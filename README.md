@@ -1,1 +1,11 @@
-# public4jy
+# 积云大学部													编号															目录
+# H5 专业教学资料 存储仓库
+# 1.教学大纲													jydx-H5-2018-0001								syllabus
+# 2.专业阶段学习手册											jydx-H5-2018-0002								spacialty_handbook4students
+# 3.月考题库													jydx-H5-2018-0003								questions4month
+# 4.周考测试题库												jydx-H5-2018-0004								questions4week
+# 5.实训手册													jydx-H5-2018-0005								practical_training_handbooks
+# 6.教案														jydx-H5-2018-0006								teaching_program
+# 7.教学大纲配套思维导图										jydx-H5-2018-0007								mindmap
+# 8.课堂教学案例库											jydx-H5-2018-0008								samples
+# 9.课堂教学课堂PPT											jydx-H5-2018-0009								ppt
