@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		ul	li{
+				width:30px;
+				height:30px;
+				background:blue;
+				margin-left:20px;
+				float:left;
+				list-style: none;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		//获取li
+		var ul = document.getElementsByTagName("ul")[0];
+		var uLi = ul.getElementsByTagName("li");
+		for(var i =0;i<uLi.length;i++)
+		{
+			uLi[i].id = i;
+			//uLi[i].setAttribute("index",i);
+			
+			uLi[i].onclick = function()
+			{
+				var index = this.id;
+				console.log(index);
+			}
+		}
+	</script>
+	
+</html>

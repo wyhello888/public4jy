@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//水仙花数：153  1*1*1 + 5 *5*5 + 3*3*3
+		
+		var num = 372;
+		//
+		var a = parseInt(num/100);
+		var b =parseInt(num/10%10);
+		var c =num %10;
+		console.log(c);
+		console.log(b);
+		if(a*a*a +b*b*b + c*c*c == num)
+		{
+			document.write(num + "是水仙花数!");
+		}
+		else
+		{
+			document.write(num +" 不是水仙花数 ！");
+		}
+		
+		//输出所有的水仙花数， 100--999
+		for(var num = 100;num <1000;num ++)
+		{
+			
+		}
+		
+	</script>
+</html>

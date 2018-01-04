@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width:100px;
+				height:100px;
+				border:1px solid red;
+			}
+			.c1{
+				background:blue;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" value ="button" />
+		<input type="button" id="btn2" value ="删除" />
+		<div class ="c1" title ="helloDiv"></div>
+		<input type="checkbox" />
+		<p>ddddd</p>
+	</body>
+	<script type="text/javascript" src ="js/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$("input[type=button]").click(function(){
+//			$("div").attr("class","c1");
+//			$("div").attr("title","helloDiv");
+//			$("div").removeAttr("class");
+//			$("div").removeAttr("title");
+			$("p").prop("hello","12345");
+		})
+		$("#btn2").click(function(){
+			
+			
+		});
+		
+	</script>
+		
+	
+</html>

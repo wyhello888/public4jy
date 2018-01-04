@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//数据元素的查找：准确查找， 模糊查找
+		var arr=["岳齐","李静","栗浩博"];
+		//输入一个人的姓名，判断这个人是否存在，准确查找
+		//var userName = prompt("请输入要查找的人的姓名:");//李静， 岳齐
+		var userName="李静111";
+		var flag = false;//定义一个变量，标记是否找到了，初始值为false, 表示默认没有
+		for(var i =0;i<arr.length;i++)
+		{
+			if(arr[i] == userName)
+			{
+				//console.log("找到了");
+				flag = true;//修改flag的值，表示找到了
+				
+			}
+			
+		}
+		if(flag)
+		{
+			console.log("找到了！");
+		}
+		else
+		{
+			console.log("不存在！");
+		}
+		
+	</script>
+</html>

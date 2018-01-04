@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<style>
+		*{
+			margin:0px;
+			padding:0px;
+			list-style: none;
+		}
+			ul>li{
+				width:150px;
+				height:40px;
+				background-color: gray;
+				float:left;
+				
+			}
+			div{
+				width:150px;
+				height:40px;
+			}
+			ul>li:hover{
+				background-color: blue;
+			}
+
+			ol{
+				display:none;
+				width:450px;
+				height:300px;
+				border:1px solid blue;
+				position:absolute;
+				left:0px;
+				top:40px;
+				
+			}
+			
+		</style>
+	</body>
+	<ul>
+		<li class="class1">
+			<div>新闻</div>
+			<ol style="display:block;">
+				<li>新闻1</li>
+				<li>新闻1</li>
+				<li>新闻1</li>
+				<li>新闻1</li>
+				<li>新闻1</li>
+			</ol>
+			
+		</li>
+		<li class="class1">
+			<div>娱乐</div>
+			<ol>
+				<li>娱乐1</li>
+				<li>娱乐1</li>
+				<li>娱乐1</li>
+				<li>娱乐1</li>
+				<li>娱乐1</li>
+				<li>娱乐1</li>
+
+			</ol>
+		</li>
+		<li class="class1">
+			<div>体育</div>
+			<ol>
+				<li>体育1</li>
+				<li>体育1</li>
+				<li>体育1</li>
+				<li>体育1</li>
+				<li>体育1</li>
+				<li>体育1</li>
+			</ol>
+		</li>
+	</ul>
+	<script type ="text/javascript">
+		var lis = document.getElementsByClassName("class1");
+		var ols = document.getElementsByTagName("ol");
+		console.log(ols.length);
+		console.log(lis.length);
+		for(var i =0;i<lis.length;i++)
+		{
+			//ols[i].id = i;
+			lis[i].id = i;
+			lis[i].onmouseover = function()
+			{
+				var index = this.id;
+				console.log(index);
+				for(var j =0;j<ols.length;j++)
+				{
+					ols[j].style.display="none";
+					ols[index].style.display="block";
+				}
+			}
+		}
+	</script>
+</html>

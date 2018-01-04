@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type = "text/javascript">
+		//原型
+		//定义一个空的构造函数
+		function Person()
+		{
+			
+		}
+		//属性和方法放入到原型对象中,prototype原型对象
+		//console.log(Person.prototype);//object 
+		Person.prototype.name= "zhaochengxue";
+		Person.prototype.age = 20;
+		Person.prototype.sayName = function()
+		{
+			alert("大家好，我叫" +this.name);
+		}
+		
+		var person1 = new Person();//实例化一个person1
+		var person2 = new Person();//实例化一个person2
+		
+		//person1.name = "xiaoxue";
+		//person1.sayName();
+		//person2.sayName();
+		
+		//console.log(person1.sayName == person2.sayName);//true;
+		//console.log(Person.prototype.constructor  == Person);//true
+
+		console.log(Person.prototype == person1.__proto__);//true
+		
+		
+		//三个属性 prototype  constructor __proto__
+		
+	</script>
+</html>

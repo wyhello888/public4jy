@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//var a=["赵小学",18,"女"];
+		var a2 = [["赵小学",18,"女"],["赵小学2",19,"女"],["赵小学3",20,"女"]];//定义一个二维数组
+		
+		//访问二维数组的数据元素
+	/*	console.log(a2[0]);
+		console.log(a2[0][0]);
+		console.log(a2[0][1]);
+		console.log(a2[0][2]);
+		
+		
+		console.log(a2[1]);
+		console.log(a2[1][0]);
+		console.log(a2[1][1]);
+		console.log(a2[1][2]);
+		
+		console.log(a2[2]);
+	*/	
+		for(var i =0;i<a2.length;i++)
+		{
+			//console.log(a2[i]);
+			for(var j =0;j<a2[i].length;j++)
+			{
+				document.write(a2[i][j] + "\t");
+			}
+			document.write("<br/>");
+		}
+		
+//		赵小学   18  女
+//		赵小学2 19 女
+//		赵小学3 20 女
+	</script>
+</html>

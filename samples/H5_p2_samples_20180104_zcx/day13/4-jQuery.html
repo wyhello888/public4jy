@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>helloli</li>
+			<li>helloli</li>
+			<li>helloli</li>
+			<li>helloli</li>
+			<li>helloli</li>
+			<li>helloli</li>
+			<li>helloli</li>
+			<li>helloli</li>
+			<li>helloli</li>
+		</ul>
+	</body>
+	<script type="text/javascript" src ="js/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+/*		var li = document.getElementsByTagName("li");
+		for(var i =0;i<li.length;i++)
+		{
+			if(i%2 ==0)
+			{
+				li[i].style.background='yellow';
+			}
+			else
+			{
+				li[i].style.background='blue';
+			}
+			}
+		}
+*/		
+		$("li:even").css({background:"pink"});
+		$("li:odd").css({background:"yellow"});
+		/*
+		$:代表jQuery
+		"li:even"选择器：选取的是下标为偶数的li
+		"li:odd"选择器：选取的是下标为奇数的li
+		css()方法用来设置样式，
+		 */
+	</script>	
+	
+</html>

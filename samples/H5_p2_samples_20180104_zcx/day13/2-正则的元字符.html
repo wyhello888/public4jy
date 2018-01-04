@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	/*
+	.  查找任意一个字符
+	\w 查找单词字符。 
+	\W 查找非单词字符。 
+	\d 查找数字。 
+	\D 查找非数字字符。 
+	\s 查找空白字符
+	
+		var str="That's hot!, h1t";
+		var patt1=/h.t/g;
+		str = str.replace(patt1,"hat");
+		console.log(str);
+		
+		var str = "_hello123 !@#$";
+		var patt2=/\w/g;
+		str = str.replace(patt2,"O");
+		console.log(str);
+	
+		var str = "hello123";
+		var patt3 = /\d/g;
+		str =str.replace(patt3,"A");
+		console.log(str);
+	*/	
+		var str = "hello   body   hello   gril ";
+		var patt4 = /\s/g;
+			console.log(str);
+		str = str.replace(patt4,"");
+		console.log(str);
+	</script>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+	
+	//break, continue
+		for(var i = 1;i<=10;i++)
+		{
+			if(i==5)
+			{
+				//break;//中断整个循环
+				continue;//中断当前一次循环，接着执行下一次循环
+				
+			}
+			document.write(i+"helloEveryone! <br/>");
+		}
+		
+	//从1开始计算输出，输出能被3整除的数据，要求输出20个。
+	//死循环（无限循环）
+	var n = 0;//定义一个变量，用来计数，用来计算能被3整除的数据的个数
+	for(var i = 1; ;i++)
+	{
+		if(i % 3==0)
+		{
+			
+			document.write(i+"\t");
+			n ++;//计数器变量加1
+			if(n == 20)
+			{
+				break;//退出死循环
+			}
+		}
+	}
+	document.write("<br/>");
+	//while死循环
+	var i =1;
+	var n =0;//定义一个计数器变量，用来表示能被3整除的数据的个数
+	while(true)// while(1)
+	{
+		if(i % 3==0)
+		{
+			
+			document.write(i+"\t");
+			n ++;
+			if(n == 20)
+			{
+				break;//退出循环
+			}
+		}	
+		i++;
+	}
+	document.write("<br/>");
+/*	
+	1个1个拿，正好拿完。
+	2个2个拿，还剩1个。
+	3个3个拿，正好拿完。
+	4个4个拿，还剩1个。
+	5个5个拿，还剩4个。
+	6个6个拿，还剩3个。
+	7个7个拿，正好拿完。
+	8个8个拿，还剩1个。
+	9个9个拿，正好拿完。
+	问筐里有多少鸡蛋？
+*/
+	</script>
+</html>

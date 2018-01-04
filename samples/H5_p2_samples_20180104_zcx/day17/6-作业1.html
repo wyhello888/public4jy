@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type = "text/javascript">
+	/*
+	 * 1. 用字面量创建一个对象
+	要求人的属性要有 ，姓名，年龄，是否有妻子（布尔类型），朋友的数组，自我介绍的方法，
+	父亲对象，其它的属性自己添加，不得少于3个
+	 */
+	var person={
+		name:'小明',
+		age:60,
+		hasWife:true,
+		friends:["tom","jerry"],
+		sayName:function()
+		{
+			alert("我叫" + this.name + "年龄：" + this.age+ "婚否：" 
+			+ this.hasWife + "朋友： "+this.friends);
+		}	
+	};
+	person.sayName();
+	
+	</script>
+</html>

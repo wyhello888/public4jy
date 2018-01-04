@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type = "text/javascript">
+	//原型结构
+	//一个空的构造函数
+	function Person()
+	{
+		
+	}
+	Person.prototype.name ="zhaochengxue";
+	Person.prototype.age = 20;
+	Person.prototype.friends=["tom","jerry"];
+	Person.prototype.sayName= function()
+	{
+		alert(this.name);
+	}
+	
+	//实例化对象
+	var person1 = new Person();
+	var person2 = new Person();
+	
+	person1.name = "Alina";
+	person1.friends.push("jim");//原型的属性共享引出的问题
+	
+	console.log(person1.name);
+	console.log(person1.friends);
+	
+	console.log(person2.name);
+	console.log(person2.friends);
+	
+	
+	
+	</script>
+</html>

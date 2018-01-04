@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				display: inline-block;
+				border: 1px dashed black;
+				width: 100px;
+				height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div><span></span>
+		<script type="text/javascript">
+			var oDiv = document.getElementsByTagName("div");
+			var oSpan = document.getElementsByTagName("span")[0];
+			for(var i=0 ; i<oDiv.length ; i++){
+				oDiv[i].item = i; 
+				oDiv[i].onclick = function(){
+					this.style.backgroundColor = "rgb("+ran(0,255)+","+ran(0,255)+","+ran(0,255)+")";
+					oSpan.innerHTML = "您点击了第"+this.item+"个div"
+				}
+			}
+			function ran(min,max){
+				return parseInt(Math.random()*(max-min+1)+min);
+			}
+		</script>
+	</body>
+</html>

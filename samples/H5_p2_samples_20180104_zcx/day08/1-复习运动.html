@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		.box{
+			width:900px;
+			height:400px;
+			border:1px solid red;
+			position: relative;
+		}
+		#ball{
+			width:100px;
+			height:100px;
+			background:blue;
+			position: absolute;
+			left:0px;
+			top:0px;
+			border-radius: 50%;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div id="ball"></div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var box = document.getElementsByClassName("box")[0];
+		var ball = document.getElementById("ball");
+		var x = ball.offsetLeft;//0
+		var x1 = box.clientWidth - ball.offsetWidth;//运动的临界点
+		
+		var y = ball.offsetTop;
+		var y1 = box.clientHeight - ball.offsetHeight;
+		
+		var v = 20;
+		var v2 = 10;//垂直方向的速度
+		
+		var timer = setInterval(function(){
+			x += v;
+			y += v2;
+			
+			if(x>=x1 || x <=0)
+			{
+				//clearInterval(timer);//清除定时器
+				v = -v;//把速度变为相反值
+			}
+			if(y >=y1 || y <=0)
+			{
+				v2 = -v2;
+			}
+			ball.style.left = x +"px";
+			ball.style.top = y +"px";
+		},50);
+	</script>
+</html>

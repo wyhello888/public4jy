@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type = "text/javascript">
+		//利用Object创建对象
+		/*var person = new Object();
+		person.name="赵成学";
+		person.age = 18;
+		person.sayName = function()
+		{
+			alert("我的姓名是：" + this.name);
+		}
+		
+		//调用方法
+		person.sayName();
+		*/
+		//工厂模式创建对象
+		function createPerson(name,age)
+		{
+			var obj = new Object();//实例化一个Object对象
+			obj.name = name;//给对象obj添加一个name属性，其值为形式参数name
+			obj.age = age;//添加age属性，其值为形式参数age
+			//添加一个方法
+			obj.sayName = function()
+			{
+				alert("我的名字是：" + this.name + ",我的年龄是：" + this.age);
+			}		
+			return obj;//返回obj对象	
+		}
+		
+		var person1 = createPerson("赵成学",18);//实例化一个Person对象
+		person1.sayName();
+		
+		var person2 = createPerson("赵小学",20);//实例化一个Person对象
+		person2.sayName();
+		
+		console.log(typeof person1);//object
+		console.log(typeof person2);//object
+	</script>
+</html>

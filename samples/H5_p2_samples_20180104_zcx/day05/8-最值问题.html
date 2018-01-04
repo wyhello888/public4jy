@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var arr=[-125,-250,-400,-600,-200,-100];
+		//最大值
+		var max = arr[0];//定义一个变量max，表示最大值,假设数组中的第一个数据元素最大
+		
+//		arr[0] >max  max = 125;
+//		arr[1] >max 成立   max = 250
+//		arr[2] >max   max = 400
+//		arr[3] >max   max = 600
+//		arr[4] >max 
+//		arr[5] >max 
+		for(var i in arr)
+		{
+			if(max < arr[i])
+			{
+				max = arr[i];
+			}
+		}
+		document.write(max);
+		
+		//最小值
+		var min = arr[0];
+		
+	</script>
+</html>

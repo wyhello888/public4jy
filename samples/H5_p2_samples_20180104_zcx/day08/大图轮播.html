@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin:0px;
+				padding:0px;
+				list-style: none;
+			}
+			#div1{
+				width:100%;
+				height:70px;
+				background:#394155;;
+				line-height: 60px;
+			}
+			
+			.c2{
+				float:left;
+			}
+			#div1 ul{
+				margin-left:200px;
+				/*width:400px;*/
+			}
+			#div1 ul>li{
+				float:left;
+				color:white;
+				width:120px;
+				height:40px;
+				font-family: "微软雅黑";
+				
+				margin-left:20px;
+				margin-top:15px;
+				text-align:center;
+				line-height:40px;
+				border-radius: 5px;
+			}
+			.c1{
+				background:#D21B35;
+				
+			}
+			#div2{
+				width:1360px;
+				height:370px;
+				border:1px solid blue;
+				overflow: hidden;
+				position: relative;
+				margin:0 auto;
+			}
+			#div2 ul>li{
+				float:left;
+				width:1360px;
+				height:370px;
+			}
+			#div2 ul{
+				width:8160px;
+				height:370px;
+				position: absolute;
+				left:0px;
+			}
+			img{
+				width:100%;
+				height:100%;
+			}
+			ol>li{
+				width:20px;
+				height:20px;
+				background:white;
+				border-radius: 50%;
+				float:left;
+				margin-left:10px;
+				bottom:10px;
+				
+				float:left;
+			}
+			ol{
+				position: absolute;
+				bottom:10px;
+				margin-left:600px;
+			}
+			#btn1{
+				position:absolute;
+				left:0px;
+				top:100px;
+				width:60px;
+				height:60px;
+				background:rgba(0,0,0,0.2);
+				border:none;
+				border-radius: 50%;
+			}
+			#btn2{
+				position:absolute;
+				right:0px;
+				top:100px;
+				width:60px;
+				height:60px;
+				background:rgba(0,0,0,0.2);
+				border:none;
+				border-radius: 50%;
+			}
+			#btn1:hover,#btn2:hover{
+				background:gray;
+			}
+		</style>
+	</head>
+	<body>
+		<div id = "div1">
+			
+			<div class = "c2">
+				<ul>
+					<li  class = "c1" style="margin-left:200px;">首页</li>
+					<li>充值购卡</li>
+					<li>积分商城</li>
+					<li>我的帐户</li>
+				</ul>
+			</div>
+			
+		</div>
+		<div id ="div2">
+			<ul id = "ul1">
+				<li><img src="img/image1.jpg" alt="" /></li>
+				<li><img src="img/image2.jpg" alt="" /></li>
+				<li><img src="img/image3.jpg" alt="" /></li>
+				<li><img src="img/image4.jpg" alt="" /></li>
+				<li><img src="img/image5.jpg" alt="" /></li>
+				
+				<li><img src="img/image6.jpg" alt="" /></li>
+			</ul>
+			<ol id = "ol1">
+				<li style="background:red;"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ol>
+			<input type="button" id ="btn1" value = "前一张" />
+			<input type="button" id ="btn2" value = "后一张" />
+		</div>
+	</body>
+	<script src = 'js/tween.js'></script>
+	<script>
+	console.log(document.documentElement.clientWidth);
+	var i = 0;
+	var ul= document.getElementById("ul1");
+	var ol= document.getElementById("ol1");
+	var lis = ol.getElementsByTagName("li");
+	var div1 = document.getElementById("div2");
+	
+		function move()
+		{  
+			
+			
+			var t= 1;
+			var b = -i*1360;
+			var c = -1360;
+			var d = 100;
+			
+			function fun()
+			{
+				t+=1;
+				if(t>d)
+				{	
+					btn1.disabled = false;
+					
+					clearInterval(timer);
+					
+					i++;
+				if(i ==5)
+					{
+						ul.style.left = 0+"px";
+						i=0;
+					}	
+					color();
+					console.log(ul1.offsetLeft);
+					
+
+				}
+				
+					ul.style.left = Tween.Linear(t,b,c,d) + "px";
+				
+				
+			}
+			
+			var timer = setInterval(fun,20);
+			
+			
+		}
+		//向右运动
+		function move2()
+		{  
+			if(i ==0)
+			{
+				ul.style.left = -1360*5+"px";
+				i=5;
+			}
+			
+			var t= 1;
+			var b = -i*1360;
+			var c = 1360;
+			var d = 100;
+			
+			function fun()
+			{
+				t+=1;
+				if(t>d)
+				{	
+					clearInterval(timer);
+					btn2.disabled = false;
+					i--;
+					color();
+					console.log(ul1.offsetLeft);
+					
+					
+				}
+				else{
+					ul.style.left = Tween.Linear(t,b,c,d) + "px";
+				}
+				
+			}
+			
+			var timer = setInterval(fun,20);
+			
+			
+		}
+		
+		var timer2 = setInterval(move2,3000);
+		
+		function color()
+		{
+
+			
+			
+			for(var j =0;j<lis.length;j++)
+			{
+				lis[j].style.background="white";
+			}
+			lis[i].style.background= "red";
+		}
+		
+		div1.onmouseover = function()
+		{
+			clearInterval(timer2);
+		}
+		div1.onmouseout = function()
+		{
+			 timer2 = setInterval(move2,4000);
+		}
+		btn1.onclick = function()
+		{
+//			btn1.setAttribute("disabled",true);
+			btn1.disabled = true;
+			clearInterval(timer2);
+			move();
+			
+		}
+		btn2.onclick = function()
+		{
+			btn2.disabled = true;
+			clearInterval(timer2);
+			move2();
+		}
+		
+		for(var i =0;i<lis.length;i++)
+		{
+			lis[i].index = i;
+			lis[i].onclick = function()
+			{
+//				clearInterval(timer);
+				i = this.index;
+				move();
+				color();
+			}
+			
+		}
+	</script>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+
+
+
+		td{
+			width:120px;
+			
+			border:1px solid blue;
+		}
+		tr{
+			height:110px;
+			border:1px solid blue;
+		}
+		img{
+			width:100px;
+			height:100px;
+		}
+		#table1{
+			border:1px solid blue;
+			border-collapse: collapse;
+		}
+		#img1{
+			width:150px;
+			height:150px;
+			display:block;
+			position:absolute;
+			display:none;
+		}
+		
+		</style>
+	</head>
+	<body>
+		<table id = "table1" >
+			<tbody>	
+				<tr>
+					<td>选项</td>
+					<td>编号</td>
+					<td>图片</td>
+					<td>买家</td>
+					<td>性别</td>
+					<td>价格</td>
+					<td>操作</td>
+				</tr>
+			
+		
+				<tr class="c3">
+					<td><input type ="checkbox" class="c1"></td>
+					<td>1001</td>
+					<td><img src ="img/img1.jpg" class="c4"/></td>
+					<td>姐姐</td>
+					<td>女</td>
+					<td>19。99</td>
+					<td><input type = "button" value = "删除" class="c2"></td>
+				</tr>
+				<tr  class="c3">
+					<td><input type ="checkbox" class="c1"></td>
+					<td>1001</td>
+					<td><img src ="img/img2.jpg"  class="c4"/></td>
+					<td>姐姐</td>
+					<td>女</td>
+					<td>19.99</td>
+					<td><input type = "button" value = "删除" class="c2"></td>
+				</tr>
+				<tr  class="c3">
+					<td><input type ="checkbox" class="c1"></td>
+					<td>1001</td>
+					<td><img src ="img/img3.jpg"  class="c4"/></td>
+					<td>姐姐</td>
+					<td>女</td>
+					<td>19。99</td>
+					<td><input type = "button" value = "删除" class="c2"></td>
+				</tr>
+			</tbody>
+
+			<tfoot>	
+				<tr>
+					<td colspan="7">
+						全选<input type = "checkbox" id = "ch1">
+						<input type = "button" id = "btn1" value = "全部删除">
+						<input type = "button" id = "btn2" value = "选中删除">
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+		<img id = "img1" src = "img/img1.jpg"/>
+	</body>
+	<script type = "text/javascript" src ="js/jquery-3.1.1.js"></script>
+	<script type = "text/javascript">
+		//删除单行
+		$(".c2").click(function(){
+			//console.log($(this).val());
+			$(this).parent().parent().remove();
+		});
+		
+		//选中删除
+		$("#btn2").click(function(){
+			$(".c1:checked").parent().parent().remove();
+		})
+		// 全部删除
+		$("#btn1").click(function()
+		{
+			$(".c3").remove();
+		})
+		//全选
+		$("#ch1").click(function(){
+			var flag = $(this).prop("checked");
+			$(".c1").prop("checked",flag);
+		})
+		
+		//图片
+		$(".c4").mouseover(function(event){
+			$("#img1").css("display","block");//显示
+			var src = $(this).attr("src");//获取当前图片的路径
+			$("#img1").attr("src",src);
+			$("#img1").css({
+				"left":(event.clientX+10)+"px",
+				"top":(event.clientY+10)+"px"
+			})
+		})
+		$(".c4").mousemove(function(event){
+			$("#img1").css("display","block");//显示
+			var src = $(this).attr("src");//获取当前图片的路径
+			$("#img1").attr("src",src);
+			$("#img1").css({
+				"left":(event.clientX+10)+"px",
+				"top":(event.clientY+10)+"px"
+			})
+		})
+		
+		$(".c4").mouseout(function(event){
+			$("#img1").css("display","none");//显示
+
+		})
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

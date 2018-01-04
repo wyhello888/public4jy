@@ -1,0 +1,72 @@
+1、鼠标右健单击的事件contextmenu
+
+2、	阻止默认事件的2种方法
+	return false;//方法1
+	event.preventDefault();//方法 ie低版本不支持这个方法
+	
+3、拖拽运动
+	1-获取目标元素
+	2-mousedown事件
+		mousemove事件
+	3-mouseup 事件
+	
+4、dom 0级事件
+	添加事件
+	div.onclick = function()
+	{
+	}
+	取消事件
+	div.onclick = null;
+5、dom 2级事件
+	添加事件	
+	div.addEventListener("click",fun,false);
+	取消事件
+	div.removeEventListenert("click", fun);
+		
+6、	事件冒泡，如何阻止事件冒泡
+		//event.stopPropagation();//兼容非ie
+			//event.cancelBubble = true;//兼容ie
+			if(event.stopPropagation)
+			{
+				event.stopPropagation();//兼容非ie
+			}
+			else
+			{
+				event.cancelBubble = true;//兼容ie
+			}
+			
+		div1.addEventListener("click",function(){
+			console.log("div1-------------");
+		},false);
+		
+		div2.addEventListener("click",function(){
+			console.log("div2-------------");
+		},false);
+		
+		document.addEventListener("click",function(){
+			console.log("document-------------");
+		},false);			
+7、事件捕获
+//事件捕获
+		div1.addEventListener("click",function(){
+			console.log("div1-------------");
+		},true);
+		
+		div2.addEventListener("click",function(){
+			console.log("div2-------------");
+		},true);
+		
+		document.addEventListener("click",function(){
+			console.log("document-------------");
+		},true);	
+		
+8、事件的委托
+		var ul = document.getElementsByTagName("ul")[0];
+		ul.onclick = function(event)
+		{
+			var event = event || window.event;
+			var target=event.target;
+			//console.log(event.target);
+			alert(target.innerHTML);
+			
+		}

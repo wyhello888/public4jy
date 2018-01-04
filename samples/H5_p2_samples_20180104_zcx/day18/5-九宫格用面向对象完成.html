@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		table{
+			border:1px solid blue;
+			border-collapse: collapse;
+		}
+		td{
+			border:1px solid blue;
+			width:100px;
+		}
+		tr{
+			height:100px;
+		}
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td id ="0"></td>
+				<td id ="1"></td>
+				<td id ="2"></td>
+			</tr>
+			<tr>
+				<td id ="3"></td>
+				<td id ="4"></td>
+				<td id ="5"></td>
+			</tr>
+			<tr>
+				<td id ="6"></td>
+				<td id ="7"></td>
+				<td id ="8"></td>
+			</tr>
+		</table>
+	</body>
+	<script type = "text/javascript">
+	/*	var tds = document.getElementsByTagName("td");
+		for(var i =0;i<tds.length;i++)
+		{
+			tds[i].id = i;
+			tds[i].onclick = function()
+			{
+				var dom = new Dom("td",this.id,"blue");
+			}
+		}
+	*/	
+		function Dom(tagName){
+			this.tds=document.getElementsByTagName(tagName);
+
+		}
+
+	Dom.prototype.change=function(){
+		
+	for(var i =0;i<this.tds.length;i++)
+		{
+			this.tds[i].id = i;	
+			var c = this.tds;
+			this.tds[i].onclick = function()
+			{
+				//alert(1)
+				for(var j =0;j<c.length;j++)
+				{
+					c[j].innerHTML = "";
+					c[j].style.backgroundColor="gray";
+				}
+				this.r = Math.floor(Math.random()*255);
+				this.g = Math.floor(Math.random()*255);
+				this.b = Math.floor(Math.random()*255);
+				this.color = "rgb(" + this.r+"," + this.g+"," + this.b+")";
+				this.style.backgroundColor=this.color;//当前单元格样式
+				
+				this.innerHTML= this.id;
+				
+			}
+		}
+	}
+	var a = new Dom("td");
+	a.change();
+	</script>
+</html>

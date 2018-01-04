@@ -1,0 +1,25 @@
+1、形式参数：定义函数时的参数。
+2、实际参数：调用函数时，传递进来的数据。
+3、return 关健字：返回函数的值
+
+4、Math对象的方法:
+	Math.random() 随机生成一个0--1之间的随机数
+	Math.round() 四舍五入
+	Math.abs()	绝对值
+	Math.max()	最大值
+	Math.min() 最小值
+	
+	parseInt(Math.random()*100);随机生成一个0-100之间的整数
+	parseInt(Math.random()*(最大值-最小值+1) + 最小值)
+
+5、js事件
+	鼠标单击事件：click
+	鼠标移入事件：mouseover
+	鼠标移出事件：mouseout
+6、设置div显示和隐藏
+	div.style.display = "block";
+	div.style.display = "none";
+7、设置div的html内容：div.innerHTML = "helloDiv";
+
+
+

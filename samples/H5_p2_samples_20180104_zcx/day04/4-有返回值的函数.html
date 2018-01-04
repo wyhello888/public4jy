@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//js提供的方法：
+		/*
+		 * 
+		 document.write("helloeveryone!");
+		window.alert("helloeveryone!");
+		console.log("helloeveryone!");
+		
+		//有返回值的函数，返回值的类型，可能是String, Number, Boolean ,Object类型
+		var str = String(100);
+		console.log(typeof str);
+		
+		var num = Number(str);
+		console.log(typeof num);
+		
+		var flag = isNaN("100hello");
+		console.log(flag);
+		
+		flag = isNaN(num);
+		console.log(flag);
+		
+		flag = isNaN(NaN);
+		console.log(flag);
+		
+		num = Math.pow(2,3);
+		console.log(num);
+		
+		num = Math.abs(-100);
+		console.log(num);
+		
+		num = Math.round(120.6);
+		console.log(num);
+		
+		num = Math.max(100,300);
+		console.log(num);
+		
+		num = Math.random();//0-1之间的随机数，包含0，不包含1
+		console.log(num);
+		
+		num = parseInt(Math.random()*100);//扩大100倍.取整数，生成0-100以内的整数
+		console.log(num);
+	*/	
+		//有返回值的函数
+		//自定义一个函数，返回二个数相加的和
+		function sum(x1,x2)
+		{
+			var s = x1+x2;
+			return s;//把变量s的值做为函数的返回值
+		}
+		
+		var num = sum(100,200);//有返回值的函数的调用,把函数的返回值，赋值一个变量
+		document.write(num+"<br/>");
+		
+		 num = sum(300,400);//有返回值的函数的调用,把函数的返回值，赋值一个变量
+		document.write(num+"<br/>");
+		
+//		num = sum(1,55) + sum(30,50);//函数的返回值，参与其他的运算
+//		document.write(num+"<br/>");
+		
+		//alert(sum(200,400));//将函数的返回值，在页面上弹出
+		
+		//自定义一个函数，返回二个数的差 函数名为，sub(x1,x2)
+		//自定义一个函数，返回二个数中的最大值  max(x1,x2)
+		//自定义一个函数，返回二个数中的最小值  min(x1,x2)
+		//自定义一个函数，返回一个数的绝对值 abs(x)
+		//自定义一个函数，返回x1--x2之间的所有的整数的和 sum1(x1,x2)
+		//自定义一个函数，返回x1--x2之间的所有的偶数的和 sum2(x1,x2)
+		//自定义一个函数，判断一个年份是否是闰年，返回Boolean类型的值  isLeap(x)
+		//自定义函数，完成 f(x) = 4x2+3x+2，使用户输入x的值，能得到相应的计算结果。  fun(x)
+		
+	</script>
+</html>

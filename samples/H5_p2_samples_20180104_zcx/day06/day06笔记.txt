@@ -1,0 +1,37 @@
+arguments对象：可以接收函数传递进来的实际参数的个数。
+	
+字符串的属性和方法：
+		属性:length 字符串的长度
+		12个方法：
+		*	substr() 从起始索引号提取字符串中指定数目的字符。 
+		*	substring() 提取字符串中两个指定的索引号之间的字符。 
+		*	slice() 提取字符串的片断，并在新的字符串中返回被提取的部分    **
+		
+		*	charAt() 返回在指定位置的字符。 
+		*	charCodeAt() 返回在指定的位置的字符的 Unicode 编码。  **
+		*	fromCharCode() 从字符编码创建一个字符串。   **
+		
+		*	indexOf() 检索字符串。 
+		lastIndexOf() 从后向前搜索字符串。  **
+		
+		concat() 连接字符串。 
+		
+		
+		split() 把字符串分割为字符串数组。 
+		
+		toLowerCase() 把字符串转换为小写。 
+		toUpperCase() 把字符串转换为大写。 
+
+Date对象的方法
+	toLocaleString() 根据本地时间格式，把 Date 对象转换为字符串。 
+	getFullYear() 设置 Date 对象中的年份（四位数字）。 
+	getMonth() 设置 Date 对象中月份 (0 ~ 11)。 
+	getDate() 从 Date 对象返回一个月中的某一天 (1 ~ 31)。 
+	
+	getDay() 从 Date 对象返回一周中的某一天 (0 ~ 6)。 
+	
+	getHours() 返回 Date 对象的小时 (0 ~ 23)。 
+	getMinutes() 返回 Date 对象的分钟 (0 ~ 59)。 
+	getSeconds() 返回 Date 对象的秒数 (0 ~ 59)。 	
+
+ 

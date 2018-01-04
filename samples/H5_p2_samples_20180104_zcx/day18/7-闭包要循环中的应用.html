@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		div{
+			width:100px;
+			height:100px;
+			border:1px solid blue;
+			float:left;
+			margin-left:10px;
+		}
+		</style>
+		
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<span></span>
+	</body>
+	<script type = "text/javascript">
+	
+		var divs = document.getElementsByTagName("div");
+		//console.log(divs.length);
+		var span = document.getElementsByTagName("span")[0];
+		
+		for(var i =0;i<divs.length;i++)
+		{
+			//自调函数的格式：()();
+			(function(x){
+				divs[x].onclick = function()
+				{
+					span.innerHTML = x;
+				}				
+			})(i);
+
+			
+		}
+		//传统的方法
+//		for(var i =0;i<divs.length;i++)
+//		{
+//			divs[i].id= i;
+//			divs[i].onclick = function()
+//			{
+//				var index = this.id;
+//				console.log(index);
+//				span.innerHTML = index;
+//			}
+//			
+//		}	
+	</script>
+</html>

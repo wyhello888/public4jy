@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+			#box{
+				width:1000px;
+				height:350px;
+				border:1px solid red;
+				margin:0 auto;
+				position: relative;
+				overflow: hidden;
+			}
+			#box ul>li{
+				width:1000px;
+				height:350px;
+				float:left;
+			}
+			#box ul{
+				list-style: none;
+				width:6000px;
+				height:350px;
+				position: absolute;
+				left:0px;
+				top:0px;
+				
+				
+			}
+			#box img{
+				width:100%;
+				height:100%;
+				
+			}
+			#box ol{
+				position: absolute;
+				left:100px;
+				bottom:20px;
+			}
+			#box ol li{
+				width:20px;
+				height:20px;
+				background:blue;
+				margin-left:20px;
+				float:left;
+			}
+			#left{
+				width:60px;
+				height:60px;
+				border:none;
+				background:rgba(0,0,0,0.2);
+				border-radius: 50%;
+				position:absolute;
+				left:10px;
+				top:100px;
+			}
+			#right{
+				width:60px;
+				height:60px;
+				border:none;
+				background:rgba(0,0,0,0.2);
+				border-radius: 50%;
+				position:absolute;
+				right:10px;
+				top:100px;
+			}
+			#left:hover{
+				background:rgba(0,0,0,0.5);
+			}
+			#right:hover{
+				background:rgba(0,0,0,0.5);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul>
+				<li><img src="img/image1.jpg"/></li>
+				<li><img src="img/image2.jpg"/></li>
+				<li><img src="img/image3.jpg"/></li>
+				<li><img src="img/image4.jpg"/></li>
+				<li><img src="img/image5.jpg"/></li>
+				
+				<li><img src="img/image1.jpg"/></li>
+			</ul>
+			<ol>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ol>
+			<input type="button" id ="left" value = "前一张" />
+			<input type="button" id ="right" value = "后一张" />
+		</div>
+	</body>
+	<script type="text/javascript" src ="js/tween.js"></script>
+	<script type="text/javascript">
+		var box = document.getElementById("box");
+		var ul = document.getElementsByTagName("ul")[0];
+		var index =0;
+		
+		//向左运动
+		function move1()
+		{
+			var t =0;
+			var b = -1000* index;
+			var c = -1000;
+			var d = 100;
+			
+			
+			var timer = setInterval(function(){
+				t++;
+				if(t >=d)
+				{
+					clearInterval(timer);
+					index ++;
+					if(index == 5)
+					{
+						index =0;
+					}
+					changColor();
+				}
+				ul.style.left = Tween.Linear(t,b,c,d) +"px";
+				
+			},20);
+			
+		}
+		
+		var timer2 = setInterval(move1,4000);
+		
+		//
+		var ol = document.getElementsByTagName("ol")[0];
+		var lis = ol.getElementsByTagName("li");
+		
+		function changColor()
+		{
+			for(var i =0;i<lis.length;i++)
+			{
+				lis[i].style.background="blue";
+			}
+			lis[index].style.background="white";
+		}
+		
+		//清除定时器
+		box.onmouseover = function()
+		{
+			clearInterval(timer2);
+		}
+		box.onmouseout = function()
+		{
+			timer2 = setInterval(move1,4000);
+		}
+		
+		//鼠标点击
+		for(var i =0;i<lis.length;i++)
+		{
+			lis[i].index = i;
+			lis[i].onclick = function()
+			{
+				index = this.index;
+				move1();
+				changColor();
+			}
+		}
+		
+		//left点击
+		var leftButton = document.getElementById("left");
+		leftButton.onclick = function()
+		{
+			move1();
+		}
+		
+		var rightButton = document.getElementById("right");
+		rightButton.onclick = function()
+		{
+			var t =0;
+			var b = -1000*index;
+			var c = 1000;
+			var d = 100;
+			var timer = setInterval(function(){
+				t ++;
+				if(t >=d)
+				{
+					clearInterval(timer);
+					index --;
+					if(index <=0)
+					{
+						index = 4;
+					}
+					changColor();
+				}
+				ul.style.left = Tween.Linear(t,b,c,d)+"px";
+			},20);
+		}
+	</script>
+		
+	
+</html>

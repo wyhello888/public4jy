@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width:200px;
+				height:100px;
+				border:1px solid red;
+				margin-top:10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1"></div>
+		<div class ="c1"></div>
+		<div></div>
+		<div></div>
+		
+		游泳1<input type="checkbox"  name ="check"/><br />
+		游泳2<input type="checkbox"  name ="check"/><br />
+		游泳3<input type="checkbox"  name ="check"/><br />
+		游泳4<input type="checkbox"  name ="check"/><br />
+		游泳5<input type="checkbox"  name ="check"/><br />
+		<input type="button" value ="全选" id ="btn1" />
+	</body>
+	<script type="text/javascript">
+		//获取页面元素的方法
+		//document.getElementById() id获取
+		//document.getElementsByClassName()  类名获取，伪数组。
+		//document.getElementsByTagName()  标签名称获取
+		//document.getElementsByName()
+	/*	var div1 = document.getElementById("div1");
+		console.log(div1);
+		div1.style.backgroundColor = "yellow";
+		
+		//通过类名获取
+		var divs = document.getElementsByClassName("c1");
+		
+		//divs.style.backgroundColor= "blue";
+		console.log(divs.length);
+		for(var i =0;i<divs.length;i++)
+		{
+			divs[i].style.backgroundColor= "green";
+		}
+	
+		//通过标签名称获取
+		var divs = document.getElementsByTagName("div");
+		console.log(divs.length);
+		for(var i =0;i<divs.length;i++)
+		{
+			console.log(divs[i]);
+		}
+	*/	
+		//通过名称获取
+		var check = document.getElementsByName("check");
+		var btn1 = document.getElementById("btn1");
+		btn1.onclick = function()
+		{
+			console.log(check.length);
+			for(var i =0;i<check.length;i++)
+			{
+				check[i].checked = true;//设置多选框选中状态
+			}
+		}
+	</script>
+</html>

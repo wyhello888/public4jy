@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width:1000px;
+				height:150px;
+				border:1px solid red;
+				margin:0 auto;
+				position: relative;
+			}
+			#ball{
+				width:100px;
+				height:100px;
+				background:blue;
+				position: absolute;
+				left:0px;
+				bottom:0px;
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="ball"></div>
+		</div>
+		<input type="button" id="start" value ="开始运动" />
+	</body>
+	<script type="text/javascript" src ="js/tween.js"></script>
+	<script type="text/javascript">
+		var box = document.getElementById("box");
+		var ball = document.getElementById("ball");
+		var start = document.getElementById("start");
+		
+		//按钮的点击事件
+		start.onclick = function()
+		{
+			var t= 0;//初始步数
+			var b =ball.offsetLeft; //变化属性的初始值
+			//var c  = (box.clientWidth- ball.offsetWidth)-b; //属性的变化量
+			var c = 900;
+			var d = 100;//结束步数
+			
+			var timer = setInterval(function(){
+				t++;
+				if(t >=d)
+				{
+					clearInterval(timer);
+				}
+				//ball.style.left = Tween.Linear(t,b,c,d) + "px";
+//				ball.style.left = Tween.Bounce.easeIn(t,b,c,d)+"px";
+				ball.style.left = Tween.Back.easeInOut(t,b,c,d)+"px";
+			},50);
+			
+		}
+	</script>
+		
+	
+</html>

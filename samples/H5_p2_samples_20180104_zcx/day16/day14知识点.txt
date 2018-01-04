@@ -1,0 +1,265 @@
+1、请写出5个选择器及功能？
+$("#div1") 匹配id=div1的元素
+$(".c1")  
+$("*")
+
+2、jQuer对象如何创建节点，插入节点，删除节点？各举一例
+var $li=$("<li>苹果</li>")
+$li.appendTo("ul");//$("ul").append($li);
+$("ul>li").remove();
+
+3、window.onload() $(document).ready()的区别？
+
+
+4、列举5个遍历节点的方法？
+	next()
+	prev()
+	nextAll()
+	siblings()
+	parent()
+	parents()
+	children()
+
+5、在ul列表中插入一个li, <li>苹果</li>， 写出核心代码？
+	$("<li>苹果</li>").appendTo("ul");
+
+6、jQuery给对象修改样式的方法有哪些？
+css()
+addClass()
+removeClass()
+toggleClass()
+
+8、写出8个添加节点的方法？
+append() appendTo() insertBefore() before() after() insertAfter() prepend() prependTo()
+
+9、$("p.intro")表示什么意思？
+ 匹配类名为intro的p元素
+
+10、选取id为div1的标签的写法是？ $("#div1")
+
+11、$("[href]")的意思是？
+匹配有属性href的元素
+
+12、给所有的div元素，设置为1像素，黑色边框，代码是？
+$("div").css("border","1px solid #000000");
+
+13、一个表单里，想要找到第一个input元素如何实现？
+$("form input:first")
+	找到第二个如何实现？
+$("form input:eq(1)")
+	
+14、在一个表格中，要匹配所有行数为偶数的，如何实现？  $("tr:even")
+	匹配行数为奇数的，如何实现？ $("tr:odd")
+	
+15、jQuery中$(this).get(0)的等价写法是？    $(this)[0]
+
+换一种问法：jQuery对象转换为dom对象的二种方法
+
+16、在jQuery中指定一个类，如果存在就执行删除功能，如果不存在就执行添加功能，用哪个方法可以实现？ toggleClass()
+
+17、在编写页面时，如果想要获取指定元素在当前窗口的相对偏移，用什么实现？offset
+	该方法返回二个属性，分别是什么？ top  left
+	
+18、在jQuery中，鼠标悬停到一个指定的元素上，会触发指定的一个方法，实现该操作的是？  hover()
+
+19、下列事件不正确的是？
+A、$(document).ready(function(){})
+B、$("p").click(function(){})
+C、$("#div").focus(function(){})
+D、$("#btn").onmouseover(function(){})
+
+20、下列方法，不是用来获取或者设置元素的内容和值的是？
+A、text()
+B、html()
+C、val()
+D、attr()
+
+21、将jQuery对象$div1转换为dom对象，正确写法是？AC
+A、var oDiv=$div1[0]
+B、var oDiv= $($div1);
+C、var $oDiv=$div1.get(0)
+D、var $odiv=$div1[0]
+
+22、下列哪个选择器，使用时没有参数？A
+A、:odd
+B、:eq
+C、:gt
+D、:lt
+
+23、下列哪个方法，匹配的不是兄弟节点？C
+A、next()
+B、prev()
+C、find()
+D、sublings()
+
+24、下列哪个选项不是用来操作属性？c
+A、attr
+B、prop
+C、css
+D、removeAttr
+
+25、下列哪个不属性表单选择器？d
+A、:radio
+B、:reset
+C、:image
+D、:even
+
+26、下列哪个不属于内容选择器？C
+A、:contains
+B、:has()
+C、find()
+D、:parent
+
+27、创建li节点，正确的写法是？CD
+A、$li1=$('<li><li>');
+B、$li1=$('<li title='lis'></li>')
+C、$li1=$('<li>苹果</li>')
+D、li1=$('<li>香蕉</li>')
+
+28、不是用来添加兄弟节点的方法是？B
+A、after()
+B、prepend()
+C、insertAfter()
+D、before()
+
+29、不是用来包裹节点的方法是？B
+A、wrapAll()
+B、wrapInear()
+C、wrapInner()
+D、wrap
+
+30、当DOM加载完成 后要执行的函数，正确的是？c
+A、jQuery(expression,[context])
+B、jQuery(html,[ownerDocument])
+C、jQuery(callback)
+D、jQuery(elements)
+
+
+
+31、下列哪个不是jQuery的选择器？
+A、基本选择器
+B、后代选择器
+C、类选择器
+D、表单选择器
+
+32、如果想找到一个表格的指定的行数的元素，哪个方法可以快速的找到指定元素？c
+A、text()
+B、get()
+C、eq()
+D、contents()
+
+33、删除匹配的元素，正确的方法是？A
+A、remove()
+B、empty()
+C、delete()
+D、removeAll()
+
+34、为指定的元素绑定事件，哪个功能可以实现？ b   (bind  on)  
+A、trigger(type)
+B、bind(type)
+C、one(type)
+D、bind
+
+35、哪个不是jQuery的事件处理？d   $btn.bind("click",function(){})  $btn.on("click",function(){})
+A、bind(type)
+B、click()
+C、change()
+D、one(type)
+
+36、哪几种是表单对象的属性？（多选）  ABDF   prop()
+A、:checked
+B、:enabled
+C、:hidden
+D、:selected
+E、:file
+F、:disabled
+
+37、找到所有元素的同辈元素，哪个可以实现？c
+A、eq(index)
+B、find(expr)
+C、sibling([expr])
+D、next()
+
+1.下列哪个选项可以获取到表单中所有的input元素（ ）ACD
+A.$(“input”)  B.$(“[input]”)
+C.$(“form input”) D.(“form:input”)
+
+2. 以下（B ）选项不能够正确地得到这个标签：<input id="btnGo" type="button" value="单击我"  class="btn"/> 
+A. $("#btnGo")  B. $(".btnGo")
+C. $(".btn")     D. $("input[type='button']")
+
+3. 有以下标签：<input id="txtContent" class="txt" type="text" value="张三"/>  请问不能够正确的获取文本框里面的值“张三”的语句是（C ）。（选一项）
+ A. $(".txt").val()          B. $(".txt").attr("value") 
+ C. $("#txtContent").text()   D. $("#txtContent").attr("value")
+
+4. 在HTML页面中有如下结构的代码：
+<div id="header">
+<h3><span>S3N认证考试</span></h3> 
+ <ul> 
+ <li>一</li>
+ <li>二</li> 
+ <li>三</li>       
+ <li>四</li>     
+</ul> </div>  请问下列选项（ ）所示jQuery代码，不能够让汉字“四”的颜色变成红色。（选一项）D
+ A.$("#header ul li:eq(3)").css("color","red"); 
+ B.$("#header li:eq(3)").css("color","red");
+ C.$("#header li:last").css("color","red"); 
+ D. $("#header li:gt(3)").css("color","red");
+
+5. 在HTML页面中有如下结构的代码：<ul id="p-list"> <li>苹果iPhone 4S</li></ul> 请问以下（）方法不能让“苹果iPhone 4S”隐藏。
+A. $("#p-list li:nth-child(0)").hide(); 
+B. $("#p-list li:only-child").hide(); 
+C.$("#p-list li:last-child").hide(); 
+D. $("#p-list li:first-child").hide();
+
+6. <a href="xxx.jpg" title="头条">新闻</a>, 获取<a>元素title的属性值。（ ）  
+A.$("a").attr("title").val();        
+B.$("#a").attr("title"); 
+C.$("a").attr("title");           
+D.$("a").attr("title").value;
+
+7. 页面中有一个select标签，代码如下： <select id="sel">   
+<option value="0">请选择</option>    
+ <option value="1">选项一</option>    
+ <option value="2">选项二</option>    
+ <option value="3">选项三</option>      
+ <option value="4">选项四</option>  </select>，要使“选项四”选中的正确写法。（ ）
+A.$("#sel").val("选项四");      
+B.$("#sel").val("4");    
+C.$("#sel > option:eq(4)").checked; 
+D.$("#sel  option:eq(4)").attr("selected");
+
+8. 页面中有一个性别单选按钮，请设置”男”为选中状态。代码如下： <input type="radio" name="sex"> 男  <input type="radio" name="sex"> 女        正确的是（ ） 
+A.$("sex[0]").attr("checked",true); 
+B.$("#sex[0]").attr("checked",true);  
+C.$("[name=sex]:radio").attr("checked",true);
+D. $("input:eq(0)").attr("checked",true);
+
+9.如果需要匹配包含文本”John”的元素，用下面哪种来实现 （ ）   
+A.text(“John”)       B.contains(“John”)   
+C.input(“John”)      D.attr(“John”)
+
+10.在jquery中想要找到所有元素的同辈元素，下面哪一个是可以实现的  （ ）   
+A：nextAll()       
+B：siblings()   
+C：next()           
+D：find()
+
+一、填空题
+1.在一个表单中，如果将所有的div元素都设置为绿色，实现功能是 									
+2.在编写页面的时候，如果想要获取指定元素在当前窗口的相对偏移，用_________来实现，该方法的返回值有两个属性，分别是__________和____________。
+3.在一个表单里，想要找到指定元素的第一个元素用____   _____实现，那么第二个元素用_______   __实现。
+4.现有一个表格，如果想要匹配所有行数为偶数的，用____  ____实现，奇数的用___   ____实现。
+5.jquery中$(this).get(0)的写法和____________是等价的。
+6.在jquery中如果将一个“名/值”形式的对象设置为所有指定元素的属性，可以用___  __________实现。
+7.给div追加多个样式，用（        ）来实现，多个样式直接用（       ）隔开。
+8.在jquery中指定一个类，如果存在就执行删除功能，如果不存在就执行添加功能，（             ）是可以直接完成该功能的。
+9.在jquery中用（              ）可以找到所有元素的同辈元素。
+10.实现把”<p>你好！</p>”放在<div></div>标签里面的代码是                        
+11 jQuery的工厂函数是(  $()  )
+
+二、简答题
+1.假设 $img1 是一个图片的jQuery对象，$btn1 是一个按钮的jQuery对象，请写出关键代码实现效果：
+点击按钮为 $img1 对象添加title属性，属性值为 ’message’ ，
+为 $btn1 对象添加类 ’cla’ ，
+并且将图片插入到按钮的后面。

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		
+	</head>
+	<body>
+		<ul id = "ul1">
+			<li>0AAAAAAAAAAAAAAAAA</li>
+			<li>1AAAAAAAAAAAAAAAAA</li>
+			<li>222AAAAAAAAAAAAAAAAA</li>
+			<li>3AAAAAAAAAAAAAAAAA</li>
+			<li>4AAAAAAAAAAAAAAAAA</li>
+		</ul>
+		<input type = "button" value = "删除操作" id ="btn1"/>
+	</body>
+	<script type = 'text/javascript' src = 'js/jquery-3.1.1.js'></script>
+	<script type = 'text/javascript'>
+	//remove():删除一个节点,返回被删除的节点
+	//detach():删除一个节点，返回被删除的节点
+	//区别：remove(),detach()方法，是否捆绑事件,remove()方法没有事件，detach()方法有事件
+	//empty():清空当前的节点,
+		$("#ul1>li").click(function(){
+			alert($(this).html());
+		})
+		$("#ul1>li:even").css("background-color","yellow");
+	
+		$("#btn1").click(function(){
+			//var $li = $("#ul1>li:eq(2)").remove();
+			//var $li = $("#ul1>li:eq(2)").detach();
+			//$("#ul1").append($li);//
+			
+			$("#ul1>li:eq(2)").empty();
+			
+		});
+	</script>
+</html>

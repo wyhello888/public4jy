@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		div{
+			position:absolute;
+			border-radius: 50%;
+		}
+		</style>
+	</head>
+	<body>
+	</body>
+	<script type = "text/javascript">
+	function Div(left,top,width,color)
+	{
+		this.left = left;
+		this.top = top;
+		this.width = width;
+		this.height = width;
+		this.color = color;
+	}
+	//在原型对象中添加方法
+	Div.prototype.show= function()
+	{
+		var div1 = document.createElement("div");
+		div1.style.left = this.left+"px";
+		div1.style.top = this.top + "px";
+		div1.style.width = this.width+"px";
+		div1.style.height = this.height + "px";
+		div1.style.backgroundColor=this.color;
+		document.body.appendChild(div1);
+	}
+	
+	var left1 = Math.floor(Math.random()*1000);
+	var top1 = Math.floor(Math.random()*600);
+	var width1 = Math.floor(Math.random()*100);
+	//var color = "rgb(0,0,255)";
+	var r = Math.floor(Math.random()*255);
+	var g = Math.floor(Math.random()*255);
+	var b = Math.floor(Math.random()*255);
+	var color1 = "rgb("+r+","+g+","+b+")";
+	
+	
+	var div1 = new Div(left1,top1,width1,color1);
+	div1.show();
+	console.log(top);
+	</script>
+</html>

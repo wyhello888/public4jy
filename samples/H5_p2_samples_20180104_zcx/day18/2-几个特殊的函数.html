@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<input type = "button" value = "点一点"　id = "btn1"/>
+	</body>
+	<script type = "text/javascript">
+		//一般的函数的定义方法
+		/*
+		function fun1()
+		{
+			
+		}
+		window.fun1();
+		//字面量定义函数
+		var fun1 = function()
+		{
+			
+		}
+		var fun1 = new Function()
+		{
+			
+		}
+		
+		//匿名函数：没有定义函数名的函数
+		window.onload= function()
+		{
+			
+		}
+		
+		btn1.onclick = function()
+		{
+			
+		}
+		
+		//匿名回调函数：
+		var timer = window.setInterval(function(){
+			
+		},1000);
+	
+		//自调函数 ()();
+		function fun(str)
+		{
+			alert("hello" + str);
+		}
+	
+		fun("小明");
+	*/			
+		(function(str)
+		{
+			alert("hello" + str);
+		})("小红");
+		
+		
+	</script>
+</html>

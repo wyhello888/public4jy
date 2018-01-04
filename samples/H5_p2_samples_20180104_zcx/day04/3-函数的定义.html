@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		//独立功能的代码块，封装起来，就是一个函数.
+		//函数优点：代码复用
+		//函数的调用
+		//在函数调用时，传递进来的数据，称为函数的实际参数，（实参）
+		output(1,100);//1，100是实参
+		output(20,30);//20，30是实参
+		output(50,100);//50，100是实参
+		output(100,200);//100,200是实参
+		
+		
+		
+		//定义函数,x1,x2叫形式参数， 
+		//函数的功能，是输出任意x1---x2之间的整数
+		function output(x1,x2)
+		{
+			for(var i = x1;i<=x2;i++)
+			{
+				document.write(i + "\t");
+			}
+			document.write("<br/>");
+		}
+		
+		//定义函数，输出x1--x2之间所有的偶数
+		//定义函数，输出x个helloWorld!
+		//定义函数，输出x1--x2之间所有能被3和5整除的数。
+	</script>
+</html>
