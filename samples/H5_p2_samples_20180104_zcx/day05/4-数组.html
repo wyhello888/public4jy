@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		//数组用来存储多个数据
+		//定义数组
+		var arr1 = ["岳齐","李静","栗浩博"];
+		var arr2 = new Array();//定义一个空的数组
+		var arr3 = new Array(10);//定义一个数组，数组的大小为10
+		var arr4 = new Array("赵小学",18);//定义一个数组，数组存放了二个数组
+		
+		//数组的类型  Object
+		console.log(typeof arr1);
+		
+		//数组的属性：length 返回数组的长度
+		console.log(arr1.length);
+		console.log(arr2.length);
+		console.log(arr3.length);
+		console.log(arr4.length);
+		
+		//数组中数据元素的访问  ,遍历
+		//arr1[0] arr1[1] arr2[0]
+		for(var i =0;i<arr1.length;i++)
+		{
+			console.log(arr1[i]);
+		}
+		for(var i  in arr1)
+		{
+			console.log(arr1[i]);
+		}
+		
+		//简单的输出数组中的数据元素
+		console.log(arr1);
+		
+		//pop() 方法用于删除并返回数组的最后一个元素。
+		var str = arr1.pop();
+		console.log(str);
+		console.log(arr1);
+
+
+
+	</script>
+</html>

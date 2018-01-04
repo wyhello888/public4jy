@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id = "ul1">
+			<li title="title0">0AAAAAAAAAAAAAAAA</li>
+			<li title="title1">1AAAAAAAAAAAAAAAA</li>
+			<li title="title2">2AAAAAAAAAAAAAAAA</li>
+			<li title="title3">3AAAAAAAAAAAAAAAA</li>
+			<li title="title4">4AAAAAAAAAAAAAAAA</li>
+			<li title="title5">5AAAAAAAAAAAAAAAA</li>
+		</ul>
+	</body>
+	<script type = "text/javascript" src = "js/jquery-3.1.1.js"></script>
+	<script type = "text/javascript">
+		//节点的查找   （元素节点，文本节点，属性节点）
+		var $li = $("#ul1>li:eq(0)");
+		
+//		var $li = $("#ul1>li:lt(1)");
+//		var $li= $("#ul1[title='title0']");
+//		var $li = $("#ul1>li:first-child");
+//		var $li = $("#ul1>li:first");
+
+		//获取文本节点 text()
+		var text = $li.text();
+		//alert(text);
+		
+		//获取属性节点 attr()
+		var attr = $li.attr("title");
+		alert(attr);
+		
+
+		
+	</script>
+</html>

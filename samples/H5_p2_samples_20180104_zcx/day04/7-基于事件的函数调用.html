@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#title{
+				width:120px;
+				height:40px;
+				background:lightslategray;
+			}
+			#menu{
+				width:120px;
+				height:150px;
+				background:cornflowerblue;
+				display: none;
+			}
+			#menu li{
+				width:120px;
+				height:30px;
+				background:darkgray;
+			}
+			#menu li:hover{
+				
+				background:cadetblue;
+			}
+			#box{
+				width:120px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="title"></div>
+			<div id="menu">
+				<ul>
+					
+				<li>子菜单的内容</li>
+				<li>子菜单的内容</li>
+				<li>子菜单的内容</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script>
+		//获取到标题的div
+		//获取到显示的菜单的div
+		var title = document.getElementById("title");
+		//console.log(typeof title);
+		var menu = document.getElementById("menu");
+		var box = document.getElementById("box");
+		//给title这个div添加一个鼠标移入的事件mouseover 
+		box.onmouseover = function()
+		{
+			menu.style.display = "block";//设置div显示
+		}
+		
+		//给title这个div，添加一个鼠标移出的事件mouseout
+		box.onmouseout = function()
+		{
+			menu.style.display = "none";//设置div隐藏
+		}
+	</script>
+</html>

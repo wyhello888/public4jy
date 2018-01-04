@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width:1000px;
+				height:150px;
+				border:1px solid red;
+				position: relative;
+			}
+			#ball{
+				width:100px;
+				height:100px;
+				background:blue;
+				border-radius: 50%;
+				position: absolute;
+				left:0px;
+				bottom:0px;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div id ="box">
+			<div id="ball"></div>
+		</div>
+		<input type="button" id ="start" value ="开始运动"　/>
+	</body>
+	<script type="text/javascript">
+		var ball = document.getElementById("ball");//获取运动的小球
+		var box = document.getElementById("box");//获取到盒子
+		var start = document.getElementById("start");//获取按钮
+		var x1 = box.clientWidth - ball.offsetWidth;//计算小球运动水平方向的临界点
+		
+		//按钮的点击事件
+		start.onclick = function()
+		{
+			
+			var x = ball.offsetLeft;//定义一个变量x,表示小球水平方向的偏移量
+			var v = 10;//定义一个变量，表示速度
+			
+			var timer = setInterval(function(){
+				x +=v;
+				//判断临界点，使小球停止运动
+				ball.style.left = x +"px";//设止ball的left值
+				if(x >=x1 || x <=0)
+				{
+					//clearInterval(timer);//清除定时器
+					v = -v;
+				}
+				console.log(v);
+				
+				//console.log(x);
+			},50);
+		}
+	</script>
+
+</html>

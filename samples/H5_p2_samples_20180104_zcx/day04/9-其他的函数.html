@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value ="点击我" id="btn1" />
+		<input type="button" value ="点击我"  id="btn2"  onclick ="fun()"/>
+	</body>
+	<script type="text/javascript">
+		//普通定义函数的方式
+		function add(x1,x2)
+		{
+			return x1+x2;
+		}
+		
+		//字面量的形式定义函数
+		var add2 = function(x1,x2){
+			return x1+x2;
+		};
+		
+		var num = add2(100,200);
+		console.log(num);
+		
+		//基于对象事件的函数，
+		var btn1 = document.getElementById("btn1");
+		btn1.onclick = function()
+		{
+			alert("hello,大家好，我是一个按钮!");
+		}
+		
+		//定义函数
+		function fun()
+		{
+			alert("hello,大家好，我是一个按钮!2");
+		}
+		
+		
+		//匿名函数
+		//(function(形式参数){函数体})(实际参数);
+/*		(function(){
+			alert("大家好，我是小学!");
+		})();
+		
+*/		
+/*		(function(str){
+			alert("大家好，我是" +str);
+		})("赵成学");
+*/
+		//递归函数:在函数据的定义过程中，函数调用自己
+		function age(x)
+		{
+			if(x == 1)
+			{
+				return 12;
+			}
+			else{
+				return age(x-1) +2;
+			}
+			
+		}
+		alert(age(5));
+
+/*		var  x= 12;
+		for(var i = 1;i<5;i++)
+		{
+			x += 2;
+		}
+		alert(x);
+*/
+	</script>
+</html>

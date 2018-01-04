@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{
+				width:300px;
+				height:400px;
+				border:1px solid blue;
+				text-align: center;
+			}
+			#text1,#text2,#result{
+				width:200px;
+				height:30px;
+				margin-top:10px;
+			}
+			#add,#sub,#multi,#divi,#cle{
+				width:40px;
+				height:30px;
+				margin-left:5px;
+				margin-top:20px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<label for="text1">第一个数：</label><input type="text" id="text1" /><br />
+			<label for="text2">第一个数：</label><input type="text" id="text2" /><br />
+			<label for="result">运算结果：</label><input type="text" id="result" /><br />
+			<input type="button" value =" + " id="add"/>
+			<input type="button" value =" - " id="sub"/>
+			<input type="button" value =" * " id="multi"/>
+			<input type="button" value =" / " id="divi"/>
+			<input type="button" value =" c "  id="cle"/>
+			<h1>小小计算器</h1>
+		</div>
+	</body>
+	<script>
+		//加运算
+		//获取到第1个文本框
+		//获取到第2个文本框
+		//获取到第3个文本框
+		//获取加按钮
+		
+		var text1= document.getElementById("text1");//获取到第1个文本框
+		//console.log(typeof text1);
+		var text2 = document.getElementById("text2");//获取到第2个文本框
+		var result = document.getElementById("result");//获取到第3个文本框
+		var add = document.getElementById("add");//获取加按钮
+		
+		//给加法按钮添加鼠标单击事件
+		add.onclick = function()
+		{
+			var num1 =Number(text1.value) ;//获取第1个文本框的值
+			var num2 =Number(text2.value) ;////获取第2个文本框的值
+			console.log(num1 + "---- " +num2 );
+			console.log(typeof num1 + "---" + typeof num2);
+			
+			var s = num1 + num2;
+			console.log("s = " +s);
+			
+			//将变量s的值放入到第3个文本框里
+			result.value  = s;
+		}
+		
+		//获取清空按钮
+		var cle = document.getElementById("cle");
+		cle.onclick = function()
+		{
+			text1.value ="";
+			text2.value ="";
+			result.value ="";
+		}
+		
+		
+	</script>
+</html>

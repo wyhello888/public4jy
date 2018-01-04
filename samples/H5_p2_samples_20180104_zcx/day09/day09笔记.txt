@@ -1,0 +1,61 @@
+1、在 HTML DOM 中，所有事物都是节点
+
+2、节点的三个属性值 nodeType, nodeName, nodeValue
+
+3、五种类型的节点 
+ 			nodeType  nodeName 	 	nodeValue
+元素节点		1			标签名		 null
+属性节点 	2			属性名		 属性值
+文本节点 	3			#text		 具体的文本值
+注释节点 	8			#comment	 具体的注释值
+文档节点 	9 			#document 	 null
+
+4、节点的关系
+*firstChild   ：获取元素节点的第一个子节点
+*lastChild    : 获取元素节点的最后一个子节点
+*nextSibling  ：获取元素节点的下一个兄弟节点
+*previousSibling :获取元素节点的上一个兄弟节点
+ownerDocument: 获取文档节点
+*parentNode	：获取父节点
+childNodes	：获取所有子节点（包括空格和换行）
+*children	：获取所有是元素节点的所有子节点（不包含空节点）
+
+*firstElementChild,  获取第一个子元素节点  IE6、7、8不兼容
+*lastElementChild,   获取最后一个子元素节点	IE6、7、8不兼容
+*nextElementSibling, 获取下一个元素节点	IE6、7、8不兼容
+*previousElementSibling  获取上一个元素节点	IE6、7、8不兼容
+
+
+
+
+5、节点的方法
+document.createElement("li")	创建一个元素节点  
+父节点.appendChild(子节点)		添加一个节点
+节点.remove();  					删除这个节点
+父节点.removeChild(node) : 移除父节点的某个子节点
+
+父节点.insertBefore(node,targetNode) : 向targetNode之前插入节点node
+父节点.replaceChild(newNode,oldNode) : newNode替换oldNode
+
+
+
+
+6、设置属性
+.操作符
+例如：	
+节点.className=值
+		节点.type=值
+		节点.value=值
+
+7、查找元素节点的方法
+
+document.getElementById('');	通过Id获取元素一个节点
+document.getElementsByTagName("");	通过标签名获取一组元素节点
+document.getElementsByName("");     通过name属性获取一组元素节点
+document.getElementsByClassName("");（新）通过class 获取一组元素节点	(IE6、7、8不兼容以上属性)
+document.querySelector( )(新)IE6、7、8不兼容以上属性
+document.querySelectorAll( )（新）IE6、7、8不兼容以上属性
+
+
+
+

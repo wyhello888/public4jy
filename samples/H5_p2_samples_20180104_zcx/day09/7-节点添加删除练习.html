@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" id="text1" />
+		<input type="button" id="btn1" value ="添加" />
+	</body>
+	<script>
+		var text1 = document.getElementById("text1");
+		var btn1 = document.getElementById("btn1");
+		btn1.onclick = function()
+		{
+			//创建一个ul
+			var ul = document.createElement("ul");
+			// 创建一个li
+			var li= document.createElement("li");
+			li.innerHTML = text1.value;
+			
+			var a = document.createElement("a");
+			a.href = "#";
+			a.innerHTML = "删除";
+			a.onclick = function()
+			{
+				//li.remove();
+				this.parentNode.remove();
+			}
+			
+			li.appendChild(a);
+			
+			ul.appendChild(li);
+			document.body.appendChild(ul);
+			
+			
+		}
+	</script>
+</html>

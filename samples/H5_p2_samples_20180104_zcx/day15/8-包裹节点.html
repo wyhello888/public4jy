@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		li{
+			list-style-position: inside;
+		}
+		</style>
+
+	</head>
+	<body>
+		<ul id = "ul1">
+			<li>0AAAAAAAAAAAA</li>
+			<li>1AAAAAAAAAAAA</li>
+			<li>2AAAAAAAAAAAA</li>
+			<li>3AAAAAAAAAAAA</li>
+		</ul>
+		<input type = "button" value ="包裹节点" id = "btn1"/>
+	</body>
+	<script type = "text/javascript" src = "js/jquery-3.1.1.js"></script>
+	<script type = "text/javascript">
+		//wrap() 为每一个元素都添加标签
+		//wrapAll() 用一个标签包含所有的元素
+		//wrapInner():只包裹文本
+		$("#btn1").click(function(){
+			//$("#ul1>li").wrap("<b></b>");
+			//$("#ul1>li").wrapAll("<b></b>");
+			$("#ul1>li").wrapInner("<b></b>");
+			
+			
+//			$("#ul1>li").wrap("<div></div>");
+//			$("div").css({"background-color":"yellow",
+//							"width":"200px",
+//							"height":"40px"});
+
+		})
+	</script>
+</html>

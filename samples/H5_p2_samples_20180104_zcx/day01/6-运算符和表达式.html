@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+		/*
+		 * js运算符和表达式  x+y  x>y
+		 
+		//算术运算符7个：+ - * /  %(模运算符,取余运算符) ++(自增运算符)  --(自减运算符)
+		//定义了变量x
+		var x = (100+200-50)*2/5;
+		console.log("x = " +x);
+		x = 100%3;  //给变量x重新赋值
+		console.log("x = " +x);
+		
+		x = 100%2;//给变量x重新赋值
+		console.log("x = " +x);
+		
+		x = 100; //给变量x重新赋值
+		x++; //给变量x的值增加1，
+		console.log("x = " +x);//101
+		
+		++x;//给变量x的值增加1
+		console.log("x = " +x);//102
+		
+		
+		//赋值运算符6个：=  +=    -=  *=   /=  %=
+		var x2 = 100;//定义一个变量，将100这个数据赋值给变量x2
+		
+		x2 += 200;//在变量x的值的基础上，加200
+		console.log("x2=" +x2);//300
+		x2 += 10;
+		console.log("x2=" +x2);//310
+		
+		x2 /= 5;
+		console.log("x2=" +x2);//62
+		 
+		x2 %=3;    // 62 /3 === 20 ...2
+		console.log("x2=" +x2);//2
+	*/	
+		//关系运算符（比较运算符）7个： 	 >  <  >=  <=  ==（等于）  !=(不等于)   ===（全等于，恒等于）
+		var x = 100;//定义一个变量，赋初始值为100
+//		var flag = (x>0);
+//		console.log("flag = " + flag);
+//		
+//		flag = (x <=0);
+//		console.log("flag = " + flag);
+//		
+//		flag = (x ==0);
+//		console.log("flag = " + flag);
+//		
+//		flag =(x !=0);
+//		console.log("flag = " + flag);
+//		
+//		flag = (x ==100);
+//		console.log("flag = " + flag);
+		console.group("1.js");
+		flag = (x =="100");
+		console.log("flag = " + flag);	//true
+		
+		var str = "100";
+		flag = (x == str);
+		console.log("flag = " + flag);	
+		
+		flag = (x === str);
+		console.log("flag = " + flag);
+		console.groupEnd();
+		console.log(1,2,"3");
+	</script>
+	
+</html>

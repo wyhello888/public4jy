@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="checkbox" class="c1"/>
+		<input type="checkbox" class="c1" />
+		<input type="checkbox" class="c1" />
+		<input type="checkbox" class="c1" />
+		<br />
+		<input type="button" value ="全选" id="checkAll" />
+		<input type="button" value ="取消全选" id="cancel"/>
+		<input type="button" value ="反选" id="reverse"/>
+		<hr />
+		<input type="checkbox"  id='ch'/>全选<br />
+		<input type="checkbox" class="c2" />
+		<input type="checkbox" class="c2" />
+		<input type="checkbox" class="c2" />
+		<input type="checkbox" class="c2" />		
+	</body>
+	<script>
+		//实现按钮的全选操作
+		var checkAll = document.getElementById("checkAll");
+		var cancel = document.getElementById("cancel");
+		var checkboxs = document.getElementsByClassName("c1");
+		var reverse = document.getElementById("reverse");
+		checkAll.onclick = function()
+		{
+			for(var i =0;i<checkboxs.length;i++)
+			{
+				checkboxs[i].checked = true;//设置选中状态
+			}
+		}
+		//取消全选的操作
+		cancel.onclick = function()
+		{
+			for(var i =0;i<checkboxs.length;i++)
+			{
+				checkboxs[i].checked = false;//设置取消选中状态
+			}
+		}
+		//反选的事件
+		reverse.onclick = function()
+		{
+			for(var i =0;i<checkboxs.length;i++)
+			{
+				/*	
+				if(checkboxs[i].checked)
+				{
+					checkboxs[i].checked = false;
+				}
+				else
+				{
+					checkboxs[i].checked = true;
+				}
+				*/
+				//!(checkboxs[i].checked);取当前多选框的选中状态的相反值，
+				checkboxs[i].checked = !(checkboxs[i].checked);
+			}
+		}
+		
+		//由一个多选框控制一组多选框的选中状态
+		var ch = document.getElementById("ch");
+		var checks= document.getElementsByClassName("c2");
+		//给checkbox添加点击事件
+		ch.onclick = function()
+		{
+		/*	if(ch.checked)//选中
+			{
+				for(var i =0;i<checks.length;i++)
+				{
+					checks[i].checked = true;
+				}
+			}
+			else//没有选中
+			{
+				for(var i =0;i<checks.length;i++)
+				{
+					checks[i].checked = false;
+				}
+			}
+		*/
+		//遍历一组checkbox
+			for(var i =0;i<checks.length;i++)
+			{
+				checks[i].checked = ch.checked;
+				//checks[i].checked = this.checked;
+			}
+		}
+		
+		
+		
+	</script>
+</html>

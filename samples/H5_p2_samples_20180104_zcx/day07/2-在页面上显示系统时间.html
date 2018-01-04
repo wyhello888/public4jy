@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width:300px;
+				height:50px;
+				background:cornflowerblue;
+				line-height: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<!--2017年12月25日  9:49:50-->
+		</div>
+	</body>
+	<script>
+	var box = document.getElementById("box");
+	//定义一个函数，显示系统时间
+		function showTime()
+		{
+			//定义一个日期对象
+			var d = new Date();
+			var str = "";
+			var year = d.getFullYear();//获取年
+			var month = d.getMonth()+1;//获取月
+			var day = d.getDay();//日
+			var hours = d.getHours();
+			var minute = d.getMinutes();
+			var second = d.getSeconds();
+			
+			
+			//调用格式化函数，
+			month = format(month);
+			day = format(day);
+			hours = format(hours);
+			minute = format(minute);
+			second = format(second);
+			
+			str = year +"年" + month +"月" + day +"日" + hours + ":" + minute + ":" + second;
+			box.innerHTML= str;//设置div的html的内容， 
+		}
+		//showTime();//调用这个函数
+		var timer = setInterval(showTime,1000);
+		
+		//封装一个函数，用于格式化 
+		function format(str)
+		{
+			if(str <10)
+			{
+				return "0"+str;
+			}
+			else{
+				return str;
+			}
+		}
+	</script>
+</html>

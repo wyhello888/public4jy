@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.c1{
+				background:blue;
+			}
+			div{
+				width:100px;
+				height:100px;
+				border:1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+	<input type="button" id="btn1" value ="button"/>
+	<input type="button" id="btn2" value ="button"/>
+	<input type="button"  id="btn3" value ="button"/>
+	<div></div>
+	</body>
+	<script type="text/javascript" src ="js/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$("#btn1").click(function(){
+			$("div").addClass("c1");
+		});
+		$("#btn2").click(function(){
+			$("div").removeClass("c1");
+		});
+		$("#btn3").click(function(){
+			$("div").toggleClass("c1");
+		});
+	</script>	
+	
+</html>

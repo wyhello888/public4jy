@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script type="text/javascript">
+		document.onclick = function(event)
+		{
+			var event = event || window.event;
+			//console.log("document被点击！");
+			console.log(event);
+			var x = event.clientX;//获取光标相对于浏览器可视窗口左边的位置
+			var y = event.clientY;//获取光标相对于浏览器可视窗口上边的位置
+			console.log(x +"--" +y);
+			
+			//生成一个div
+			var div = document.createElement("div");
+			div.style.width ="100px";
+			div.style.height="100px";
+			div.style.backgroundColor="blue";
+			document.body.appendChild(div);
+			
+			div.style.position="absolute";
+			div.style.left = x+"px";
+			div.style.top = y +"px";
+		}
+	</script>
+</html>

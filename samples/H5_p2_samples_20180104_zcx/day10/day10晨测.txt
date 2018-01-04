@@ -1,0 +1,32 @@
+1、获取元素节点的方法4个
+document.
+
+2、创建元素节点的方法1个
+document.createElement()
+
+3、添加节点的方法2个
+父.appendChild(子节点)
+父.insertBefore(新节点，位置节点)
+
+4、删除节点的方法2个
+子节点.remove();
+父节点.removeChild(子节点)
+
+5、列出节点之间关系的属性
+	第一个子节点 2个	
+		节点.firstChild
+		节点.firstElementChild
+	最后一个子节点 2个
+		节点.lastChild
+		节点.lastElementChild
+	父节点1个
+		parentNode
+	下一个兄弟节点2个	
+		nextSibling
+		nextElementSibling
+	上一个兄弟节点2个
+		previousSibling
+		previousElementSibling
+	获取所有的子节点2个
+		children
+		childNodes

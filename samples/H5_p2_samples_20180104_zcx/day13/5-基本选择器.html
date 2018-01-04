@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div1">1</div>
+		<div class ="c2">2</div>
+		<div class ="c2">3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+	</body>
+	<!--<script type="text/javascript" src ="js/jquery-3.2.1.js"></script>-->
+	<script type="text/javascript">
+		//基本选择器  id, 类， 标签（元素）选择器，群组选择器，全局选择器*
+		$("div").css({width:"100px",height:"50px",border:"1px solid red"});
+		
+		$("#div1").css({background:"yellow"});
+		
+		$(".c2").css({background:"red"});
+		
+		//$("#div1,.c2").css({marginTop:"20px"});
+		$("#div1,.c2").css("margin-top","30px");
+		
+		$("*").css({marginLeft:"30px"});
+		
+		
+	</script>
+</html>

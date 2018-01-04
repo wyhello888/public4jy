@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<ul>
+			<li>hello1</li>
+			<li>hello2</li>
+			<li>hello3</li>
+			<li>hello4</li>
+			<li>hello5</li>
+		</ul>
+	</body>
+	<script>
+		var ul = document.getElementsByTagName("ul")[0];
+		ul.addEventListener("click",function(){
+			console.log("ul");
+		},false);
+		
+		document.addEventListener("click",function(){
+			console.log("document");
+		},false);
+		
+	</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<img src="img/timg.jpg"/ id="img1">
+	</body>
+	<script type="text/javascript">
+		var img1 = document.getElementById("img1");
+		document.onclick = function()
+		{
+			var w = img1.offsetWidth;
+			
+			
+			w -= 20;
+			h -= 20;
+			img1.style.width = w +"px";
+//			img1.style.height = h +"px";
+		}
+	</script>
+</html>

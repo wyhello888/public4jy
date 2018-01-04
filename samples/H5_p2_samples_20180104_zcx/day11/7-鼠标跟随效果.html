@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width:30px;
+				height:30px;
+				background:green;
+				border-radius:50%;
+				position:absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+	<script type="text/javascript">
+	//鼠标移动事件
+		document.onmousemove = function(event)
+		{
+			var event = event || window.event;
+			console.log(event.clientX+"--" + event.clientY);
+		}
+	</script>
+</html>

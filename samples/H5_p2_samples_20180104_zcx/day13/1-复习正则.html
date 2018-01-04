@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		用户名:<input type="text" id ="text1" /><span id="span1">8-12位</span>
+		
+	</body>
+	<script>
+		var reg = /[a-zA-Z0-9]{8,12}/;
+		var reg2 = new RegExp("hello","ig");//构造函数定义一个正则
+		
+		
+		var text1 = document.getElementById("text1");
+		var span1 = document.getElementById("span1");
+		text1.onblur = function()
+		{
+			var str = text1.value;
+			var flag = reg.test(str);
+			if(flag)
+			{
+				span1.innerHTML="正确";
+			}
+			else
+			{
+				span1.innerHTML="不正确";
+			}
+			
+			
+		}
+		
+		
+		var reg1 =/(新疆|十九大|习近平)/g;
+		var str = "新疆是个好地方，十九大发表了习近平的 ";
+		str = str.replace(reg1,"*");
+		console.log(str);
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

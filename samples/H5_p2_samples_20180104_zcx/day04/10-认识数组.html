@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//变量：存储一个数据
+		var x = 25;
+		var userName = "赵小学";
+		//数组：存储多个数据的数据结构 
+		var arr1 =["赵小学","岳齐","李静","栗浩博"];//定义一个数组
+//		console.log(arr1[0]);
+//		console.log(arr1[1]);
+//		console.log(arr1[2]);
+//		console.log(arr1[3]);
+//		for(var i =0;i<4;i++)
+//		{
+//			console.log(arr1[i]);
+//		}
+		
+		var arr2 = [100,200,300,20];
+		
+		var arr3=["赵小学",100,"女"];
+		
+		var arr4 = new Array(10);//定义一个数组，数组的大小为10
+		var arr5 = new Array(10,20,30,40);//定义一个数组，数组的元素分别是10,20,30,40
+		
+		//数组的属性：length 可以返回数组的长度，（数组中数据元素的个数）
+//		console.log(arr1.length);
+//		console.log(arr2.length);
+//		console.log(arr3.length);
+//		console.log(arr4.length);
+//		console.log(arr5.length);
+		
+		//concat()方法用于连接两个或多个数组。
+		var arr6 = arr1.concat(arr2,arr3);
+//		for(var i =0;i<arr6.length;i++)
+//		{
+//			console.log(arr6[i]);
+//		}
+		//join()把数组中的所有元素放入一个字符串。
+		var str = arr1.join();
+		console.log(str);
+		console.log(typeof str);
+		console.log(typeof arr1);
+
+		
+	</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<select name="" id="selecte1">
+			<option value="">请选择省</option>
+			
+			<option value="">辽宁省</option>
+			<option value="">山西省</option>
+		</select>
+		<select name="" id="selecte2">
+			<option value="">请选择市</option>
+		</select>
+	</body>
+	<script type="text/javascript">
+		var city=[[],["营口市","朝阳市","铁岭市"],["运城市","大同市","太原市"]];
+		
+		var selecte1 = document.getElementById("selecte1");
+		var selecte2 = document.getElementById('selecte2');
+		selecte1.onchange = function()
+		{
+			console.log("change事件发生了。。。。");
+			selecte2.length =1;//强制设置第二个下拉列表的内容，清空
+			var index = this.selectedIndex;//selectedIndex ，返回下拉列表中被选项目的索引号。
+			console.log(index);
+			
+			var arr = city[index];
+			for(var i =0;i<arr.length;i++)
+			{
+				//console.log(arr[i]);
+				var option = document.createElement("option");
+				option.innerHTML = arr[i];
+				selecte2.appendChild(option);
+				
+			}
+		}
+	</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width:300px;
+				height:100px;
+				background:red;
+				color:yellow;
+				line-height: 50px;
+				text-align: center;
+			}
+			#btn1{
+				width:300px;
+				height:50px;
+				background:cadetblue;
+				margin-bottom: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button"  value ="幸运大抽奖" id="btn1"/>
+		<div id="box"></div>
+	</body>
+	<script>
+		//获取按钮
+		var btn1 = document.getElementById("btn1");
+		//获取div
+		var box = document.getElementById("box");
+		//按钮的点击事件
+		btn1.onclick = function()
+		{
+			var arr=["岳齐","李静","薛庆安","李斌斌","刘世奇","赵成学","王晓光"];
+			
+			//var index =随机生成一个下标 // 0 1 2 3 4 5 6 
+			var index = parseInt(Math.random()*arr.length);
+			box.innerHTML = arr[index];
+		}
+	</script>
+</html>

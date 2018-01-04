@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type = "text/javascript">
+		//原型
+		//定义一个空的构造函数
+		function Person()
+		{
+			
+		}
+		//属性和方法放入到原型对象中,prototype原型对象
+		Person.prototype.name= "zhaochengxue";
+		Person.prototype.age = 20;
+		Person.prototype.sayName = function()
+		{
+			alert("大家好，我叫" +this.name);
+		}
+		
+		var person1 = new Person();//实例化一个person1
+		var person2 = new Person();//实例化一个person2
+		
+		//alert(person1.name);//来自原型中的属性zhaochengxue
+		//person2.sayName();//实例化person2
+		
+		person1.name = "赵成学";//person1实例自己的属性 赵成学
+		//alert(person1.name);
+		//alert(person2.name);
+		
+		//hasOwnProperty()  检测一个属性，是否存在于实例 中，如果存在于实例中，返回值为true
+		//console.log(person1.hasOwnProperty("name"));
+		//console.log(person1.hasOwnProperty("age"));
+		//console.log(person2.hasOwnProperty("name"));
+		
+		//in 操作符   不管一个属性是实例属性或者是原型属性，都返回true
+		console.log("name" in person1);//实例属性 true
+		console.log("age" in person1);//原型属性true
+		console.log("name" in person2);//原型属性true
+		
+		console.log("sex" in person2);//false  既不是原型属性，也不是实例属性，返回false
+		
+		
+		
+		
+
+		
+	</script>
+</html>

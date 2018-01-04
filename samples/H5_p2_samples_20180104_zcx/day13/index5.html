@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class ="c1"><span>hellodiv1</span></div>
+		<div class ="c2">hellodiv2</div>
+		<div>hellodiv3</div>
+		<div>hellodiv4</div>
+		<div>hellodiv5</div>
+		<div></div>
+	</body>
+	<script type="text/javascript" src ="js/jquery-3.2.1.js"></script>
+		
+	
+	<script type="text/javascript">
+	/*
+		 4-内容过滤选择器4个
+	:contains(text)  选取含有文本内容的所有元素
+	:empty   选取不包含子元素或文本的所有空元素
+	:parent  选取含有子元素或文本的所有元素 
+	:has() 选取含有选择器所匹配的元素的元素 
+		 	
+
+	*/
+	$("div").css({width:"400px",
+				 height:"80px",
+				border:"1px solid red"});
+	$("div:contains(div5)").css({color:"blue"});
+	$("div:empty").css({background:"yellow"});
+	$("div:parent").css({background:"pink"});
+	$("div:has(span)").css({background:"red"});
+	$("div").css({lineHeight:"80px"});
+	</script>
+</html>

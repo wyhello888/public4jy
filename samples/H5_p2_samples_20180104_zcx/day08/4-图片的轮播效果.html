@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+			#box{
+				width:1000px;
+				height:350px;
+				border:1px solid blue;
+				margin:0 auto;
+				position: relative;
+				overflow: hidden;
+			}
+			#box ul{
+				width:6000px;
+				height:350px;
+				list-style: none;
+				position: absolute;
+				left:0px;
+				top:0px;
+			}
+			#box li{
+				width:1000px;
+				height:350px;
+				float:left;
+			}
+			#box img{
+				width:100%;
+				height:100%;
+			}
+			#box ol{
+				position: absolute;
+				left:200px;
+				bottom:20px;
+				width:200px;
+				height:20px;
+			}
+			#box ol li{
+				width:20px;
+				height:20px;
+				float:left;
+				background:blue;
+				list-style: none;
+				margin-left:10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul>
+				<li><img src="img/image1.jpg" alt="" /></li>
+				<li><img src="img/image2.jpg" alt="" /></li>
+				<li><img src="img/image3.jpg" alt="" /></li>
+				<li><img src="img/image4.jpg" alt="" /></li>
+				<li><img src="img/image5.jpg" alt="" /></li>
+				
+				<!--第1张图片的替身-->
+				<li><img src="img/image1.jpg" alt="" /></li>
+			</ul>
+			<ol>
+				<li style="background:red;"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ol>
+		</div>
+	</body>
+	<script type="text/javascript" src ="js/tween.js"></script>
+	<script type="text/javascript">
+		var w = document.documentElement.clientWidth;//获取浏览器窗口的可视宽度
+		console.log(w);
+		
+		var box = document.getElementById("box");
+		var ul = document.getElementsByTagName("ul")[0];//获取ul
+		var uLi = ul.getElementsByTagName("li");
+		
+		//动态设置宽度
+		box.style.width = w+"px";//设置盒子的宽度为浏览器的可视窗口的宽度
+		ul.style.width = w * uLi.length + "px";//ul的宽度
+		for(var i =0;i<uLi.length;i++)
+		{
+			uLi[i].style.width = w +"px";
+		}
+		
+		
+		
+		
+		//调用ul运动的函数
+		//move();
+		var timerMove = setInterval(move,4000);
+		
+		var index =0;//图片的索引值
+		
+		//////////////////////////////////////////		
+		//封装一个函数，完成小圆点的颜色变化
+		//获取ol 下的Li
+		var ol = document.getElementsByTagName("ol")[0];
+		var oLi = ol.getElementsByTagName("li");
+		function color()
+		{
+			//设置所有的li恢复默认颜色
+			for(var i =0;i<oLi.length;i++)
+			{
+				oLi[i].style.background="blue";
+			}
+			//与图片匹配的Li设置为红色
+			oLi[index].style.background="red";
+		}
+		
+		//////////////////////////////////////////		
+		//给ol下的Li添加点击事件
+		for(var i =0;i<oLi.length;i++)
+		{
+			// 循环给oLi添加点击事件
+			oLi[i].index = i;// index = 0 , index = 1,index =2, index = 3,index =4
+			oLi[i].onclick = function()
+			{
+				//需要找到点击的是哪一个li
+				index = this.index;
+//				if(index <=0)
+//				{
+//					index =0;
+//				}
+////				//console.log(index);
+//				move();
+				ul.style.left = -index *w+"px";
+				color();
+				
+				
+				
+			}
+		}
+		
+		
+		//////////////////////////////////////////
+		//鼠标移入停止运动，
+		box.onmouseover = function()
+		{
+			clearInterval(timerMove);
+		}
+		
+		//鼠标移出继续运动
+		box.onmouseout = function()
+		{
+			timerMove = setInterval(move,4000);
+		}
+		
+		
+		//////////////////////////////////////////
+		//ul的运动函数
+		function move()
+		{
+			var t= 0; //初始步数
+			var b= -w *index;//属性的初始值 0 -1000 -2000 -3000  -4000
+			var c= -w; //属性的变化量  结束值-初始值  -1000 - 0 
+			var d= 100;//总的步数
+			
+			var timer = setInterval(function(){
+				t++;
+				if(t >=d)
+				{
+					clearInterval(timer);
+					index ++;
+					if(index >=5)
+					{
+						index =0;
+					}
+					color();
+				}
+				ul.style.left = Tween.Linear(t,b,c,d)+"px";
+			},20);
+		}
+		
+		//
+		
+	</script>
+		
+	
+</html>

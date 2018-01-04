@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type = "text/javascript">
+	/*
+	 * 写一个创建div的构造函数，实例化后，调用方法可以实现在页面创建一个有宽高、颜色的div。
+（      提示：需要用到
+document.createElement和
+document.body.appendChild()     ）;
+	 */
+	
+	function Div(width,height,color)
+	{
+		this.width = width;
+		this.height = height;
+		this.color = color;
+	}
+	Div.prototype.show=function()
+	{
+		var div1 = document.createElement("div");
+		
+		div1.style.width =this.width + "px";
+		div1.style.height = this.height + "px";
+		div1.style.backgroundColor = this.color;
+		
+		document.body.appendChild(div1);
+	}
+	
+	var div1 = new Div(100,200,"red");
+	var div2 = new Div(200,100,"blue");
+	div1.show();
+	div2.show();
+	
+	</script>
+</html>

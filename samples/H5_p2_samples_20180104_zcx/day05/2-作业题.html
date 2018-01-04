@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//自定义函数，完成 f(x) = 4x2+3x+2，使用户输入x的值，能得到相应的计算结果。  fun(x)
+		function fun(x)
+		{
+			//var y = 4*x*x + 3*x +2;
+			y = 4 * Math.pow(x,2) + 3*x +2;
+		
+			return y;
+		}
+		
+		var num = fun(5);
+		alert(num);
+		num = fun(6);
+		alert(num);
+	</script>
+</html>

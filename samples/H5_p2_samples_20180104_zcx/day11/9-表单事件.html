@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			input{
+				width:200px;
+				height:30px;
+			}
+		</style>
+	</head>
+		<script type="text/javascript">
+		window.onload = function()
+		{
+		//文本框获取焦点时，提示8--12位字符
+		//失去焦点时，验证这个用户名是否是符合要求
+		var userName = document.getElementById("userName");
+		var span1 = document.getElementById("span1");
+		userName.onfocus = function()
+		{
+			span1.innerHTML = "请输入8-12位字符串";
+			userName.value ="";
+		}
+		userName.onblur = function()
+		{
+			var str = userName.value;
+			if(str.length >=8 && str.length <=12)
+			{
+				span1.innerHTML = "用户名正确!"
+				
+			}
+			else
+			{
+				span1.innerHTML = "用户名长度不正确!"
+			}
+		}			
+		}
+
+		
+	</script>
+	<body>
+		<form action="" method="post">
+			<label for="userName">用户名：</label>
+			<input type="" name="userName" id="userName" value="" required="required"/>
+			<span id ="span1"></span>
+			
+		</form>
+	</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+				list-style: none;
+			}
+			span{
+				display:inline-block;
+				width: 100px;
+				height: 100px;
+				border: 3px solid wheat;
+				background: chocolate;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</body>
+	<script type="text/javascript">
+	var span=document.getElementsByTagName("span");
+	for(var i=0;i<span.length;i++){
+		span[i].index=i;
+		span[i].onmouseover=function(){
+			var str=new fun("span",this.index,"red");
+			str.sayName();
+		}
+		span[i].onmouseout=function(){
+			var str=new fun("span",this.index,"red");
+			str.say();
+		}
+		
+		
+	}
+		function fun(name,inde,color){
+			this.name=name;
+			this.inde=inde;
+			this.color=color;
+		}
+		fun.prototype.sayName=function(){
+			var span=document.getElementsByTagName(this.name);
+			span[this.inde].innerHTML="a";
+			span[this.inde].style.backgroundColor=this.color
+		}
+		fun.prototype.say=function(){
+			var span=document.getElementsByTagName(this.name);
+			span[this.inde].innerHTML="";
+			span[this.inde].style.backgroundColor="chocolate"
+		}
+		
+	</script>
+</html>

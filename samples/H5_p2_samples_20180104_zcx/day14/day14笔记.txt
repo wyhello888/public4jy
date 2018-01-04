@@ -1,0 +1,33 @@
+一、设置元素及内容 
+	html()
+	text()
+	val()
+
+二、设置样式
+	addClass()
+	removeClass()
+	toggleClass()
+	css()
+三、属性操作
+	attr()
+	removeAttr()
+	prop()
+	removeProp()
+	
+四、节点操作
+	创建
+	
+	插入
+	
+	删除
+	
+	复制
+	
+	替换
+	
+五、基础事件
+	绑定事件
+	简定事件
+	复合事件
+
+		

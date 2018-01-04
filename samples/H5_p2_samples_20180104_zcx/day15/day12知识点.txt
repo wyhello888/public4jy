@@ -1,0 +1,10 @@
+1、js对象与jQuery对象的转换方法  $(js对象)  jQuery对象[0]  jQuery对象.get(0)
+2、获取文本节点的方法 text()
+3、获取属性的方法attr()
+4、添加节点的8个方法
+ append() appendTo() prepend()  prependTo()  after() insertAfter() before() insertBefore()
+5、删除节点的方法
+remove() detach() empty()
+6、克隆节点的方法 clone() clone(true)
+7、替换节点的方法 replaceWith() replaceAll()
+8、包裹节点的方法wrap()  wrapAll() wrapInner()

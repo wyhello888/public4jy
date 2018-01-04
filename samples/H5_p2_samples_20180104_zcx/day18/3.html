@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>抽奖转轮</title>
+	<style type="text/css">
+    table{
+    	border:blue;
+    	width: 300px;
+    	height: 300px;
+    }
+    td{width: 100px;height: 100px;}
+
+	</style>
+</head>
+<body>
+	<table border="1" cellspacing="0" id="tab">
+           <tr>
+              <td id="0"></td>
+              <td id="1"></td>
+              <td id="2"></td>
+           </tr>
+           <tr>
+              <td id="3"></td>
+              <td id="tb" onclick="add()"></td>
+              <td id="4"></td>
+           </tr>
+           <tr>
+              <td id="5"></td>
+              <td id="6"></td>
+              <td id="7"></td>
+           </tr>
+	</table>
+</body>
+<script type="text/javascript">
+    var tds=document.getElementsByTagName('td');
+    var ts=document.getElementById('tb');
+    ts.style.backgroundColor="blue"
+function add(){    
+   for(var i=0;i<tds.length;i++){
+   	tds[i].onmouseover=function (){
+           		  
+   		this.style.backgroundColor="red";
+   	}
+   	var zi=["你中了","10Q币","50元红包","1克拉","鲜花一朵"]
+   		
+   		for (var j=0;j<zi.length;j++) {   			
+   			tds[i].onclick=function (){
+		   		var sgu=Math.floor(Math.random()*5);
+		   		this.innerHTML=zi[sgu];
+   		    }   		       			
+   		}
+   }
+}
+
+
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id = "ul1">
+			<li>苹果</li>
+			<li>西瓜</li>
+			<li>香蕉</li>
+		</ul>
+		<input type = "button" value = "节点的替换" id ="btn1">
+	</body>
+	<script type ="text/javascript" src = "js/jquery-3.1.1.js"></script>
+	<script type ="text/javascript">
+		//节点的替换  replaceWith()  replaceAll()
+		//生成一个新的节点
+		//节点A替换节点B    B.replaceWith(A)   A.replaceAll(B)   
+		var $li=$("<li>猕猴桃</li>");
+		
+		$("#btn1").click(function(){
+			//$("#ul1>li:eq(1)").replaceWith($li);
+			
+			$li.replaceAll("#ul1>li:eq(1)");
+		})
+		
+		
+	</script>
+</html>

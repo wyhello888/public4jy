@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script type = "text/javascript">
+	
+	
+	//Number String Boolean Null Undefined Object
+	var array = new Array();
+	var str1 = new String("hello");
+	date= new Date();
+	
+	console.log();
+	//自定义一个对象person
+	var person = new Object();
+	console.log(typeof person);//object
+	
+	//添加属性
+	person.name="赵成学";
+	person.age =18;
+	
+	//添加方法
+	person.sayName= function()
+	{
+		alert("大家好，我叫" + this.name + "年龄："  + this.age);//this表示当前对象person
+	}
+	
+	//调用 person对象的方法
+	//person.sayName();
+	
+	//获取person的属性  方法1: 对象名.属性名  .操作符获取属性      方法2:["属性名"]  对象名["属性名"]
+	//alert(person.name);
+	//alert(person["name"]);
+	
+	//删除属性
+	//delete person.name;
+	//alert(person["name"]);//undefined
+	
+	//设置对象的属性
+	person.name = "赵小学";
+	//alert(person["name"]);
+	
+	//for...in 循环遍历对象的属性和方法
+	for(var key  in person)
+	{
+		document.write(key + "---------" + person[key]+ "<br/>");
+	}
+//定义一个对象，student  姓名，年龄， 性别， 
+//陈亮  13501047803
+	
+	
+	
+	
+
+	</script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+/*		document.write("HelloEveryone!<br/>");
+		document.write("HelloEveryone!<br/>");
+		document.write("HelloEveryone!<br/>");
+		document.write("HelloEveryone!<br/>");
+		document.write("HelloEveryone!<br/>");
+		document.write("HelloEveryone!<br/>");
+		document.write("HelloEveryone!<br/>");
+		document.write("HelloEveryone!<br/>");
+		document.write("HelloEveryone!<br/>");
+		document.write("HelloEveryone!<br/>");
+		*/
+		//表达式1：定义一个循环变量i  var i = 1;
+		//表达式2：循环条件   i<=10
+		//表达式3：循环增量
+		//循环语句注意点：1保证循环运行起来，2保证循环能退出
+		
+		for(var i = 1;i<=5;i++)
+		{
+			document.write(i +"HelloEveryone!<br/>");
+		}
+		document.write("******************<br/>");
+		
+//		var i = 1;
+//		 判断条件
+//		 条件满足执行语句;
+//		 变量做加运算
+		for(var i = 1;i<=10;i++)
+		{
+			document.write(i+" ");
+		}
+		document.write("<br/>");
+		
+		for(var i = 100;i>=1;i--)
+		{
+			if(i%2 ==0)
+			{
+				document.write(i+" ");
+			}
+			
+		}
+		document.write("<br/>");
+		//输出1-100之间，能同时被2和5整除的数据
+		for(var i =1;i<=100;i++)
+		{
+			if(i%3 ==0 && i%5 ==0)
+			{
+				document.write(i+" ");
+			}
+		}
+		document.write("<br/>");
+	</script>
+</html>

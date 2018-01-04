@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			ul li{
+				list-style: circle;
+			}
+			.c1{
+				color:blue;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<input type="text"  id="text1" />
+		<input type="button" id="btn1" value ="添加一条信息" />
+		<ul>
+			<li>一路一桥总关情 习近平指“路”脱贫攻坚</li>
+			<li>“榜样面对面”党的十九大精神宣讲 领航新征程</li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		var text1 = document.getElementById("text1");//获取文本框节点
+		var btn1 = document.getElementById("btn1");//获取按钮节点
+		var ul = document.getElementsByTagName("ul")[0];//获取ul这个元素节点
+		
+		//按钮的事件
+		btn1.onclick = function()
+		{
+			//获取文本框里的字符串
+			var str = text1.value;
+			//console.log(str);
+			//创建一个元素节点
+			var li = document.createElement("li");
+			//console.log(li.nodeName);
+			li.innerHTML= str;
+			//添加属性class = "c1"
+			li.className= "c1";
+			//追加一个节点	父元素.appendChild(子节点)
+			ul.appendChild(li);
+			
+		}
+	</script>
+</html>

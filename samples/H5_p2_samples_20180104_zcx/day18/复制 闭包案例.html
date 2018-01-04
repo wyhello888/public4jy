@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				display: inline-block;
+				border: 1px dashed black;
+				width: 100px;
+				height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div><span></span>
+		<script type="text/javascript">
+			var oDiv = document.getElementsByTagName("div");
+			var oSpan = document.getElementsByTagName("span")[0];
+			for(var i=0 ; i<oDiv.length ; i++){
+				
+				var div = oDiv[i];
+				(function(dom,a)
+				{
+					dom.onclick = function(){
+					dom.style.backgroundColor ="blue";
+					oSpan.innerHTML = "您点击了第"+a+"个div"
+				}
+				})(div,i);		}
+			function ran(min,max){
+				return parseInt(Math.random()*(max-min+1)+min);
+			}
+		</script>
+	</body>
+</html>

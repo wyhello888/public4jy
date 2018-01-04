@@ -1,0 +1,23 @@
+1、设置一个已知ID的DIV的html内容为helloDiv，字体颜色设置为黑色
+	div.innerHTML="helloDiv";
+	div.style.color = "black";
+2、如何获取到页面中所有的checkbox怎么做？
+将这一组checkbox设置为选中状态
+	var checks = document.getElementsByTagName("input");
+	var checks = document.getElementsByClassName("c1");
+	var checks = document.getElemetnsByName("check");
+	for(var i =0;i<checks.length;i++)
+	{
+		checks[i].checked = true;
+	}
+	
+3、数组添加尾部数据元素的方法 push()
+	尾部删除数据元素的方法  pop()
+	头部添加数据元素的方法 unshift()
+	头部删除数据元素的方法 shift()
+
+4、split() join() 的区别   
+	切割数组
+	数组转换为字符串
+5、如何获取浏览器页面的可视宽度。
+	var w = document.documentElement.clientWidth;

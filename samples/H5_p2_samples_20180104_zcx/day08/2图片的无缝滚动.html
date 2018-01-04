@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width:800px;
+				height:300px;
+				border:1px solid red;
+				margin:0 auto;
+				position: relative;
+				overflow: hidden;
+				}
+			.box li{
+				float:left;
+				width:400px;
+				height:300px;
+			}
+			.box img{
+				width:100%;
+				height:100%;
+			}
+			.box ul{
+				width:2000px;
+				height:300px;
+				list-style: none;
+				position: absolute;
+				left:0px;
+				top:0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul>
+				<li><img src="img/img1.jpg"/></li>
+				<li><img src="img/img2.jpg" alt="" /></li>
+				<li><img src="img/img3.jpg" alt="" /></li>
+				<li><img src="img/img4.jpg" alt="" /></li>
+				<li><img src="img/img5.jpg" alt="" /></li>
+				<!--复制一份图片-->
+				<!--<li><img src="img/img1.jpg"/></li>
+				<li><img src="img/img2.jpg" alt="" /></li>
+				<li><img src="img/img3.jpg" alt="" /></li>
+				<li><img src="img/img4.jpg" alt="" /></li>
+				<li><img src="img/img5.jpg" alt="" /></li>-->
+			</ul>
+			
+		
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var box = document.getElementsByClassName("box")[0];//获取父元素
+		var ul = document.getElementsByTagName("ul")[0];
+		var lis = ul.getElementsByTagName("li");
+
+		
+		ul.innerHTML += ul.innerHTML;//复制ul的html
+		var w = lis[0].offsetWidth;//获取一个li的宽度
+		ul.style.width = w * lis.length + "px";//设置ul的宽度
+		
+		
+//		console.log(box);
+//		console.log(ul);
+		var x = ul.offsetLeft;//获取ul相对于父元素水平方向的偏移量
+		var v = 10;//定义一个速度
+		var timer = 0;//定义一个定时器变量
+
+		// 封装一个运动的函数，
+		function move()
+		{
+			 timer = setInterval(function(){
+				x -=v;
+				if(x <= -ul.offsetWidth/2)
+				{
+					x =0;
+				}
+				ul.style.left = x +"px";
+			},50);			
+		}
+		move();
+		//鼠标移入，停止运动 
+		ul.onmouseover = function()
+		{
+			clearInterval(timer);
+		}
+		//鼠标移出，继续运动
+		ul.onmouseout = function()
+		{
+			move();
+		}
+	</script>
+</html>

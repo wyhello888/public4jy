@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value ="设置内容"/>
+		<input type="text" id="text1"/>
+		<div></div>
+	</body>
+	<script type="text/javascript" src ="js/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		//设置html的内容
+		$("input[type=button]").click(function(){
+			//$("div").html("<h1>helloDiv</h1>");
+			//$("div").text("HelloDiv!!22");
+			
+			var str = $("#text1").val();//获取文本框里的值
+			$("div").html(str);
+			
+			$("#text1").val("");//清空文本框
+			
+		});
+		
+	</script>
+</html>

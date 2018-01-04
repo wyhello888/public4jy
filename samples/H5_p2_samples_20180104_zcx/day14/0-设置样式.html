@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				background:pink;
+			}
+			.c1{
+				background: yellow;
+				width:100px;
+				height:100px;
+				border:1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" id="btn1" value="设置样式" />
+		<input type="button" id="btn2" value="删除样式" />
+		<input type="button" id="btn3" value="切换样式" />
+		<div>hll</div>
+		<div>hll</div>
+		
+	</body>
+	<script src="js/jquery-3.2.1.js"></script>
+	<script>
+//		$("#btn1").click(function(){
+////			$("div").css({width:"200px",height:"100px",border:"1px solid red",margin:"20px"});
+//			$("div").addClass("c1");
+//		});
+//		
+//		$("#btn2").click(function(){
+//			$("div").removeClass("c1");
+//		});
+		$("#btn1").click(function(){
+			$("div").addClass("c1");
+		});
+	</script>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		table{
+			border:1px solid blue;
+			border-collapse: collapse;
+			width:500px;
+		}
+		td{
+			border:1px solid blue;
+		}
+		.c1{
+			background-color: transparent;
+			border:none;
+		}
+		
+		</style>
+	</head>
+	<body>
+		姓名：<input type = "text" id ="text1"><br/>
+		性别：<input type = "radio" value = "男" name="name1" checked class="c3">男
+		<input type = "radio" value = "女" name="name1" class="c3">女
+		<br/>
+		<input type = "button"  value ="提交" id ="btn1"/>
+		<input type = "button"  value ="删除全部" id ="btn2"/>
+		<input type = "button"  value ="删除选中" id ="btn3"/>
+		<table id = "table1">
+			<tr>
+				<td>序号</td>
+				<td><input type ="checkbox" id = "ch1"></td>
+				<td>姓名</td>
+				<td>性别</td>
+				<td>操作</td>
+			</tr>
+			
+		</table>
+	</body>
+	<script type = "text/javascript" src = "js/jquery-3.1.1.js"></script>
+	<script type = "text/javascript">
+        var n =1;
+		$("#btn1").click(function(){
+			var tr=$("<tr></tr>");
+			var td1 = $("<td></td>");
+			var td2 = $("<td></td>");
+			var td3 = $("<td></td>");
+			var td4 = $("<td></td>");
+			var td5 = $("<td></td>");
+			
+			td1.html(n++);
+			$("<input type = 'checkbox' class='c2'>").appendTo(td2);
+			td3.html($("#text1").val());
+			
+			var str = $(".c3:checked").val();
+			td4.html(str);
+			//alert(str);
+			
+			var btn= $("<input type = 'button' value='删除' class='c1'>");
+			btn.appendTo(td5);
+			btn.click(function(){
+				$(this).parent().parent().remove();
+			})
+			
+			//tr
+			tr.append(td1,td2,td3,td4,td5);
+			$("#table1>tbody").append(tr);
+			
+			
+			
+		})
+		//全选功能
+		$("#ch1").click(function(){
+			var flag = $(this).prop("checked");//获取
+			$(".c2").prop("checked",flag );
+			
+		})
+		//删除全部
+		$("#btn2").click(function(){
+			$("tr:gt(0)").remove();
+		})
+		
+		//删除选中
+		$("#btn3").click(function(){
+			$(".c2:checked").parent().parent().remove();
+		})
+	</script>
+</html>

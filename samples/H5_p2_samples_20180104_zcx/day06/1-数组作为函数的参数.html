@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+	
+		var arr= new Array(10);//定义一个数组，数组的大小为10
+		//随机给数组元素赋值 
+//		arr[0]=parseInt(Math.random()*100);
+//		arr[1] = parseInt(Math.random()*100);
+		//随机给数组元素赋值
+		for(var i =0;i<arr.length;i++)
+		{
+			arr[i] = parseInt(Math.random()*100);
+		}
+		
+		//调用函数，输出数组中的数据元素
+		print(arr);//arr是实际参数
+		
+		
+		var arr2 =[11,22,33];
+		print(arr2);//调用函数，输出数组中的数据元素 arr2是实际参数
+		output(arr);
+		output(arr2);
+		var num = sum(arr2);
+		document.write("sum = " + num+"<br/>");
+
+		var num = max(arr);//调用最大值的函数
+		alert(num);
+		num = max(arr2);//调用最大值的函数
+
+
+
+	//封装一个函数，返回最大值
+		function max(array)
+		{
+			//求最大值
+			var m = array[0];
+			for(var i =0;i<array.length;i++)
+			{
+				if(m < array[i])
+				{
+					m = array[i];
+				}
+			}
+			//document.write("m = " + m+"<br/>");
+			return m;
+			
+		}
+
+
+
+		
+		//封装一个函数，输出数组中的数据元素  ,a 是形式参数
+		function print(array)
+		{
+			//输出数组中的数据元素
+			for(var i =0;i<array.length;i++)
+			{
+				document.write(array[i] + "\t");
+			}
+			document.write("<br/>");			
+		}
+		
+		//自定义函数，输出数组中所有的偶数。	函数名output()
+		function output(array)
+		{
+			for(var i =0;i<array.length;i++)
+			{
+				if(array[i] %2 ==0)
+				{
+					document.write(array[i] +"\t");
+				}
+			}
+			document.write("<br/>");
+		}
+		//自定义函数，返回数组中所有的数据的和。	函数名sum()
+		function sum(array)
+		{
+			var s =0;//定义的变量表示和
+			for(var i =0;i<array.length;i++)
+			{
+				s = s + array[i];
+			}
+			return s;
+			
+		}
+		//自定义函数，返回数组中的最大值  	  函数名max()
+		
+	</script>
+</html>
