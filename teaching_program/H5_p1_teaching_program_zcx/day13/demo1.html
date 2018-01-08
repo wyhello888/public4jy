@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+			div{
+				width:100px;
+				height:100px;
+				background:red;
+				border:1px solid green;
+				border-radius: 50%;				
+				animation-name:myani;				
+				animation-duration:5s;
+				animation-iteration-count:infinite;
+				animation-direction:alternate;				
+			}
+			@keyframes myani{
+				from{
+					background:red;
+					transform: translate(0,0);					
+				}
+				to{
+					background:blue;
+					transform: translate(500px,0);
+				}
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

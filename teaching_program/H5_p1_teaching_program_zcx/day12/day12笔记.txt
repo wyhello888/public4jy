@@ -1,0 +1,122 @@
+一、CSS3选择器
+1、结构伪类选择器：css3新设计的选择器，它利用文档结构树实现元素的过滤，通过文档结构的相互关系来匹配特定的元素，从而减少文档内class属 性和
+ID属性的定义，使得文档更加简洁。
+	(1):root	匹配所在文档的根元素。在html文档中，根元素是html,此时该选择器与html标签选择器匹配的内容相同。
+	
+	(2)E:nth-child(n)	选择所有在其父元素中第n个位置,匹配E的子元素
+		参数n可以是数字(1,2,3),关键字(odd,even)和公式(2n,2n+1)
+		tr:nth-child(3)匹配所有表格里排第3行的tr元素
+		tr:nth-child(2n+1)匹配所有表格的奇数行
+		
+	(3)E:nth-last-child(n) 选择所在其父元素中倒数第n个位置的匹配E的子元素
+		例如：li:nth-last-child(2)
+	
+	(4)E:nth-of-type(n)	选择所在有其父元素中，同类型的第n个位置， 匹配E的    子元素
+		例如：li:nth-of-type(2)
+	
+	(5)E:nth-last-of-type(n)	选取所有在其父元素中同类型倒数第n个位置的匹配E的子元素。
+		例如：li:nth-last-of-type(2)
+	
+	(6)E:last-child	选择位于其父元素最后一个位置，且匹配E的子元素
+		例如：li:last-child
+		
+	
+	(7)E:first-of-type	选择在其父元素中匹配E的第一个同类型的子元素
+		例如：li:first-of-type
+	
+	(8)E:only-child	选择其父元素中只包含同类型的子元素，且该子元素匹配E
+		例如：div:only-child
+	(9)E:empty	选择匹配E的元素，且该元素不包含子节点
+		例如：div:empty
+	
+	E:last-of-type:
+	E:first-child:
+2、UI伪类选择器
+	(1)E:enabled	匹配所有可用的UI元素
+	例如：input[type="button"]:enabled 
+	(2)E:disabled	匹配所有不可用的UI元素
+	例如：input[type="button"]:disabled
+	(3)E:checked	匹配所有已选中的UI元素
+	例如：input[type="checkbox"]:checked
+	
+3、属性选择器
+	(1)E[attr]	选择匹配E的元素，且该元素定义了attr属性。
+		例如:img[title]
+	(2)E[attr="value"]	选择匹配E的元素，且该元素定义了attr的属性值为value
+		例如：input[type="button"]
+
+	[attribute]	用于选取带有指定属性的元素。
+	[attribute=value]	用于选取带有指定属性和值的元素。
+	[attribute~=value]	用于选取属性值中包含指定词汇的元素。
+	[attribute|=value]	用于选取带有以指定值开头的属性值的元素，该值必须是整个单词。
+	[attribute^=value]	匹配属性值以指定值开头的每个元素。
+	[attribute$=value]	匹配属性值以指定值结尾的每个元素。
+	[attribute*=value]	匹配属性值中包含指定值的每个元素。
+
+4、否定伪类选择器
+	(1)E:not(selector)	选择匹配E的选有元素,有过滤掉匹配selector的任意元素
+		div:not(.c1)  选择类名不是c1的div
+5、伪元素选择器
+	(1):first-line选择元素的第一行，比如说改变每个段落的第一行文本的样式，我们就可以使用这个
+	(2):first-letter	为某个元素中的文字的首字母或第一个字使用样式
+	
+	(3):before	在某个元素之前插入一些内容。 
+	(4):after	在某个元素之后插入一些内容。
+
+	:before和:after这两个主要用来给元素的前面或后面插入内容，这两个常用"content"配合使用，见过最多的就是清除浮动
+
+	(5)::selection用来改变浏览网页选中文的默认效果
+
+
+三、CSS3变形效果  transform
+	transform实现了变型功能，它可以旋转，缩放和移动元素。
+	语法：transform:none|	<transform-function>[<transform-function>]
+	transform属性的初始值是none,适用于块元素和行内元素。
+	变型函数包括translate(),scale(),scaleY(),scaleX(),rotate(),skewX(),skewY()和skew()等。
+	translate():移动元素对象，即基于X和Y坐标重新定位元素的位置。该函数包括两个参数值，分别用来定义x轴和y轴的相对于原位置的偏移量。
+	如果省略了第2个参数，默认为0。
+	例如：
+	div:hover{
+				transform: translate(10px,0);
+			}
+	
+	scale():缩放元素对象，可以使任意元素对象尺寸发生变化，取值包括正数，负数以及小数。该函数包涵二个参数，分别用来表示宽度
+	和高度缩入比例。如scale(2)
+	例如：
+	div:hover{
+				transform:scale(2);
+			}
+	rotate():旋转元素对象，取值为一个度数值。rotate(90deg) 顺时针旋转90度。
+	div:hover{
+				transform:rotate(45deg);
+			}
+	skew():倾斜元素对象，取值为一个度数值。该函数包括两个参数，分别用来x轴和y轴坐标倾斜的角度。
+	
+
+	
+	不同浏览器前缀：
+	-webkit- 支持Chrome、Safari浏览器
+	-moz- 支持Firefox浏览器
+	-o- 支持opera浏览器
+	-ms- 支持IE9及以上浏览器
+	
+	css变形的原点默认为对象的中心点，如果要改变这个中心点，可以使用transform-origin这个属性进行定义。
+	如设置中心点为右上角
+	transform-origin:top right;
+	
+四、平滑过渡效果
+	transition-property:
+	transition-duration:
+	transition-delay:
+		div{
+				background:red;
+				width:400px;
+				height:400px;
+				
+			}
+			div:hover{
+				transform: rotate(45deg);
+				transition-property: transform;
+				transition-duration: 5s;
+				transition-delay: 2s;
+			}

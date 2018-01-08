@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			/*body{
+				background-image: url(img/mainbg2.jpg) no-repeat;
+				background-size:cover;
+			}*/
+			*{
+				margin:0px;
+				padding:0px;
+			}
+			body{
+				background-color:#CAE7F9;
+			}
+			#box{
+				width:1000px;
+				margin:0 auto;
+				
+			}
+			#logo{
+				width:100%;
+				background:white;
+				margin-top:40px;
+				height:88px;
+			}
+			#logo img{
+				/*width:100%;*/
+				width:550px;
+				height:70px;
+				vertical-align: middle;
+				/*display: block;*/
+				margin-top:10px;
+				margin-left:10px;
+			}
+			#banner{
+				width:100%;
+				/*height:80px;*/
+				height:56px;
+				
+			}
+			#banner img{
+				width:1000px;
+				height:56px;
+			}
+			#regist{
+				width:100%;
+				background:white;
+				padding-top:10px;
+				
+				
+			}
+			p{
+				font-size:18px;
+				color:#75BAE3;
+				text-indent: 30px;
+				
+			}
+			#div1{
+				width:950px;
+				margin:0 auto;
+				border:1px solid lightgray;
+				/*height:500px;*/
+				padding-top:20px;
+				margin-top:10px;
+				padding-bottom: 20px;
+			}
+			label{
+				display: inline-block;
+				width:150px;
+				text-align: right;
+				color:#75BAE3;
+				font-size:16px;
+				margin-left:100px;
+				margin-top:30px;
+				margin-right:10px;
+				
+			}
+			#text1{
+				width:400px;
+				height:40px;
+			}
+			#s1{
+				width:200px;
+				height:30px;
+			}
+			#IDcard{
+				width:400px;
+				height:30px;
+			}
+			#tel,#msg,#pwd,#pwd2{
+				width:200px;
+				height:25px;
+			}
+			#div1 span{
+				color:orange;
+				font-size:15px;
+			}
+			#btn1{
+				width:80px;
+				height:35px;
+				color:white;
+				background:orange;
+				margin-left:300px;
+				margin-top:10px;
+			}
+			#btn2{
+				width:80px;
+				height:35px;
+				color:white;
+				background:#21C258;
+				margin-top:10px;
+				margin-left:20px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="logo">
+				<img src="img/logo_xkc.png" alt="" />
+			</div>
+			<!--<div id="banner">
+				<img src="img/subbigpic.png" alt="" />
+			</div>-->
+			<div id="regist">
+				<p>个人注册</p>
+				<div id="div1">
+					<label for="text1">姓名:</label>
+					<input type="text" id="text1" /><br />
+					<label for="s1">证件类型:</label>
+					<select name="" id="s1">
+						<option value="">请选择</option>
+					</select>
+					<br />
+					<label for="IDcard">证件号码:</label>
+					<input type="text" id="IDcard" /><br />
+					<label for="tel">手机号码:</label>
+					<input type="text" id="tel" /><br />
+					<label for="msg">短信验证码:</label>
+					<input type="text" id="msg" /><span>点击获取短信验证码</span><br />
+					<label for="pwd">密码:</label>
+					<input type="text" id="pwd" /><br />
+					<label for="pwd2">确认密码:</label>
+					<input type="text" id="pwd2" /><br />
+					<input type="button" value ="返回" id="btn1"/>
+					<input type="button" value ="提交" id="btn2"/>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

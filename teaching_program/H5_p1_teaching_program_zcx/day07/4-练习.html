@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+			#box{
+				width:325px;
+				height:85px;
+				border:1px solid lightgray;
+			}
+			#box .top{
+				width:100%;
+				height:15px;
+				/*background:indianred;*/
+				margin-top:5px;
+			}
+			#box .bottom{
+				width:100%;
+				height:60px;
+				/*background:greenyellow;*/
+				margin-top:5px;
+			}
+			#box .top .left{
+				width:50px;
+				height:15px;
+				background:blue;
+				float:left;
+			}
+			
+			#box .top .right{
+				width:50px;
+				height:15px;
+				background:blue;
+				float:right;
+			}
+			#box .bottom .c1{
+				width:105px;
+				height:100%;
+				background:darkgray;
+				float:left;
+			}
+			.marginLeft5{
+				margin-left:5px;
+			}
+			.marginLeft20{
+				margin-left:20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div class="top">
+				<div class="left"></div>
+				<div class="right"></div>
+			</div>
+			<div class="bottom">
+				<div class="c1"></div>
+				<div class="c1 marginLeft5"></div>
+				<div class="c1 marginLeft5"></div>
+			</div>
+		</div>
+	</body>
+</html>

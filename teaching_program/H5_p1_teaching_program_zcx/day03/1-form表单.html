@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			label{
+				/*把行内元素转换为行内块元素*/
+				display: inline-block; 
+				width:100px;
+				height:30px;
+				text-align: right;
+				margin-right: 10px;
+			}
+			#text1,#pwd{
+				width:300px;
+				height:30px;
+				margin-top:5px;
+			}
+			#text2{
+				vertical-align: top;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="#" method="get" name="form1" id="form1">
+			<label for="text1">用户名</label><input type="text" name="" id="text1" value=""  placeholder="请设置用户名"/><br />
+			<label for="pwd">密码</label><input type="password" name="pwd" id="pwd" value=""  placeholder="请输入密码"/><br />
+			<label for="sex">性别</label>
+			<input type="radio" name="sex" id="" value="男" checked=true/>男
+			<input type="radio" name="sex" id="" value="女" />女
+			<br />
+			<label for="ch">兴趣爱好</label>
+			<input type="checkbox" name="ch"  value="唱歌" checked />唱歌
+			<input type="checkbox" name="ch"  value="游泳" />游泳
+			<input type="checkbox" name="ch"  value="跳舞" />跳舞
+			<input type="checkbox" name="ch"  value="阅读" />阅读
+			<br />
+			<label for="file1">个人简历</label><input type="file"  id="file1"/>
+			<br />
+			<label for="select1">学历</label>
+			<select name="" id="select1">
+				<option value="本科">本科</option>
+				<option value="专科">专科</option>
+				<option value="高中">高中</option>
+			</select>
+			<br />
+			<label for="">自我介绍</label>
+			<textarea name=""  id="text2" rows="10" cols="40"></textarea>
+			
+			<br />
+			<input type="submit" name="" id="" value="注册" />
+			<input type="reset" name="" id="" value="重置信息" />
+			<input type="button" name="" id="" value = "普通按钮" />
+		</form>
+	</body>
+	<script>
+		//获取文本框
+//		var text1 = document.getElementById("text1");
+//		alert(text1.value);
+	</script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+	</head>
+	<style>
+		.content{
+			width:80%;
+			height:300px;
+			background:blue;
+			margin:0 auto;
+		}
+		.content .left{
+			width:50%;
+			height:100%;
+			background:yellow;
+			float:left;
+		}
+		.content .right{
+			width:50%;
+			height:100%;
+			background:green;
+			float:left;
+		}
+		@media only screen and (max-width: 768px) {
+			.content .left{
+				display:none;
+				}
+			/*.content{
+				width:60%;
+				
+			}*/
+			.content .right{
+				width:100%;
+			}
+		}
+	</style>
+	<body>
+		<div class="content">
+			<div class="left"></div>
+			<div class="right"></div>
+		</div>
+	</body>
+</html>

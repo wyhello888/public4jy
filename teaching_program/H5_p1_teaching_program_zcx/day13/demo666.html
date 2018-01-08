@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width:100px;
+				height:100px;
+				border:1px solid blue;
+				background:blue;
+				transform: rotate(45deg);
+				
+				animation-name:myani;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+				
+			}
+			@keyframes myani{
+				from{
+					background:blue;
+					transform: translateX(0px);
+					
+				}
+				to{
+					background:red;
+					transform:translateX(400px);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

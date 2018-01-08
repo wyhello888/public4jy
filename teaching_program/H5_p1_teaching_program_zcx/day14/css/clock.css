@@ -1,0 +1,36 @@
+*{
+	margin:0px;
+	padding:0px;
+	list-style: none;
+}
+body{
+	background:black;
+}
+#watch{
+	position: relative;
+		width:360px;
+	height:360px;
+}
+#watch .frame-face{
+	position:relative;
+	width:360px;
+	height:360px;
+	border-radius: 50%;
+	background:lightgray;
+	/*margin:0 auto;
+	margin-top:50px;*/
+	
+}
+#watch .minute-marks li{
+	width:3px;
+	height:15px;
+	background:darkslategray;
+	position:absolute;
+	top:50%;
+	left:50%;
+}
+#watch .minute-marks li:nth-child(1)
+{
+	transform: translateY(-170px) rotate(6deg);
+}
+
