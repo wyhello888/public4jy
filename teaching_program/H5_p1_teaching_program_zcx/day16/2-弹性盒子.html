@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style>
+			.flex-container{
+				width:100%;
+				height:300px;
+				background:pink;
+				display:flex;
+				/*justify-content: space-around;*/
+				/*flex-direction: column;*/
+				/*align-items:flex-end;*/
+				/*flex-wrap: wrap;*/
+			}
+			.flex-item{
+				width:300px;
+				height:200px;
+				background:palegreen;
+				/*margin-top:10px;*/
+				margin-left:10px;
+				margin:auto;
+			}
+			.flex-item:nth-child(1)
+			{
+				height:100px;
+				/*margin-top:100px;*/
+				/*flex:2;*/
+				background:red;
+			}
+			.flex-item:nth-child(2)
+			{
+				height:300px;
+				/*flex:1;*/
+				background:yellow;
+			}
+			.flex-item:nth-child(3)
+			{
+				height:200px;
+				/*flex:3;*/
+				background:orange;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="flex-container">
+			<div class="flex-item">1</div>
+			<div class="flex-item">2</div>
+			<div class="flex-item">3</div>
+		</div>
+	</body>
+</html>

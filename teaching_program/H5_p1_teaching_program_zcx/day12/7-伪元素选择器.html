@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width:400px;
+				height:800px;
+				border:1px solid blue;
+			}
+			p:first-line{
+				color:red;
+			}
+			p:first-letter{
+				font-size:30px;
+			}
+			div:after{
+				/*content:"hello";*/
+				content:url(img/logo.jpg)
+			}
+			
+			p::selection{
+				color:red;
+				background:palegreen;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			
+		
+			<p>属性选择器CSS 2 引入了属性选择器。 属性选择器可以根据元素的属性及属性值来选择元素。简单属性选择 如果希望选择有某个属性的元素,而不论属性值是什么,可以使用简单属性...</p>
+		</div>
+	</body>
+</html>

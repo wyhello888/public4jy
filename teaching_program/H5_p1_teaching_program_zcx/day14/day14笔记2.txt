@@ -1,0 +1,115 @@
+一、响应式布局
+1、什么叫做响应式？通俗的说就是一个网站能够兼容多个终端——而不是为每个终端做一个特定的版本。
+这个概念是为解决移动互联网浏览而诞生的。
+响应式布局可以为不同终端的用户提供更加舒适的界面和更好的用户体验，而且随着目前大屏幕移动设备的普及，
+用“大势所趋”来形容也不为过。
+2、响应式核心技术－媒体查询
+
+二、媒体查询
+1、媒体查询可以让我们在不同显示器（如视口宽度、屏幕比例、设备方向：横向或纵向）为其设定不同的CSS样式，
+2、媒体查询可用于检测很多事情，例如：
+	viewport(视窗) 的宽度与高度
+	设备的宽度与高度
+	朝向 (智能手机横屏，竖屏) 。
+	分辨率
+	使用方法是：@media 媒体类型 and (媒体特性){你的样式}
+	
+3、设置meta标签：首先在使用媒体查询时需要设置以下代码，来兼容移动设备的兼容问题。
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,
+maximum-scale=1,user-scalable=no" />这段代码的解释
+	这段代码的几个参数解释：
+	name="viewport" :窗口设定 
+	width = device-width：宽度等于当前设备的宽度
+	initial-scale：初始的缩放比例（默认设置为1.0）
+	minimum-scale：允许缩放的最小比例 （默认设置为1.0）
+	maximum-scale：允许缩放的最大比例 （默认设置为1.0）
+	user-scalable：用户是否可以手动缩放（默认设置为no，因为我们不希望用户放大缩小页面）
+
+4、在实际项目中常用的方式。
+	@media only screen and (min-width: ) and (max-width:) {
+					
+	}
+	(1)only:用来指定某种特定的媒体类型。
+	(2)min-width:最小宽度,指的是媒体类型大于或等于指定宽度时，样式生效
+	(3)max-width:意思是指媒体类型小于或等于指定的宽度时，样式生效。
+	(4)and:使用关键词"and"将多个媒体特性结合在一起。
+如：
+			@media only screen and  (max-width:768px) {
+				body{
+					background:red;
+				}
+			}
+
+	
+	注意：and一定要加空格
+5、很多时候，在响应式设计中，你经常看到的断点值是：320px、480px、768px和1024px等。
+	320px是iPhone设备的竖屏尺寸，480是iPhone设备横向屏幕尺寸，768px是iPad竖向屏幕尺寸
+
+三、弹性盒子：flex布局
+1、弹性盒子(flexbox)是 CSS3 的一种新的布局模式,是一种当页面需要适应不同的屏幕大小以及设备类型时确保元素拥有恰当的行为的布局方式。
+引入弹性盒布局模型的目的是提供一种更加有效的方式来对一个容器中的子元素进行排列、对齐和分配空白空间。
+
+2、弹性盒子的内容：弹性盒子由弹性容器(Flex container)和弹性子元素(Flex item)组成。
+	弹性容器通过设置 display 属性的值为 flex 或 inline-flex将其定义为弹性容器。
+	
+3、flex-direction属性：指定弹性子元素在父容器中的位置。	
+	语法：
+	flex-direction: row | row-reverse | column | column-reverse
+	
+	row：横向从左到右排列（左对齐），默认的排列方式。
+	row-reverse：反转横向排列（右对齐，从后往前排，最后一项排在最前面。
+	column：纵向排列。
+	column-reverse：反转纵向排列，从后往前排，最后一项排在最上面。
+justify-content：内容对齐属性
+	语法：
+	justify-content: flex-start | flex-end | center | space-between | space-around
+	flex-start：默认属性，弹性子元素由行头紧挨着填充
+	flex-end：弹性子元素项目由行尾紧挨着填充
+	center：弹性项目居中紧挨着填充。
+	space-between：
+	space-around：
+弹性项目平均分布在该行上，两边留有一半的间隔空间。
+4、align-items：设置弹性盒子元素在侧轴（纵轴）方向上的对齐方式。
+	语法：align-items: flex-start | flex-end | center | baseline | stretch
+	flex-start：弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴起始边界。
+	flex-end：弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴结束边界。
+	center：弹性盒子元素在该行的侧轴（纵轴）上居中放置。（如果该行的尺寸小于弹性盒子元素的尺寸，则会向两个方向溢出相同的长度）。
+	baseline：如弹性盒子元素的行内轴与侧轴为同一条，则该值与'flex-start'等效。其它情况下，该值将参与基线对齐。
+	stretch：如果指定侧轴大小的属性值为'auto'，则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸，但同时会遵照'min/max-width/height'属性的限制。
+5、flex-wrap：用于指定弹性盒子的子元素换行方式。
+	语法：flex-wrap: nowrap|wrap|wrap-reverse|initial|inherit;
+	nowrap - 默认， 弹性容器为单行。该情况下弹性子项可能会溢出容器。
+	wrap - 弹性容器为多行。该情况下弹性子项溢出的部分会被放置到新行，子项内部会发生断行
+	wrap-reverse -反转 wrap 排列。
+6、align-content：用于修改 flex-wrap 属性的行为。类似于 align-items, 但它不是设置弹性子元素的对齐，而是设置各个行的对齐。
+	语法：align-content: flex-start | flex-end | center | space-between | space-around | stretch
+	stretch - 默认。各行将会伸展以占用剩余的空间。
+	flex-start - 各行向弹性盒容器的起始位置堆叠。
+	flex-end - 各行向弹性盒容器的结束位置堆叠。
+	center -各行向弹性盒容器的中间位置堆叠。
+	space-between -各行在弹性盒容器中平均分布。
+	space-around - 各行在弹性盒容器中平均分布，两端保留子元素与子元素之间间距大小的一半。
+7、弹性盒子子元素的属性order:排序
+	语法：order 用整数值来定义排列顺序，数值小的排在前面。可以为负值。
+	
+8、完美的居中：使用弹性盒子，居中变的很简单，只想要设置 margin: auto; 可以使得弹性子元素在两上轴方向上完全居中:
+
+9、弹性盒子子元素的属性align-self:用于设置弹性元素自身在侧轴（纵轴）方向上的对齐方式。
+	语法:align-self: auto | flex-start | flex-end | center | baseline | stretch
+	auto：如果'align-self'的值为'auto'，则其计算值为元素的父元素的'align-items'值，如果其没有父元素，则计算值为'stretch'。
+	flex-start：弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴起始边界。
+	flex-end：弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴结束边界。
+	center：弹性盒子元素在该行的侧轴（纵轴）上居中放置。（如果该行的尺寸小于弹性盒子元素的尺寸，则会向两个方向溢出相同的长度）。
+	baseline：如弹性盒子元素的行内轴与侧轴为同一条，则该值与'flex-start'等效。其它情况下，该值将参与基线对齐。
+	stretch：如果指定侧轴大小的属性值为'auto'，则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸，但同时会遵照'min/max-width/height'属性的限制。
+
+10、弹性盒子子元素的属性flex：用于指定弹性子元素如何分配空间。
+	语法:flex: auto | initial | none | inherit |  [ flex-grow ] || [ flex-shrink ] || [ flex-basis ]
+	auto: 计算值为 1 1 auto
+	initial: 计算值为 0 1 auto
+	none：计算值为 0 0 auto
+	inherit：从父元素继承
+	[ flex-grow ]：定义弹性盒子元素的扩展比率。
+	[ flex-shrink ]：定义弹性盒子元素的收缩比率。
+	[ flex-basis ]：定义弹性盒子元素的默认基准值。
+

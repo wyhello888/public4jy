@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		div{
+			width:100px;
+			height:100px;
+			border:1px solid red;
+		}
+			div[class~="c2"]
+			{
+				background:red;
+			}
+			/*div[class*="c"]
+			{
+				background:green;
+			}*/
+		</style>
+	</head>
+	<body>
+		<div class="c1  c2  c3 c3"></div>
+		<div class="c3"></div>
+		<div class="abc2"></div>
+	</body>
+</html>

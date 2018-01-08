@@ -1,0 +1,42 @@
+一、CSS3变型
+1、translate(位移),scale(缩放) rotate(旋转) skew(倾斜)
+2、transform:变型函数
+	具体的变型函数：translate(x,y),translateX(), translateY(), translateZ(),scale(),scaleX(),scaleY(),rotate(),skew()
+3、transform-origin 允许你改变被转换元素的位置。 
+4、transform-style:preserve-3d;设置3D变型
+5、perspective:1000px; 规定 3D 元素的透视效果。
+浏览器前缀：
+-ms-  		IE浏览器
+-webkit-  	chrome, safira浏览器
+-o-   		opera浏览器
+-moz-		firfox浏览器
+
+二、CSS3平滑过渡动画 transition
+1、transition-property:background, transform;
+2、transition-duration:5s;
+3、transition-delay:1s;
+4、transition-timing-function:easeIn|easeOut,|linear.......
+5、复合属性：transition: background 5s;
+
+
+三、CSS3 3D动画animation
+1、animation-name:
+2、animation-duration:
+3、animation-delay:
+4、animation-iteration-count:10 |infinite	执行的次数
+5、animation-direction:alternate;
+6、animation-timing-function:easeIn|easeOut
+7、animation:复合属 性
+关键帧：
+@keyframes name{
+	from{
+	
+	}
+	to{
+	
+	}
+	
+}
+
+
+四、animate.css框架

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{
+			list-style: none;
+		}
+			li:only-child{
+					color:yellow;
+					background:pink;
+					font-size:30px;
+			}
+			ul li{
+				width:200px;
+				height:40px;
+				background:blue;
+				margin-top:10px;
+			}
+			li:empty{
+				background:y;
+			}
+			div{
+				width:200px;
+				height:100px;
+				border:1px solid blue;
+				
+			}
+			.c1{
+				/*background:blue;*/
+			}
+			div:not(.c1)
+			{
+				background:red;
+			}
+			span{
+				display:block;
+				width:50px;
+				height:50px;
+				border:1px solid blue;
+			}
+			/*:not(div)
+			{
+				background:yellow;
+			}*/
+			p:first-line{
+				color:blue;
+			}
+			p:first-letter{
+				font-size:50px;
+			}
+			.c1:before{
+				content:url(img/logo.jpg);
+			}
+			P::selection{
+				background:green;
+			}
+			div{
+				transform: rotate(60deg);
+			}
+		</style>
+	</head>
+	<body>
+		<p>
+			前端开发过程中，由于不同浏览器间的不兼容性，相同的标签在不同的浏览器中显示不同的效果。尤其在移动端开发中，安卓与iOS表单元素显示各不相共，所以在前端页面开发过程中，需要统一相关样式，前端er需要自己开发相应组件去实现对应标签功能。
+知识点： css3中before与after选择器，兄弟选择器，checked选择器
+本示例通过css3实现浏览器下checkbox选中与未选中效果
+作者： 朽梨 
+链接：http://www.imooc.com/article/15815
+来源：慕课网
+		</p>
+		<div class="c1">
+			<div>hello</div>
+			<div>hello</div>
+			<div>hello</div>
+		</div>
+
+	</body>
+</html>

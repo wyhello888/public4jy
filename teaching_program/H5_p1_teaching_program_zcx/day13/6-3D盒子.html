@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width:600px;
+				height:600px;
+				border:1px solid blue;
+				margin:0 auto;
+				perspective: 600px;
+			}
+			#box .container{
+				width:500px;
+				height:500px;
+				/*border:1px solid red;*/
+				transform-style:preserve-3d;
+				position: relative;
+				
+				margin-left:50px;
+				margin-top:50px;
+				
+			}
+			#box .container div{
+				width:300px;
+				height:300px;
+				position: absolute;
+				left:100px;
+				top:100px;
+				
+				font-size:50px;
+				text-align: center;
+				line-height: 300px;
+				
+			}
+			.container .front{
+				background:rgba(255,0,0,0.5);
+				transform:translateZ(150px)
+			}
+			.container .back{
+				background:rgba(255,0,0,0.5);
+				transform:translateZ(-150px) rotateZ(180deg);
+			}
+			.container .left{
+				background:rgba(0,255,0,0.5);
+				transform:translateX(-150px) rotateY(-90deg);
+			}
+			.container .right{
+				background:rgba(0,255,0,0.5);
+				transform:translateX(150px) rotateY(90deg);
+			}
+			.container .top{
+				background:rgba(0,0,255,0.5);
+				transform:translateY(-150px) rotateX(90deg);
+			}
+			.container .bottom{
+				background:rgba(0,0,255,0.5);
+				transform:translateY(150px) rotateX(-90deg);
+			}
+			
+			.container:hover{
+				animation-name:myani;
+				animation-duration: 5s;
+				animation-iteration-count: infinite;
+			}
+			@keyframes myani{
+				from{
+					transform: rotateX(0) rotateY(0) rotateZ(0);
+				}
+				to{
+					transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+				
+				}
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div class="container">
+				<div class="front">前</div>
+				<div class="back">后</div>
+				<div class="left">左</div>
+				<div class="right">右</div>
+				<div class="top">上</div>
+				<div class="bottom">下</div>
+			</div>
+		</div>
+	</body>
+</html>

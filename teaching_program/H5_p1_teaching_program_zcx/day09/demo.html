@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div1,#div2{
+				width:400px;
+				height:0px;
+				border-top:1px solid red;
+				margin-top:10px;
+			}
+			.c1{
+				float:left;
+			}
+			#div0{
+				width:1000px;
+				height:20px;
+				border:1px solid blue;
+			}
+			#div3{
+				width:1000px;
+				height:20px;
+				border:1px solid blue;
+				margin-top:300px;
+				line-height: 20px;
+				
+			}
+			#div3 span{
+				display: inline-block;
+				width:400px;
+				height:0px;
+				border-top:1px solid red;
+				
+				
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div0">
+			<div id="div1" class="c1"></div>
+			<div class="c1">hello</div>
+			<div id="div2" class="c1"></div>
+		</div>
+		<div id="div3">
+			<span></span>hello <span></span>
+		</div>
+	</body>
+</html>

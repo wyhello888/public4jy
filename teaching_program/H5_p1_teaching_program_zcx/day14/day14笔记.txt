@@ -1,0 +1,97 @@
+一、媒体查询
+1、媒体查询可以让我们在不同显示器（如视口宽度、屏幕比例、设备方向：横向或纵向）为其设定不同的CSS样式，
+媒体查询由媒体类型和一个或多个检测媒体特性的条件表达式组成（媒体查询有自己特定的表达式语法）。
+媒体查询中可用于检测的媒体特性有 width 、 height 和 color （等）。使用媒体查询，可以让一套代码适应多种设备。
+Media Queries能在不同的条件下使用不同的样式，使页面在不同在终端设备下达到不同的渲染效果
+使用方法如下。
+@media 媒体类型and （媒体特性）{你的样式}
+媒体查询使用方法@media
+Media Queries能在不同的条件下使用不同的样式，使页面在不同在终端设备下达到不同的渲染效果。前面简单的介绍了Media Queries如何引用到项目中，但Media Queries有其自己的使用规则。具体来说,Media Queries的使用方法如下。
+
+@media 媒体类型and （媒体特性）{你的样式}
+注意：使用Media Queries必须要使用“@media”开头，然后指定媒体类型（也可以称为设备类型），随后是指定媒体特性（也可以称之为设备特性）。
+媒体特性的书写方式和样式的书写方式非常相似，主要分为两个部分，第一个部分指的是媒体特性，
+第二部分为媒体特性所指定的值，而且这两个部分之间使用冒号分隔。例如：
+
+在实际项目中常用的方式。
+@media only screen and (min-width: 100px) and (max-width: 640px) {
+				
+}
+1. 最大宽度max-width
+
+“max-width”是媒体特性中最常用的一个特性，其意思是指媒体类型小于或等于指定的宽度时，样式生效。如：
+@media screen and (max-width:480px){
+ .ads {
+   display:none;
+  }
+}
+上面表示的是：当屏幕小于或等于480px时,页面中的广告区块（.ads）都将被隐藏。
+
+2.最小宽度min-width
+“min-width”与“max-width”相反，指的是媒体类型大于或等于指定宽度时，样式生效。
+
+@media screen and (min-width:900px){
+.wrapper{width: 980px;}
+}
+上面表示的是：当屏幕大于或等于900px时，容器“.wrapper”的宽度为980px。
+
+3.多个媒体特性使用
+
+Media Queries可以使用关键词"and"将多个媒体特性结合在一起。
+
+当屏幕在600px~900px之间时，body的背景色渲染为“#f5f5f5”，如下所示。
+
+@media screen and (min-width:600px) and (max-width:900px){
+  body {background-color:#f5f5f5;}
+}
+
+
+
+6.only关键词
+
+only用来指定某种特定的媒体类型。
+
+二、flex布局
+
+三、rem布局
+
+四、分栏布局
+
+五、响应式布局
+
+
+1、Flex布局是什么
+	Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。 
+	任何一个容器都可以指定为Flex布局。
+	 display: flex;
+	display: inline-flex;
+	display: -webkit-flex; /* Safari，Chrome */
+	设为Flex布局以后，子元素的float、clear和vertical-align属性将失效。
+
+2、Flexbox通常能让我们更好的操作他的子元素布局，例如：
+
+如果元素容器没有足够的空间，我们无需计算每个元素的宽度，就可以设置他们在同一行； 
+可以快速让他们布局在一列； 可以方便让他们对齐容器的左、右、中间等； 无需修改结构就可以改变他们的显示顺序； 如果元素容器设置百分比和视窗大小改变，不用提心未指定元素的确切宽度而破坏布局，因为容器中的每个子元素都可以自动分配容器的宽度或高度的比例。
+
+
+3、Flex容器属性
+除了display开启容器外，还有以下6个属性设置在容器上【老版本】。
+
+flex-direction： 主轴的方向（即项目的排列方向）。
+ 【box-orient】 flex-wrap： 如果一条轴线排不下，如何换行。 
+【box-lines】 flex-flow： flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap
+ justify-content： 项目在主轴上的对齐方式。
+【box-pack】 align-items： 项目在交叉轴上如何对齐。
+【box-align】 align-content： 定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。
+
+
+4、
+
+5、
+
+6、
+
+7、
+
+8、
+

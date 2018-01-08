@@ -1,0 +1,118 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+/*标题*/
+#box{
+	width:1300px;
+	margin:0 auto;
+	/*border:1px solid lightgray;*/
+}
+#box .header{
+	width:100%;
+	height:40px;
+	/*background:aliceblue;*/
+	margin-top:10px;
+}
+#box .header .right{
+	float:right;
+	width:500px;
+	height:40px;
+	/*background:gray;*/
+	line-height: 40px;
+}
+.header .right li{
+	float:left;
+	width:50px;
+	list-style: none;
+	height:40px;
+	line-height: 40px;
+	font-size:14px;
+	font-weight:600;
+	
+}
+.header .right li a{
+	color:black;
+}
+.right #more{
+	width:70px;
+	height:25px;
+	background:cornflowerblue;
+	line-height: 25px;
+	margin-top:5px;
+	text-align: center;
+	
+}
+.right #more a{
+	color:white;
+	font-weight: 400;
+	text-decoration: none;
+}
+.right .c1 a{
+	font-weight:400;
+}
+
+/*logo部分*/
+#box .logo{
+	width:100%;
+	height:130px;
+	/*border:1px solid blue;*/
+	text-align: center;
+	margin-top:10px;
+}
+#box .logo img{
+	height:130px;
+}
+
+/*搜索部分*/
+.search{
+	width:640px;
+	height:35px;
+	border:1px solid lightgray;
+	margin:0 auto;
+	margin-top:20px;
+}
+.search .left{
+	width:540px;
+	height:100%;
+	float:left;
+	position: relative;
+}
+.search .right{
+	width:100px;
+	height:100%;
+	background:cornflowerblue;
+	color:white;
+	float:left;
+	line-height:35px;
+	text-align: center;
+}
+.search .left input{
+	float:left;
+	width:540px;
+	height:35px;
+	border:none;
+}
+.search .left span{
+	/*float:right;*/
+	width:19px;
+	height:19px;
+	/*margin-top:10px;
+	margin-right:5px;*/
+	/*background:red;*/
+	background-image: url(../img/camera_new_5606e8f.png);
+	background-position-x: 0;
+	background-position-y: 0px;
+	position: absolute;
+	right:10px;
+	top:10px;
+}
+
+.erweima{
+	width:100px;
+	height:100px;
+	margin:0 auto;
+	/*border:1px solid gray;*/
+	text-align: center;
+	margin-top:190px;
+}
