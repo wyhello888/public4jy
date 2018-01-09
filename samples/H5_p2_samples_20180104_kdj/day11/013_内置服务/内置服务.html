@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+      <script src="../node_modules/angular/angular.min.js"></script>
+  </head>
+  <body ng-controller="ctrl">
+
+    <h1>
+        {{count}}
+    </h1>
+<script>
+    angular.module('app',[])
+    .controller('ctrl',function($scope,$interval,$location){
+        $scope.count = 0;
+
+        $interval(function () {
+            $scope.count++;
+        }, 500);
+
+        console.log($location)
+        console.log($location.absUrl())
+        console.log($location.host())
+        console.log($location.port())
+        console.log($location.url())
+        console.log($location)
+
+    })
+
+</script>
+  </body>
+</html>

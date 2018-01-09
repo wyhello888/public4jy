@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        var xhr;
+        //判断下浏览器是否支持 XMLHttpRequest
+        if(window.XMLHttpRequest){
+            // 111实例化XMLHttpRequest
+            xhr = new XMLHttpRequest;
+        }else{
+            //兼容IE5，IE6
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        //2222-建立连接  (请求方法,请求路径，是否是异步)  
+        xhr.open('GET','./笔记.txt',true);
+        //333-发送
+        xhr.send();
+
+        //4 -监听 onreadystatechange  判断 readyState == 4 和 status == 2 ，是否得到响应数据
+        xhr.onreadystatechange = function(){
+
+            if(xhr.readyState == 4 && xhr.status == 200){
+                //响应的数据在  xhr.responseText 或者  xhr.responseXML
+                //XML    <p>hello </p>  <user>hhh</user>  <book  maxlength=10>js高级程序设计</book>
+                // {book: js高级程序设计}
+                var res = xhr.responseText;
+                console.log(res)
+            }
+        }
+    </script>
+</body>
+</html>

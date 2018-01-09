@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../node_modules/angular/angular.min.js"></script>
+  </head>
+  <body ng-controller="ctrl">
+
+    <my-header>
+        <hi></hi>
+    </my-header>
+
+    <!-- <div class="my-header"></div> -->
+
+    <!-- <div my-header></div> -->
+
+<script>
+
+
+//restrict :   E C M A
+//E: element
+//C : class
+//A attribute
+//M : 注释
+angular.module('app',[])
+.controller('ctrl',function(){})
+.directive('myHeader',function(){
+    return{
+      restrict:"ECAM",
+      replace:true,
+      transclude:true,
+      // template:"<div><div ng-transclude></div></div>"
+      templateUrl:"myheader.html"
+    }
+})
+.directive('hi',function(){
+  return{
+    restrict:'E',
+    template:"<h2> 这是 Hi 指令</h2>"
+  }
+})
+
+</script>
+  </body>
+</html>

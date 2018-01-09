@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../node_modules/angular/angular.min.js"></script>
+  </head>
+  <body ng-controller="ctrl">
+
+    <h1>
+
+        {{name | tc}}
+    </h1>
+
+    <h1>
+
+        {{name2 | tc}}
+    </h1>
+
+    <h1>
+
+        {{price | mycurrency:"$"}}
+    </h1>
+<script>
+
+angular.module('app',[])
+.filter('tc',function(){
+
+    return function(ele){
+        console.log(ele)
+        return ele + '@@@'
+    }
+})
+// .directive()
+.controller('ctrl',function($scope){
+    $scope.name = '张三';
+
+    $scope.name2 = '王源';
+
+    $scope.price = 3.141592653;
+})
+
+.filter('mycurrency',function(){
+
+    return function(ele,arg1){
+      console.log(arg1)
+        return arg1 + ele.toFixed(3);
+    }
+
+
+})
+
+</script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../node_modules/angular/angular.min.js"></script>
+  </head>
+  <body ng-controller="ctrl">
+    <h1>{{time | date : "yyyy-MM-dd hh:mm:ss"}}</h1>
+    <h1>{{time | date : "yyyy-MM-dd hh:mm:ssa"}}</h1>
+
+    <h1>{{json | json}}</h1>
+
+    <input ng-model="myfilter"/>
+    <input ng-model="myLimit"/>
+    <ul ng-repeat="x in arr | filter:myfilter | limitTo:myLimit |orderBy:'name'">
+      <li>{{x.name | uppercase}} {{x.age | currency}}</li>
+    </ul>
+
+    <h1>{{num | number}}</h1>
+    <script>
+    //内置9个过滤器：currency date filter json limitTo lowercase uppercase number orderBy
+    /*
+    * currency 货币过滤 currency:'$'
+      data 日期格式化 data:'yyyy-MM-dd hh:mm:ss'
+      filter 内容过滤 filter:'abc'
+      limitTo
+    */
+    angular.module('app',[])
+    .controller('ctrl',function($scope){
+        $scope.time = new Date();
+        $scope.json = {name:'潘金莲'}
+
+        $scope.arr = [
+          {name:'bbb',age:14},
+          {name:'cccc',age:15},
+          {name:'aeae',age:22},
+          {name:'abc',age:10},
+          {name:'bbc',age:12},
+          {name:'aaa',age:13},
+          {name:'fff',age:23},
+          {name:'ggg',age:24},
+          {name:'ggg',age:25},
+          {name:'ddd',age:16},
+          {name:'eeee',age:21},
+          {name:'ax',age:26},
+          {name:'at',age:27}
+        ]
+
+        $scope.num = 3141592653;
+    })
+    </script>
+  </body>
+</html>

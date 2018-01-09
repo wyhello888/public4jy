@@ -1,0 +1,26 @@
+1、http请求方法  http://www.runoob.com/http/http-methods.htm
+
+2、安装express   
+    创建一个目录 myapp
+    cd myapp
+    在里面执行  npm install express
+3、创建 一个服务
+    var express = require('express');
+
+    var app = express();
+    app.get('/',function(req,res){  
+        res.send('Hello world!');
+    })
+    var server = app.listen(4000,function(){
+        var host = server.address().address;
+        var port = server.address().port;
+        console.log('服务器启动啦，地址是 http://%s:%s',host,port);
+    })
+
+4、使用 res给浏览器响应
+    res.send()
+    res.download()
+    res.render()
+    res.sendFile()
+5、 安装 express 应用生成器 
+    npm install express-generator -g

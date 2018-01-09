@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://localhost:3000/javascripts/ajax.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		
+		<form action="#" method="post">
+			
+			<input type="text" id="username" value="" />
+			<input type="password" id="password" value="" />
+			
+			<input type="button" id="btn" value="提交"/>
+		</form>
+		
+		<script type="text/javascript">
+			
+			var btn = document.getElementById('btn');
+			btn.onclick = function(){
+				
+				var username = document.getElementById('username').value;
+				var passwrod = document.getElementById('password').value;
+				
+				ajax('post',
+				{username:username,password:passwrod},
+				'http://localhost:3000/adduser',function(res){
+					alert(res)
+				})
+				
+			}
+			
+			
+		</script>
+		
+	</body>
+</html>

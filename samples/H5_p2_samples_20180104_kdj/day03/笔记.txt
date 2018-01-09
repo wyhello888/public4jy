@@ -1,0 +1,64 @@
+1、json
+[
+    {
+        name:'aaa',
+        age:18,
+        hobby:['足球','游泳']
+    }
+]
+
+2、模块化
+    1、代码公用，提高开发效率
+    2、解耦 
+
+    组件化
+
+3、模块化规范：  AMD  CMD   CommonJS
+
+4、 导出模块  module.exports.add = add;
+    module.exports = Person
+    导入模块  require('./module.js')
+
+    AMD  
+        f1.js
+        define([],function(){
+
+        })
+
+        require(['./f1.js'],function(){
+
+        })
+
+5、ES6   export      import  
+
+6、 创建一个包   使用命令 npm init
+
+7、 npm    node package manager  
+    npm  init  初始化一个包
+    npm  search  搜索包
+    npm  install 安装包    -g  全局安装    
+                          --save  把依赖写入到  package.json  的 dependencies
+                          --save-dev   写入到  devDependencies
+
+    
+    发布包
+        npm adduser  注册用户
+        npm login  登陆 npm
+        npm publish .  发布包
+
+8、创建 http服务
+
+http.createServer(function(req,res){
+    res.end('hello http')
+})
+
+9、服务器响应
+    res.writeHead()
+    res.write()
+    res.end()
+
+
+10.  querystring    name=aaa&age=2222&hh=222  --->   {name:aaa,age:2222,hh=222}
+     JSON.parse     "{name:222,age:3333}"     --->   {name:222,age:3333}
+
+    toString()  

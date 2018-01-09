@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>过滤器</title>
+    <script src="../node_modules/angular/angular.min.js"></script>
+  </head>
+  <body ng-controller="ctrl">
+
+<h1> {{price | currency:i18n}}</h1>
+
+<button ng-click="change('￥')">china</button>
+<button ng-click="change('$')">USA</button>
+<button ng-click="change('@')">@</button>
+
+<h1>{{data | json}}</h1>
+<script>
+  //i18n
+  angular.module('app',[])
+  .controller('ctrl',function($scope){
+      $scope.price = 998;
+      $scope.i18n = '￥';
+      $scope.change = function(arg){
+          $scope.i18n = arg;
+      }
+
+      $scope.data = "{name:'aaa'}"
+  })
+
+</script>
+  </body>
+</html>

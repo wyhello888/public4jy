@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <style>
+        div{
+          width: 300px;height: 50px;
+          background-color: red;
+        }
+    </style>
+  </head>
+  <body ng-controller="ctrl">
+
+      <div ng-if="flag">{{name}}</div>
+      <div ng-show="flag">{{name}}</div>
+      <div ng-hide="flag">{{name}}</div>
+
+      <input type="button" value="button" ng-click="change()"/>
+
+    <script>
+
+    angular.module('app',[])
+    .controller('ctrl',function($scope){
+        $scope.flag = true;
+        $scope.name = '用户名或密码错误！';
+        $scope.a = 2;
+        $scope.b = 3;
+        $scope.change = function(){
+            console.log('------')
+            console.log($scope.flag)
+            $scope.flag = !$scope.flag;
+        }
+    })
+    </script>
+  </body>
+</html>

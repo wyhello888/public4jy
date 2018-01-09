@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		
+		<script type="text/javascript">
+			
+			
+			
+			$.ajax({
+				url:'http://localhost:3000/jsonp',
+				dataType:'jsonp',
+				success: function(res){
+					console.log(res)
+				}
+			})
+
+
+			
+		</script>
+		
+		
+	</body>
+</html>

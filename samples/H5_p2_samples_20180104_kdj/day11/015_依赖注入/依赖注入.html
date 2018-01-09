@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../node_modules/angular/angular.min.js"></script>
+  </head>
+  <body ng-controller="ctrl">
+
+      <h1>
+          {{name}}
+      </h1>
+
+      <h1>
+          {{pic}}
+      </h1>
+
+      <div ng-controller="ctrl2">
+          {{picc}}
+          <h1>{{pi}}</h1>
+      </div>
+
+<script>
+
+    //服务
+    //value constant factory service provider
+    angular.module('app',[])
+    .config(function(PI,prissa){
+        console.log(PI)
+        console.log(prissa);
+    })
+    .controller('ctrl',["$scope","$http","prissa",function($scope,$http,prissa){
+          $scope.name = 'hello'
+          $scope.pic = prissa;
+    }])
+    .controller('ctrl2',function($scope,$http,prissa,PI){
+          $scope.name = 'hello'
+          $scope.picc = prissa;
+          $scope.pi = PI;
+    })
+    .value('prissa',"育知同创教育")
+    .constant('PI',3.141592653)
+
+</script>
+  </body>
+</html>

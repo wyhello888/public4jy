@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width:device-width,initial-scale=1.0"/>
+    <style>
+    html,body{
+      width: 100%;height: 100%;
+    }
+    body{
+      padding: 0;margin: 0;
+    }
+
+#container{
+  width: 100%;
+  height: 5000px;
+  position: relative;
+}
+    #box{
+      width: 100%;
+      height: 80px;
+      background: #f00;
+      position: sticky;
+      opacity: 0.5;
+      -webkit-position:sticky;
+
+    }
+
+    #box2{
+      width: 100%;
+      height: 80px;
+      background: #ff0;
+      position: fixed;
+        opacity: 0.5
+    }
+
+    #box3{
+      width: 100%;
+      height: 80px;
+      background: #00f;
+      position: absolute;
+
+    }
+
+
+
+
+
+    </style>
+  </head>
+  <body>
+
+<div id="container">
+    <div id="box">sticky</div>
+
+    <div id="box2">fixed</div>
+
+    <div id="box3">absolute</div>
+</div>
+
+
+  </body>
+</html>

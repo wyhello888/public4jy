@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+      <script src="../node_modules/angular/angular.min.js"></script>
+  </head>
+  <body>
+
+    <div ng-controller="ctrl">
+        <h1>{{result}}</h1>
+        <h1>{{result2}}</h1>
+    </div>
+
+<script>
+angular.module('app',[])
+.controller('ctrl',function($scope,math,math2){
+    var result = math.add(2,3);
+    $scope.result = result;
+
+    $scope.result2 = math2.add(12,12)
+})
+.service('math',function(){
+  this.name = 'hello';
+
+  this.add = function(x,y){
+      return x+y;
+  }
+  this.min = function(x,y){
+      return x-y;
+  }
+})
+.factory('math2',function(){
+  var factory = {};
+  factory.add = function(x,y){
+    return x+y;
+  }
+
+  return factory;
+})
+
+
+</script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="http://localhost:3000/javascripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1>留言板</h1>
+  
+    <div id="">
+    		<input type="text" name="username" id="username" value="" />
+    		<input type="text" name="msg" id="msg" value="" />
+    		<input type="button" name="send" id="send" value="添加" />
+    </div>
+    <ul id="lists">
+    		<li><span id="name"></span><p></p></li>
+    </ul>
+    
+    <script type="text/javascript">
+    	
+    		/*
+    		 *给按钮添加点击事件，点击按钮，获取input值，使用ajax把数据发给后端
+    		 * */
+    		$('#send').click(function(){
+    			var username = $("#username").val();
+    			var msg = $('#msg').val();
+    			if(username != '' && msg != ''){
+    				$("#username").val('');
+    				$('#msg').val('');
+    				$.post('http://localhost:3000/sendmsg',{username:username,msg:msg},function(res){
+    					showlist(res)
+    				})
+    			}
+    		})
+    		
+    		function showlist(res){
+    			// 遍历 响应的json数据 ，显示在ul
+    			var str = '';
+			for(var i =0; i < res.length;i++){
+				str += '<li><span>'+res[i].username+'</span><span>'+res[i].msg+'</span><button data-id="'+res[i].id+'"  class="delete">删除</button></li>';
+			}
+			$('#lists')[0].innerHTML = str;
+			$('.delete').click(function(){
+				var id = $(this).data('id');
+				console.log(id)
+				$.get('http://localhost:3000/delete',{id:id},function(res){
+					showlist(res)		
+				})
+			})
+    		}
+    	
+    </script>
+  </body>
+</html>

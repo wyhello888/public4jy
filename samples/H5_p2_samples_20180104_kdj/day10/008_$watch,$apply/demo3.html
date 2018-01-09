@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../node_modules/angular/angular.min.js"></script>
+  </head>
+  <body ng-controller="ctrl">
+
+<h1>{{arr[0]}}</h1>
+<input ng-model="arr[0]"/>
+<script>
+
+angular.module('app',[])
+.controller('ctrl',function($scope){
+
+    $scope.arr = [1,2,3,4];
+
+    $scope.$watch('arr',function(newvalue,oldvalue,scope){
+        console.log('new:' + newvalue)
+        console.log('old:' + oldvalue)
+        console.log('scope:' + scope)
+    },true)
+})
+
+
+</script>
+  </body>
+</html>

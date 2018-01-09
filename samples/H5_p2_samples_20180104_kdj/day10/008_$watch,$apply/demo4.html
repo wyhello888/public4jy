@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="../node_modules/angular/angular.min.js"></script>
+</head>
+<body>
+
+    <div ng-controller="ctrl">
+
+      <h1>{{name}}</h1>
+      <input ng-model="name"/>
+
+    </div>
+
+<script>
+
+    //define([],callback)
+    //  脏查询  watch   $digest
+    angular.module('app',[])
+    .controller('ctrl',function($scope,$timeout,$interval){
+          $scope.name = '吴亦凡'
+
+          // setTimeout(function(){
+          //     $scope.name = '鹿晗'
+          //     console.log('-------')
+          // },2000)
+
+          // $timeout(function(){
+          //     $scope.name = '鹿晗'
+          // },2000)
+
+          setTimeout(function(){
+
+             $scope.$apply(function(){
+                $scope.name = '鹿晗'
+             })
+
+          },2000)
+    })
+
+</script>
+</body>
+</html>

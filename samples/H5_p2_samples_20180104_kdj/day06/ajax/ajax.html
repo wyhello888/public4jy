@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<button  id="btn">ajax请求</button>
+		
+		<script type="text/javascript">
+			
+			//jquery 添加点击事件
+//			$('#btn').on('click',function(){
+//				
+//			})
+			
+			$('#btn').click(function(){
+				
+				$.ajax({
+					type:'get',
+					dataType:'text',
+					success: function(res){
+						console.log(res)
+					},
+					error: function(err){
+						console.log(err)
+					},
+					data: {name:'abc'},
+					url:'笔记.txt',
+				})
+			})
+			
+			
+		</script>
+	
+	</body>
+</html>

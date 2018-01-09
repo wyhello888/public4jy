@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+		<script src="http://localhost:3000/javascripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		
+		<button id="btn">post</button>
+		
+		<script type="text/javascript">
+			
+			
+			
+			//  www.abc.com
+			//  abc.com/add
+			//add
+			$('#btn').click(function(){
+				
+				$.post('/add',function(res){
+					console.log(res)
+				})
+			})
+			
+		</script>
+	</body>
+</html>

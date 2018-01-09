@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        var xhr;
+        if(window.XMLHttpRequest){
+            xhr = new XMLHttpRequest;
+            // console.log(xhr)
+        }else{
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        xhr.open('GET','http://localhost:3000/ajax?name=aaa&age=18',true);
+        xhr.send();
+
+        xhr.onreadystatechange = function(){
+
+            if(xhr.readyState == 4 && xhr.status == 200){
+                var res = xhr.responseText;
+                console.log(res)
+            }
+        }
+    </script>
+</body>
+</html>

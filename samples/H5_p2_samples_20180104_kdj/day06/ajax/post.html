@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		
+		<button id="btn">  跨域请求</button>
+		
+		
+		<script type="text/javascript">
+			
+			$('#btn').click(function(){
+				
+				$.post('http://127.0.0.1:4008/hao',function(res){
+					console.log(res)
+					
+				})
+				
+			})
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		
+		
+		<button id="btn">  发送请求</button>
+		
+		
+		<script type="text/javascript">
+			
+			$('#btn').click(function(){
+				
+				$.get('笔记.txt',function(res){
+					console.log(res)
+				})
+				
+			})
+			
+			
+		</script>
+		
+	</body>
+</html>

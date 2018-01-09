@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../node_modules/angular/angular.min.js"></script>
+  </head>
+  <body ng-controller="ctrl">
+
+    <h1>
+        {{name}}
+    </h1>
+
+    <input ng-model="name"/>
+
+    <h1>
+      {{popple.name}}
+    </h1>
+    <input ng-model="popple.name"/>
+<script>
+
+angular.module('app',[])
+.controller('ctrl',function($scope){
+    $scope.name = 'aaaa';
+
+    $scope.popple = {
+      name:'bbbb',
+      age:18
+    }
+
+
+    //第一个参数：要监听的属性名称
+    //函数 (新值，旧值，scope)
+    //boolean  是否深度监听
+    $scope.$watch('name',function(newvalue,oldvalue,scope){
+        console.log('newvalue:' + newvalue);
+        console.log('oldvalue:' + oldvalue);
+        console.log('name:' + scope.name);
+    })
+
+    $scope.$watch('popple',function(newvalue,oldvalue,scope){
+        console.log('newvalue:' + newvalue.name);
+        console.log('oldvalue:' + oldvalue.name);
+        console.log('name:' + scope.popple.name);
+    },false)
+})
+
+</script>
+  </body>
+</html>

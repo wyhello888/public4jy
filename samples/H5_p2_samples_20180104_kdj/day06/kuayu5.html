@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="ajax/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		
+		<button id="btn">click</button>
+		
+		<script type="text/javascript">
+			
+			
+			$("#btn").click(function(){
+				
+				$.ajax({
+					url:"http://169.254.114.155:4008/jsonp",
+					dataType:'jsonp',
+					success: function(res){
+						console.log(res)
+					}
+				});	
+			})
+			
+		</script>
+	</body>
+</html>
