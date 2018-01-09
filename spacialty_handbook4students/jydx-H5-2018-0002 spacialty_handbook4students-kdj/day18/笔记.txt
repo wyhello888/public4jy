@@ -1,0 +1,95 @@
+1、 gulp 是一个前端自动构建工具
+	git 是版本控制工具
+	node 是一个基于chrome v8引擎的js的运行和开发环境
+	less: css 预处理语言    sass  stylus  postcss
+	gulp/grunt/webpack/fis3/......
+	
+	
+
+2、安装  
+	全局安装  npm install -g gulp
+	安装成功之后 执行  gulp -v  查看版本号  gulp -h
+	
+	在项目中安装
+	npm install gulp --save-dev
+	
+3、 使用
+	新建一个 gulpfile.js 文件
+	创建一个gulp任务
+	var gulp = require('gulp')
+	gulp.task('任务名称',function(){
+	
+	})
+	
+4、使用gulp 编译less
+	1- 安装  gulp-less     npm install --save-dev gulp-less
+	2- 在gulpfile.js  引入  var less = require('gulp-less')
+	3- 
+		gulp.task('less',function(){
+	
+			return gulp.src('app/less/style.less') //获取要编译的less
+			.pipe(less())   //使用gulp-less插件编译less
+			.pipe(gulp.dest('app/css'))  // 把编译完的文件输出到 app/css
+		})  
+		
+		
+5、匹配模式
+	*.less   匹配所有的less文件
+	**/*.less   匹配当前目录下和所有子目录下的less文件
+	!not.less  排除某个文件
+	!{a,b}.less
+	
+
+6、gulp-livereload 实现浏览器自动刷新
+
+   gulp-minify-css  压缩css
+   
+   del  删除目录
+   
+   gulp-rename  重命名
+   
+   gulp-minify-css  压缩css
+   
+   gulp-concat  文件合并
+   
+   gulp-uglify  压缩js 
+	
+	
+	
+	
+	
+	
+	
+经常出现的问题：
+	1、标点符号  中英文标点  
+	2、单词写错  dest -> desk    localhost ->localhsot
+	3、没有保存  代码写没有保存就执行
+	4、项目目录结构有问题  
+	5、404  -> 路劲不对，检查路径
+	6、unexpected identifer  不期待的标识符， 比如对象里，多个属性之间少写逗号
+	7、not define  变量未定义，方法没找到到，或者是某个包未正确安装
+	8、"require" not define  错把  node文件引入了html，在浏览器运行，运行环境不对！
+	
+	
+	
+开发环境
+	搭建开发环境
+	1、安装各种开发软件  IDE(HBuilder,webstorm,vscode)
+	2、安装 各种浏览器   IE、firefox 、chrome、360、UC
+	3、安装Node（npm） 
+	4、git/svn
+	5、gulp/webpack/。。。。。
+	6、（数据库）
+	7、把项目拉下来，运行起来    npm run dev / npm start 
+	
+	8、搭建项目框架
+		1- 新建一个文件夹 my-project 
+		2- cd my-project  git init 初始化仓库
+					      npm init  初始化包
+		3- 使用gulp/webpack/grunt  
+		4- 创建好目录结构
+		5- 安装服务器    npm start
+		6- 模拟数据  静态 json， 使用express搭建服务器
+		7- 使用浏览器测试，安装各种浏览器插件
+		
+   阅读公司开发文档，需求文档，接口文档 。。。 

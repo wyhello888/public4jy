@@ -1,0 +1,111 @@
+
+1、  函数封装  
+	 把特定功能，重复使用的代码，可以封装成函数，方便调用。
+	
+	$.get(url)
+	
+	缺点：  容易污染全局变量  
+	
+	function add(){}
+	
+	
+2、 封装对象
+
+	var util = {
+		_number:100,
+		add:function(){
+		
+		},
+		min: function(){
+		
+		}
+	}
+	
+	var number = 200;
+	
+	var util = 'ss'
+	
+	util._number 200;
+
+
+3、命名规范
+  
+tupian_img
+
+tupian.png
+
+helloWrold
+
+//普通函数
+function person(){
+
+}
+
+person()
+//构造函数
+function Person(){
+
+}
+
+new Person()
+
+//定义常量  
+var  PI = 3.14  
+
+//
+/*
+ 计算学生分数的函数
+ params:  stuent: Object  学生对象，clazz： string  班级
+ return：Number 返回学生分数
+ */
+function CountStudentScore(stuent,clazz){}
+
+/*
+ 
+ */
+function fsfs(){
+
+}
+
+
+4、 在js中，window对象的属性，是全局变量， 同时，定义的全局变量，也是window对象的一个属性
+	window.name = 'dddd';
+	var name = 'dddd'
+	
+	alert()
+	
+	var alert = function(){
+	
+	}
+	window.alert = function(){
+	
+	}
+	
+5、require  
+	
+	AMD，CMD，CommonJS
+	
+	CommonJS  Nodejs
+	AMD  require.js  
+	CMD  sea.js 
+	
+6、 AMD  
+   规定如何去定义模块及如何使用模块
+   
+   define([],function(){
+   
+   })  写一个模块
+   
+   require([],function(){
+   		
+   })
+	
+	
+7、 使用非AMD 规范的模块，需要配置 shim
+
+	shim:{
+		"jQuery":{
+			"exports" :"$"
+		}
+	} 
+

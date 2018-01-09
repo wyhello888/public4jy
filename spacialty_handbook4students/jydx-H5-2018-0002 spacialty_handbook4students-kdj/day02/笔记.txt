@@ -1,0 +1,16 @@
+pwd  查看当前目录
+ls   查看当前目录里文件
+cd .. 退出当前目录
+cd 文件名
+cd D:    切换盘符    
+
+
+在浏览器的环境下：  window
+var name = ''
+window.name = 'ddd';
+
+
+前端异步代码
+1、setTimeout
+2、事件
+3、ajax
