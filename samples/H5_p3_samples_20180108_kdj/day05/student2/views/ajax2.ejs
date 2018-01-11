@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>  this is ajax2 page </h1>
+
+    <button id="btn">发送请求</button>
+    <script>
+    
+        document.write('hhhh')
+        var btn = document.getElementById('btn');
+        btn.onclick = function(){
+
+            var xhr;
+            if(window.XMLHttpRequest){
+                xhr = new XMLHttpRequest;
+            }else{
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            xhr.open('POST','http://localhost:3000/ajax2',true);
+            xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+
+            xhr.send('name=迪丽热巴&age=18');
+
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState == 4 && xhr.status == 200){
+                    alert(xhr.responseText)
+                    console.log(xhr.responseText)
+                    document.write(xhr.responseText)
+                } 
+            }
+        }
+
+        
+        
+    </script>
+</body>
+</html>

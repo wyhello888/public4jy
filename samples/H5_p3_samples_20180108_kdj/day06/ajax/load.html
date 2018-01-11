@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		
+		
+		<button id="btn">load</button>
+		
+		<div id="container">
+			
+		</div>
+		
+		<script type="text/javascript">
+			
+			
+			$('#btn').click(function(){
+				
+				$('#container').load('div.html',function(){
+					console.log('加载成功！')
+				})
+			})
+			
+		</script>
+		
+	</body>
+</html>

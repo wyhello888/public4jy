@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../node_modules/angular/angular.min.js"></script>
+  </head>
+  <body>
+
+
+    <div ng-controller="ctrl">
+        <h1> {{name}}</h1>
+
+        <h1>{{brand.name}} {{brand.age}}</h1>
+
+        <input ng-model="brand.name"/>
+    </div>
+
+    <script>
+
+    //双向数据绑定
+    // ng-modle--> $scope.name
+    // $scope.name --> {{name}}
+    //脏查询机制 $digest
+
+      angular.module('app',[])
+      .controller('ctrl',function($scope,$timeout){
+          $scope.name = '易烊千玺';
+          $scope.age = 18;
+
+          $scope.brand = {
+            name:'hello',
+            age:18
+          }
+
+          $scope.$watch('brand',function(newvalue,oldvalue,scope){
+              console.log('新值:' + newvalue.name);
+              console.log('旧值:' + oldvalue.name);
+              // console.log("scope:" + scope.name)
+          },false)
+
+          // $timeout(function(){
+          //
+          //     $scope.name = '王源'
+          //
+          // },2000)
+
+          setTimeout(function(){
+              $scope.$apply(function(){
+                $scope.name = '王源123'
+              })
+          },2000)
+      })
+
+    </script>
+  </body>
+</html>

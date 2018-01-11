@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../node_modules/angular/angular.min.js"></script>
+  </head>
+  <body ng-controller="ctrl">
+
+    <ul ng-repeat="x in arr |orderBy:'age'">
+        <li>{{x.name}} -- {{x.age}}<li>
+    </ul>
+
+    <ul ng-repeat="x in arr3 track by $index">
+        <li>{{x}}<li>
+    </ul>
+
+
+    <ul>
+
+      <li ng-repeat="(k,v) in obj">
+
+            <h1>{{k}} ---{{v}}</h1>
+      </li>
+    </ul>
+
+      <script>
+        angular.module('app',[])
+        .controller('ctrl',function($scope){
+              $scope.arr = [
+                {name:'王源1',age:18},
+                {name:'王源2',age:20},
+                {name:'王源3',age:12},
+                {name:'王源4',age:22},
+                {name:'王源5',age:32}
+              ]
+
+              $scope.arr3 = [1,2,3,4,5,6,7,8,9];
+
+              $scope.arr2 = [1,2,3,4,5,6,2,8,4,2];
+
+
+
+              $scope.obj = {
+                name:'aaa',
+                age:'dddd',
+                hobby:'dddccc'
+              }
+        })
+      </script>
+  </body>
+</html>

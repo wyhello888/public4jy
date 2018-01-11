@@ -1,0 +1,20 @@
+脚本语言  
+企业级开发
+ES6
+ES5     ECMAScript    
+js   java   php  c#   python   c++  
+js   js
+
+
+js  是动态的、弱类型、解释性语言
+
+var a = 100;
+int a = 100;  
+
+编译型  编译器
+
+chrome V8     
+firefox  spidermonkey
+
+Nodejs 使用 chrome 一样的内核 V8  
+webkit   

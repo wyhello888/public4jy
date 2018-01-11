@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<button id="btn">获取jsonp数据</button>
+		<button id="btn2">获取jsonp数据222</button>
+		<script>	
+			
+			document.getElementById("btn").onclick = function(){
+				jsonp('http://169.254.114.155:4008/jsonp')
+			}
+			document.getElementById("btn2").onclick = function(){
+				jsonp('http://169.254.114.155:4008/jsonp2')
+			}
+			
+			function jsonp(url){
+				//创建  <script> 标签
+				var script = document.createElement('script');
+				// 给 src赋值
+				script.src = url;
+				//添加到页面上
+				document.body.appendChild(script);
+			}
+			
+			function foo(data){
+				console.log(data)
+			}
+			
+			
+		</script>
+	</body>
+</html>

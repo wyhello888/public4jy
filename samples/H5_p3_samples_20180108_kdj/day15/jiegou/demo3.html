@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+    <script>
+
+      //在js当中，对象就是 一组无序的属性集合
+
+      var p = {
+        name : '潘金莲',
+        age:18,
+        skill: function(){
+          console.log('我喜欢武松！');
+        }
+      }
+
+      var  {name,age,skill} = p;
+      console.log(name);
+      console.log(age);
+      skill();
+
+
+      var liangshan = [{name:'宋江',age:18},'hello',[2,4,55]]
+
+      var liangshan = {
+        ls: {name:'宋江',age:18},
+        number:108,
+        skill:['杀虎','喝酒','分赃']
+      }
+
+      var {ls,number,skill} = liangshan;
+      console.log(ls);
+      console.log(number);
+      console.log(skill);
+      [a,b,c] = skill;
+      console.log(a)
+          console.log(b)
+              console.log(c)
+
+
+    </script>
+  </body>
+</html>

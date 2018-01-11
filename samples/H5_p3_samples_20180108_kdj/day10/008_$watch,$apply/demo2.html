@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../node_modules/angular/angular.min.js"></script>
+  </head>
+  <body ng-controller="ctrl">
+
+    <h1>{{name}}</h1>
+<script>
+
+//脏查询  $digest
+angular.module('app',[])
+.controller('ctrl',function($scope,$timeout,$interval,$http){
+
+  $scope.name = 'aaaa';
+
+  // setTimeout(function(){
+  //     console.log('---------')
+  //
+  //       // console.log('name:' + $scope.name)
+  //
+  //     $scope.$apply(function(){
+  //         $scope.name = 'bbbb';
+  //     })
+  //
+  // },2000)
+
+  $timeout(function(){
+     $scope.name = 'ccccc';
+  },2000)
+
+  $http.get()
+  .success(function(data){
+      $scope.$apply(function(){
+        $scope.name = data.name;
+      })
+  })
+
+})
+
+
+
+</script>
+  </body>
+</html>

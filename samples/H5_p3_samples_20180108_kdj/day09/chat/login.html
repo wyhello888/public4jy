@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://localhost:4010/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			#container{
+				width: 500px;
+				margin: 100px auto;
+				text-align: center;
+			}
+			.title{
+				color: black;
+				margin-bottom: 50px;
+			}
+			.panel{
+				width: 100%;
+			}
+			.tip{
+				font-size: 22px;
+				color: gray;
+			}
+			input{
+				width: 200px;
+				height: 40px;
+				font-size: 30px;
+				border: none;
+				outline: none;
+				border-bottom: solid 1px black;
+				padding-left: 5px;
+			}
+			#enterbtn{
+				width: 200px;
+				height: 40px;
+				margin: 0 auto;
+				border: solid 1px gray;
+				margin-top: 50px;
+				line-height: 40px;
+				border-radius: 5px;
+				color: gray;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="container">
+			<h1 class="title">成长聊天室</h1>
+			<div class="panel">
+				<span class="tip">
+					请输入你的用户名
+				</span> <input type="text" name="uername" id="username"/>
+				<div id="enterbtn">
+					进入聊天室
+				</div>
+			</div>
+			
+		</div>
+		
+		<script type="text/javascript">
+			
+			function enterToIndex(){
+				var username = $("#username").val();
+				console.log(username)
+				if(username != ''){
+					//把用户名保存在localStorage里，跳转到 聊天页面
+					localStorage.username = username;
+					window.location.href = 'http://localhost:4010/'	
+				}
+			}
+			
+			$(document).on('keyup',function(e){
+				var keycode = e.keyCode;
+				if(keycode == 13){
+					enterToIndex()	
+				}
+				
+			})
+			$("#enterbtn").click(function (e) {
+				
+				enterToIndex()
+			})
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+      <script src="../node_modules/angular/angular.min.js"></script>
+  </head>
+  <body ng-controller="ctrl">
+
+<h1>{{text | hexie2}}</h1>
+
+<input ng-model="text"/>
+<script>
+
+angular.module('app',[])
+.controller('ctrl',function($scope){
+
+    $scope.text = "hello world";
+})
+.filter('hexie',function(){
+    return function(ele){
+        var arr = ele.split(' ');
+        console.log(arr);
+        for(var i = 0;i < arr.length;i++){
+           if(arr[i].toLowerCase() == 'sb'){
+             arr[i] = "*";
+           }
+        }
+
+        var str = arr.join(" ");
+        return str;
+    }
+})
+.filter('hexie2',function(){
+   return function(ele){
+      var arr = ele.split(' ');
+      var newarr = arr.map(function(word){
+          return word.toLowerCase() == "sb" ? "*" : word;
+      })
+      console.log(newarr)
+
+
+      return newarr.join(' ');
+   }
+})
+</script>
+  </body>
+</html>

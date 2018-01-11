@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../node_modules/angular/angular.min.js"></script>
+  </head>
+  <body>
+
+    <h1>{{say()}}</h1>
+    {{age}}
+
+    {{brand}}
+    <div ng-controller="ctrl">
+        <h1> {{brand}}</h1>
+        <h1>{{name}}</h1>
+        <h1>{{sing()}}</h1>
+
+        <h1>{{say()}}</h1>
+
+        <div ng-controller="ctrl2">
+            {{brand}}
+            <h1>{{name}}</h1>
+            <h1 ng-bind="sing()"></h1>
+            <h1>{{say()}}</h1>
+        </div>
+    </div>
+
+    <div>
+
+    </div>
+
+
+    <script>
+
+      angular.module('app',[])
+      .controller('ctrl',function($scope,$rootScope){
+          $scope.brand = "TFBOYS";
+
+          $rootScope.age = 18;
+
+      })
+      .controller('ctrl2',function($scope,$rootScope){
+          $scope.name = '王源'
+          $scope.sing = function(){
+            return "青春练习手册"
+          }
+
+          $rootScope.say = function(){
+            return "hello angular"
+          }
+
+      })
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/baiduTemplate.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		
+		<script type="text/html"  id="temp">
+			
+			<%for(var i = 0; i < data.length;i++){%>
+				
+				<li> <span><%= data[i].name %></span> <span> <%= data[i].age %></span> </li>
+				
+			<%}%>
+			
+		</script>
+		
+		
+		<ul id="list">
+		</ul>
+		
+		<script type="text/javascript">
+			
+			
+			var actors = 
+			[{"name" : "薛之谦", "age":"32"	},
+			{"name" : "迪丽热巴", "age":"23"	},
+			{"name" : "黄轩", "age":"31"	}]
+			
+			// 第一个参数  模板的id，第二个参数是  数据 ，注意数据的类型是一个对象
+			var html = baidu.template('temp',{data:actors})
+			document.getElementById('list').innerHTML = html;
+			
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

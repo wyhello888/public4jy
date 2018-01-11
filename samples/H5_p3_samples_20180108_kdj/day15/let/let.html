@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script>
+    //1-let 声明变量
+    // var a = 100;
+    // let b = 200;
+    // console.log(a);
+    // console.log(b);
+
+    //使用let声明的变量不会将申明提前，也就是说，必须要先声明，后使用
+    // var c;
+    // console.log(c);
+    // console.log(d);
+    // var c = 123;
+    // let d = 321;
+
+    //2- 使用let声明的变量是一个块级作用域
+    {
+      var e = 'hello';
+      let f = 'world';
+    }
+
+    // console.log(e);
+    // console.log(f);
+
+    // function add(){
+    //   // var e1 = 'helo';
+    //   let f1 = 'word';
+    // }
+    // add();
+    // // console.log(e1);
+    // console.log(f1);
+
+    if(true){
+      var e2 = 'hello';
+      let f2 = 'word';
+    }
+
+    // console.log(e2);
+    // console.log(f2);
+
+    // for(var j = 0;j< 10;j++){
+    //   console.log(j);
+    // }
+    // console.log(j);
+    //
+    // for(let i = 0;i< 10;i++){
+    //   console.log(i);
+    // }
+    // console.log(i);
+
+    //let 不能重复声明
+    var cc = 100;
+    var cc = 200;
+
+    let dd = 200;
+    let dd = 300;
+
+
+    </script>
+  </body>
+</html>

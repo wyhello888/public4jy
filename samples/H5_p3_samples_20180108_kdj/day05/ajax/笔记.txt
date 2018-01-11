@@ -1,0 +1,12 @@
+这是笔记内容
+
+1、在vscode 上安装 express 插件  这个插件可以把当前项目在服务器启动
+   在扩展中搜索  express  ,点击安装 ，安装完成之后，重启编辑器
+
+2、如何使用 ：  ctrl+ shift + p  ,弹出输入框，输入 express， 在下拉列表选择
+    最长的那个选项
+    如何关闭：  ctrl + shift + p ，输入 express，选择  stop server
+
+
+
+     

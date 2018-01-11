@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		<script type="text/javascript">
+			
+			
+			
+			
+			
+			jsonp('http://localhost:3000/jsonp',function(res){
+				console.log(res)
+			})
+			
+			function jsonpcallback(res){
+				console.log(res)
+			}
+			
+			function jsonp(url){
+				var script = document.createElement('script');
+				script.src = url;
+				document.body.appendChild(script);
+			}
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+一、 JSON   JSON.parse（）  JSON.stringify
+
+	 { "name" : "abc" }
+		
+二、 jquery 
+
+		jq 中添加点击事件   $('#btn').click(function(){})    $('#btn').on('click',function(){})
+		$.ajax()
+		url ： 请求的路径
+		success  ：  成功的回调函数，在此获取 返回的数据
+		error    :   请求失败的回调，在此处理请求失败
+		type ： 设置请求的方法   POST/GET
+		dataType:  预期返回的数据类型
+				xml，html，json，text，script，jsonp
+				
+		async  是否异步请求 默认是 true
+		data：  请求发送的数据  ，如果是get请求，会自动拼接到url后
+		
+		
+		$.get(url,function(){})   get请求数据
+		$.post(url,{},function(){})  post请求
+		$.getScript( url,function(){})  获取script脚本
+		$.getJSON(url ,function(){})  获取JSON数据
+		$('#container').load(url,function(){})
+		
+		
+
+
+
+对象： 在JavaScript当中 ，对象是一组无序的属性集合  
+
+
+三、 跨域   
+	原因： 浏览器的同源策略 
+	跨域的情况：  协议、域名、端口有一个不同就跨域
+	
+
+四、跨域的解决办法：
+	1、 在同源下   www.baidu.com
+				  baidu.com/add
+				  /add
+				  
+	2、利用  script  的 src 实现跨域请求
+	
+				  
+	

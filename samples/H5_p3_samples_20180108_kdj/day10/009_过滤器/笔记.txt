@@ -1,0 +1,9 @@
+currency
+date
+json
+number
+lowcase
+uppercase
+filter
+limitTo
+orderBy

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://localhost:3000/javascripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<h1>jquery</h1>
+		
+		<div id="container">
+			
+		</div>
+		
+		<script type="text/javascript">
+			
+			$.ajax({
+				type:"post",
+				url:"http://localhost:3000/ajax2",
+				data:{name:'hello',age:11},
+				async:true,
+				success: function(res){
+					alert(res.name + res.age)
+				}
+			});
+
+//			$.get('http://localhost:3000/getuser',function(res){
+//				console.log(res)	
+//			})
+			
+//			$.post('http://localhost:3000/ajax2',{name:'abcaa',age:11},function(res){
+//				console.log(res.name)
+//			})
+
+//			$('#container').load('http://localhost:3000/test.html',function(){
+//				console.log('插入到页面')
+//			})
+			
+//			$.getJSON('http://localhost:3000/json',function(res){
+//					console.log(res)
+//			})
+
+//			$.getScript('http://localhost:3000/javascripts/ajax.js',function(res){
+//					console.log(ajax)
+//			})
+		</script>
+	</body>
+</html>

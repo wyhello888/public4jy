@@ -1,0 +1,26 @@
+ node.js 运行 es6代码
+
+
+1、 在项目目录下执行 npm init ,一路回车，创建package.json 配置文件
+
+2、执行下面的命令，安装 babel
+npm install --save-dev babel-cli
+npm install babel-preset-es2015 --save-dev
+
+###如果有package.json ，省略1、2 ，执行 npm install
+
+3、修改配置文件
+添加：
+"babel": {
+ "presets": ["es2015"]
+},
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "build": "babel src -d build"
+},
+
+4、在项目目录下创建 src和build目录
+
+5、在src中编写es6代码，之后执行 npm run build 把es6编译成es5代码，并且输出到build目录下
+
+6、进入build目录，执行node file.js 命令运行程序

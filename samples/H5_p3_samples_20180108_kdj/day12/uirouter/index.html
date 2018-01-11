@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <style>
+.active{color:red;background-color: gray;}
+    </style>
+  </head>
+  <body>
+
+<ul>
+  <li ui-sref-active="active" ui-sref="home"><a >home</a></li>
+  <li ui-sref-active="active"><a ui-sref="list">list</a></li>
+</ul>
+
+<div ui-view></div>
+
+<script>
+
+angular.module('app',['ui.router'])
+.config(function($stateProvider,$urlRouterProvider){
+
+    $urlRouterProvider.otherwise('/home')
+
+    $stateProvider
+    .state('home',{
+      url:"/home",
+      templateUrl:"./home.html"
+      // template:'<h1>this is home page</h1>'
+    })
+    .state('list',{
+      url:"/list",
+      template:'<h1>this is list page</h1>'
+    })
+    .state('home.homep1',{
+      url:"/homep1",
+      templateUrl:'./homep1.html'
+    })
+    .state('home.homep2',{
+      url:"/homep2",
+      templateUrl:'./homep2.html'
+    })
+})
+
+</script>
+  </body>
+</html>

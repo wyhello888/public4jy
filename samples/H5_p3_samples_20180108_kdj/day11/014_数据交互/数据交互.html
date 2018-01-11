@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../node_modules/angular/angular.js"></script>
+    <style>
+        ul li{
+          display: flex;
+          height: 100px;
+        }
+        li img{
+          flex: 1;
+        }
+        li p{
+          flex: 1;
+        }
+    </style>
+
+  </head>
+  <body ng-controller="ctrl">
+
+    <ul ng-repeat="x in pro.data">
+        <li>
+            <img ng-src={{x.img}}  />
+            <p>{{x.name}}</p>
+            <p>{{x.price}}</p>
+        </li>
+    </ul>
+
+      <script>
+
+        angular.module('app',[])
+        .controller('ctrl',['$scope','$http',function($scope,$http){
+
+            $http.get('http://h5.yztctech.net/api/axf/apihomehot.php')
+            .then(function(res){
+              return res.data
+            })
+            .then(function(res){
+                console.log(res)
+                $scope.pro = res;
+            })
+
+            // console.log($http.get('http://h5.yztctech.net/api/axf/apihomehot.php'))
+        }])
+
+      </script>
+  </body>
+</html>

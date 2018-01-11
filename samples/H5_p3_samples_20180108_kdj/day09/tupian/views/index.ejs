@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style type="text/css">
+    	.preview{
+    		width: 200px;
+    	}
+    </style>
+  </head>
+  <body>
+    <h1></h1>
+    <p>Welcome to</p>
+    
+    <form action="http://localhost:3000/upload" method="post"  enctype="multipart/form-data">
+    		<input type="file" name="image"/>
+    		<input type="file" name="image"/>
+    		<input type="file" name="image"/>
+    		<input type="submit" value="提交"/>
+    </form>
+    
+    <img class="preview" src="<%= src %>"/>
+  </body>
+</html>

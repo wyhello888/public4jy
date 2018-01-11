@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+    <script>
+
+      var func1 = function(){
+
+      }
+
+      // var func2 = (x) => x;
+      var func2  = x=>x;
+      console.log(func2(2));
+
+      var func3 = (x,y) => x+y;
+      console.log(func3(3,3));
+
+      var func4 = () =>{
+          console.log('haahhhah--')
+          return '你好'
+      }
+      var h = func4();
+      console.log(h)
+
+      var func5 = () =>({name:'aaa'})
+      var obj = func5();
+      console.log(obj)
+
+    </script>
+  </body>
+</html>

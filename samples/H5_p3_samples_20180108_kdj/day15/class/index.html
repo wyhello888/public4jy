@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+    <script>
+
+      class Person{
+
+          constructor(name,age){
+            this.name  = name;
+            this.age = age;
+          }
+          say(){
+            console.log('我不是' + this.name)
+          }
+      }
+
+      var p = new Person('潘金莲',18);
+      p.say();
+
+      var p2 = new Person('冯小刚')
+      p2.say()
+
+
+      class Actor extends Person{
+
+          constructor(name){
+            super()
+            // console.log(this)
+            this.name = name;
+            // this.age = age;
+            // this.skill = skill;
+          }
+          show(){
+              console.log('我是我不是潘金莲的主演' + this.name)
+          }
+      }
+      var actor = new Actor('范冰冰');
+      actor.say();
+      actor.show()
+    </script>
+  </body>
+</html>

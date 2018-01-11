@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		<script type="text/javascript">
+			
+			
+			
+			function jsonp(url){
+			
+				var script = document.createElement('script');
+				script.src = url;
+				document.body.appendChild(script);			
+			}
+			
+			function getdata(res){
+				console.log(res)
+			}
+			
+			
+			jsonp('http://169.254.114.155:4008/jsonp?callback=getdata')
+			
+			
+		</script>
+	</body>
+</html>

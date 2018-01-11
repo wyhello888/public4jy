@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../node_modules/angular/angular.min.js"></script>
+  </head>
+  <body ng-controller="ctrl">
+
+      <div title="home" name="hello" my-touch>
+          <h1>hello angular</h1>
+      </div>
+
+<script>
+
+angular.module('app',[])
+.controller('ctrl',function(){})
+.directive('myTouch2',function($http){
+    return{
+      link:function($scope,$element,$attrs){
+            $element.on('touchstart',function(){
+              console.log('touch')
+            })
+      }
+    }
+})
+.directive('myTouch',function(){
+    return function($scope,$element,$attrs){
+          $element.on('touchstart',function(){
+              console.log('touch')
+              this.style.backgroundColor = 'red'
+          })
+    }
+})
+
+
+</script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <p>Welcome to <%= clazz %></p>
+
+    <button type="button" id="btn" name="button">click</button>
+
+    <script type="text/javascript">
+
+
+    function  ajax(url,data,method,callback){
+
+        var xhr ;
+        if(window.XMLHttpRequest){
+            xhr = new XMLHttpRequest();
+        }
+        else {
+          xhr = new ActiveXObject('Microsoft.XMLHTTP');
+        }
+        xhr.onreadystatechange = function(){
+          if(xhr.readyState == 4 && xhr.status == 200){
+              callback(xhr.responseText)
+          }
+        }
+        xhr.open(method,url,true);
+        if(method == 'POST'){
+          xhr.setRequestHeader("Content-type","application/json");
+        }
+        xhr.send(JSON.stringify(data));
+    }
+        $("#btn").click(function(){
+
+          ajax('http://localhost:3000/add?name=d',{name:'aaa'},'POST',function(res){
+              console.log(res)
+          })
+
+
+        })
+    </script>
+  </body>
+</html>

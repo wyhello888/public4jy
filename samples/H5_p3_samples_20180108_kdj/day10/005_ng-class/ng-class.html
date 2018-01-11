@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <style>
+      .red{
+        width: 200px;height: 200px;
+        background-color: red
+      }
+      .green{
+        width: 200px;height: 200px;
+        background-color: green;
+      }
+
+    </style>
+  </head>
+  <body ng-controller="ctrl">
+
+      <div ng-class="myclass" ng-click="change()"></div>
+  <script>
+
+  angular.module('app',[])
+  .controller('ctrl',function($scope){
+      $scope.myclass = 'green';
+
+      $scope.change = function(){
+        $scope.myclass = $scope.myclass == 'red' ? 'green' : 'red';
+      }
+  })
+
+  </script>
+  </body>
+</html>

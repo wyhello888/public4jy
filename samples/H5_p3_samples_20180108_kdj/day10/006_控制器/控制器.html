@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../node_modules/angular/angular.min.js"></script>
+  </head>
+  <body ng-init="a=100;" ng-controller="ctrl">
+
+      <h1>{{a}}</h1>
+
+      <h1>{{b}} {{c}}</h1>
+
+      <div ng-controller="ctrl2">
+          <h1>{{arr}}</h1>
+          <h1>{{show()}}</h1>
+      </div>
+
+    <script>
+
+      var app = angular.module('app',[]);
+      app.controller('ctrl',function($scope){
+          $scope.b = 200;
+          $scope.c = 'hello angular'
+      })
+
+      app.controller('ctrl2',["$scope",function($scope){
+
+      }])
+      //
+      // app.controller('ctrl2',function($scope){
+      //     $scope.arr = [2,4,7,8];
+      //     $scope.show = function(){
+      //       return "hello world"
+      //     }
+      // })
+
+      angular.module('app',[])
+      .controller('ctrl',function($scope){
+          $scope.b = 200;
+          $scope.c = 'hello angular'
+      })
+      .controller('ctrl2',function($scope){
+        $scope.arr = [2,4,7,8];
+         $scope.show = function(){
+           return "hello world"
+         }
+      })
+
+
+    </script>
+
+  </body>
+</html>

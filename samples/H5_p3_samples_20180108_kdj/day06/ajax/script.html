@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<button id="btn">获得脚本</button>
+
+		<script type="text/javascript">
+			
+			$('#btn').click(function(){
+				
+				
+				$.getScript('number.js',function(res){
+					console.log(res)
+					
+					var n = getNumber()
+					alert(n)
+				})
+			})
+			
+		</script>
+	
+	</body>
+</html>
