@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>前兄弟</div>
+		<div id ="box">
+			<div>10</div>
+			<div>11</div>
+			<div>12</div>
+			<span>
+				<div>span 13</div>
+			</span>
+			<span>
+				<div>span 14</div>
+			</span>
+		</div>
+		
+		<div>兄弟1</div>
+		<span>
+			<div>span 兄弟3</div>
+		</span>
+		<div>兄弟2</div>
+	</body>
+	<script type="text/javascript" src ='js/jquery-3.2.1.js'></script>
+	<script type="text/javascript">
+		//2-层次选择器 4个：后代选择器，子代选择器，相邻元素选择器+，兄弟元素选择器~
+		$("#box div").css({width:"300px",height:"80px",border:"1px solid red"});
+		$("#box>div").css({background:"blue"});
+		$("#box+div").css({width:"400px",height:"80px",border:"1px solid red"});
+//		$("#box~div").css({width:"400px",height:"80px",border:"1px solid red",background:"yellow"});
+	</script>		
+	
+
+</html>

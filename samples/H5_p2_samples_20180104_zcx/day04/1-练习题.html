@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		//页面上输出1-100之间所有的数据，如果这个数能被3和5同时整除，就替换为helloBaby,  如果这个数能被3整除替换为hello, 如果这个数能被5整除，替换为baby
+		//要求10个数据换行
+		
+		for(var i = 1;i<=100;i++)
+		{
+			//如果这个数能被3和5同时整除
+			if(i%3 ==0 && i%5 ==0)
+			{
+				document.write("helloBaby ");
+			}
+			else if(i%3 ==0)//能被3整除
+			{
+				document.write("hello ");
+			}
+			else if(i%5 ==0)//能被5整除
+			{
+				document.write("baby ");
+			}
+			else{
+				document.write(i  + " ");
+			}
+			
+			//换行
+			if(i %10==0)
+			{
+				document.write("<br/>");
+			}
+		}
+		document.write("<br/>");
+	</script>
+</html>

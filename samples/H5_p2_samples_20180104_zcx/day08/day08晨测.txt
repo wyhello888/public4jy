@@ -1,0 +1,16 @@
+1、字符串截取的三个方法。 
+2、数组添加数据元素的二个方法。
+3、数组删除数据元素的三个方法。
+4、如何定义一个日期对象？var d = new Date();
+5、间歇性定时器的方法  var timer= setInterval()
+6、清除间歇性定时器的方法  clearInterval(timer)
+7、获取页面元素的四种方法
+	document.getElementById()
+	document.getElementsByClassName()
+	document.getElementsByTagName()
+	document.getElementsByName()
+8、元素可视宽度，高度的属性 clientWidth  clientHeight
+9、元素占位宽度，高度的属性 offsetWidth  offsetHeight
+10、获取一个元素相对于父元素的左偏移量，上偏移量的属性
+offsetLeft
+offsetTop

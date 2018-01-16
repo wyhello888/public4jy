@@ -1,0 +1,151 @@
+1、html元素的分类：
+	块元素：单独占一行，不管任何多少，总是占一行， <p>...</p>  <h1>..</h1>  ......<h6>...</h6>  <div>...</div>
+	行内元素：不会单独占一行，行内元素的宽度，根据内容决定  <span>...<span>  <i>...</i>  <b>...</b> 等
+	行内块元素：支持宽高，共处一行  如img
+
+2、无序列表<ul>标签作用给一组类型相同的数据添加列表的语义，告诉浏览器、搜索引擎
+<ul>无序列表里的数据是一个整体，
+他们是没有类似于排行榜上的先后、重要、次要排名上分别的，他们的重要性都一样的。
+	语法格式：
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	type的属性值：
+		实心圆：disc（默认）	
+		空心圆：circle
+		黑色方块：square
+		
+	注意点:<ul>标签里只能嵌套<li>标签	,<li>标签可以嵌套任何标签
+	
+3、	有序列表
+	<ol type="a"  start ="" reversed="reversed">
+		<li></li>
+		<li></li>
+		<li></li>
+	</ol>
+	type的属性值：1(默认)|i|I|a|A
+	start的属性值：阿拉伯数字，表示从第几个序号开始排序
+	reversed="reversed"	（H5新属性）用于指定列表倒序显示。
+	reversed=true 
+	reversed 
+
+
+4、自定义列表
+定义：自定义列表不仅仅是一列选项，而是项目及其注释的组合。
+语法：	
+<dl> 
+	<dt>定义项</dt>  
+	<dd>描述项</dd>  
+	<dt>定义项</dt>
+	<dd>描述项</dd>
+</dl> 	
+
+5、超链接
+HTML 使用超级链接与网络上的另一个文档相连。超链接可以是一个字，一个词，或者一组词，也可以是一幅图像，
+你可以点击这些内容来跳转到新的文档或者当前文档中的某个部分。
+当你把鼠标指针移动到网页中的某个链接上时，箭头会变为一只小手。
+
+<a></a>
+属性：
+        href（设置链接目标地址）
+        title（悬停文本）
+       target（设置页面打开方式）
+属性值：
+		href="链接目标地址"
+        title=“鼠标悬停文本内容”
+        target="_blank"  在新窗口打开        
+		或     target="_self" 默认，在自身窗口打开
+		_blank	浏览器总在一个新打开、未命名的窗口中载入目标文档。
+		_self	在自身窗口打开
+		
+		_parent		这个目标使得文档载入父窗口或者包含来超链接引用的框架的框架集。
+		如果这个引用是在窗口或者在顶级框架中，那么它与目标 _self 等效。
+		_top	这个目标使得文档载入包含这个超链接的窗口，忽略框架集，
+		用 _top 目标将会清除所有被包含的框架并将文档载入整个浏览器窗口。
+		如果这个引用是在窗口或者在顶级框架中，那么它与目标 _self 等效。
+		
+
+		
+链接的种类：		
+1) 内部链接：简单来说,就是网站内部页面之间的链接。此时href的属性值只需写相对路径就可以<a  href="1.html">内容</a>
+2) 外部链接：在网站与网站间的链接。此时href的属性值的写法为：	<a  href="http://www.baidu.com">百度一下</a>
+3) 空链接：没有链接指向的链接。此时href的属性值的写法为：<a  href="#">内容</a>
+4) 下载链接：
+		<a href="demo.rar">点击下载rar</a>
+		<a href="demo.txt" download="demo.txt">点击下载</a>
+注意，txt,png,jpg等这些浏览器支持直接打开的文件是不会执行下载任务的，而是会直接打开文件，这个时候需要给a标签添加一个
+属性“download”；这里download也可以不写任何信息，会自动使用默认文件名。
+
+5) 锚点链接：
+	锚点命名：<a name=”top”> </a>        
+	 链接到锚点：<a href=”#top”> </a>           
+	     
+6) 发邮件的链接<a href="mailto:zhaochengxue@usian.com">发邮件给我</a>
+                  
+6、表格
+
+	表格的基本结构
+
+		示例代码：
+			<table>............表格开始标记
+					<tr>........行开始标记
+							<td></td>单元格标记
+					</tr>........行结束标记
+					<tr>
+							<td></td>
+					</tr>
+			</table>............表格结束标记
+		table:表格标签
+		caption: 定义表格标题
+		tr：表格的行
+		td：单元格
+		th：表头单元格（大多浏览器会把表头显示为粗体居中的文本）
+		数据单元格：包含文本、图片、列表、段落、表单、水平线、表格等等	
+	
+	
+	table的基本属性
+		width、height     宽高（单位是像素或%）
+		align         对齐-- left/center/ right
+		border        外边框
+		bordercolor   外边框颜色
+		bgcolor       背景色
+		background    背景图片
+		cellspacing      单元格间距 （默认2）
+		cellpadding     表格边框与内容的间距 默认是0
+		
+	
+	行标签tr的属性
+		height  高（单位是像素或%）
+		align  水平对齐-- left/center/ right
+		bgcolor  背景色
+		valign  垂直对齐-- top/middle/bottom
+	
+	单元格td的属性
+	width  宽（单位是像素或%）
+	height  高（单位是像素或%）
+	align  水平对齐-- left/center/ right
+	valign   垂直对齐-- top/middle/bottom
+	bgcolor  背景色
+	background  背景图片
+	colspan  跨列（column）
+	rowspan  跨行 (row）
+	
+	表头标签th
+	    <th>...</th>标签：
+	    表头单元格标记，是特殊的单元格，文字会自动加粗、居中。它的用法是取代<td>的位置即可。
+	
+	表格主体tbody标签
+	<thead></thead>标签定义表格的表头。该标签用于组合 HTML 表格的表头内容。
+	
+	<tbody></tbody>标签定义表格的主体
+	<tfoot></tfoot>标签定义表格的页脚（脚注或表注）
+	thead 元素应该与 tbody 和 tfoot 元素结合起来使用。
+	表格中 ，tbody可以有多个 ,thead和tfoot只能有一个。
+	<thead><tbody><tfoot>在table中的代码位置是灵活的，但是现实效果都是正常的。	
+	
+	
+	
+	
+

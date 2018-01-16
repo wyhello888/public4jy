@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div1,#div2{
+				width:200px;
+				height:200px;
+				border:1px solid red;
+				float:left;
+				margin-left:20px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button"  id ="btn1"value ="这是一个按钮" onclick = "fun()" />
+		<input type="button"  id ="btn2"value ="取消事件"  />
+		<input type="button"  id ="btn3"value ="dom 2级事件绑定"  />
+		<input type="button"  id ="btn4"value ="取消dom2级事件"  />
+		<div id="div1">
+			helloDiv
+		</div>
+		<div id="div2">
+			helloDiv
+		</div>
+	</body>
+	<script>
+//		function fun()
+//		{
+//			console.log("按钮1的点击事件被执行");
+//		}
+		
+		//dom 0级事件绑定
+		var btn1 = document.getElementById("btn1");
+		var btn2 = document.getElementById("btn2");
+		var btn3 = document.getElementById("btn3");
+		var btn4 = document.getElementById("btn4");
+		var div1 = document.getElementById("div1");
+		var div2 = document.getElementById("div2");
+		btn1.onclick = function()
+		{
+			console.log("按钮1的点击事件被执行---------");
+			//给div1绑定事件
+			div1.onclick = function()
+			{
+				alert(this.innerHTML);
+			}
+			
+		}
+		
+		btn2.onclick = function()
+		{
+			//取消div1的事件
+			div1.onclick = null;
+		}
+		
+		//dom 2级事件绑定
+		//btn3.addEventListener("click",function(){},false);
+		btn3.addEventListener("click",function(){
+			console.log("btn3的事件被执行");
+		},false);
+		
+		btn3.addEventListener("click",function(){
+
+			div2.addEventListener("click",fun,false);
+			
+		},false);
+		
+		btn4.addEventListener("click",function(){
+			//取消div2的事件绑定
+			div2.removeEventListener("click",fun);
+		},false);
+		
+		
+		//自定义
+		function fun()
+		{
+			alert(this.innerHTML);
+				
+		}
+		
+	</script>
+</html>

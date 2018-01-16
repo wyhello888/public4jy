@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width:200px;
+				height:100px;
+				border:1px solid red;
+			}
+			.c1{
+				background:yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<!--<div style="background:blue; width:20px;height:20px;">11</div>
+			<div style="background:red; width:20px;height:20px;">222</div>-->
+		</div>
+		<div></div>
+		<div></div>
+		<input type="button" id ="btn" value ="按钮" />
+	</body>
+	<script>
+//		var div = document.querySelector("#div1");
+//		div.style.width= "100px";
+//		div.style.height= "100px";
+//		div.style.border="1px solid red";
+//		
+//		//var divs = document.querySelectorAll("div");
+//		var divs = document.querySelectorAll(".c1");
+//		for(var i = 0;i<divs.length;i++)
+//		{
+//			divs[i].style.width = "100px";
+//			divs[i].style.height = "100px";
+//			divs[i].style.background = "blue";
+//			divs[i].style.marginTop = "20px";
+//		}
+		
+		//复制一个节点
+//		var node1 = div.cloneNode();
+//		document.body.appendChild(node1);
+
+		//var node1 = div1.firstElementChild;
+//		var node1 = document.createElement("div");
+//		node1.style.width = "100px";
+//		node1.style.height = "100px";
+//		node1.style.background="yellow";
+//		var node2 = div1.lastElementChild;
+//		console.log(node1+"--" + node2);
+//		
+//		div1.replaceChild(node1,node2);
+		
+		
+		var btn = document.getElementById("btn");
+		btn.onclick = function()
+		{
+			var divs = document.querySelectorAll("div");
+			for(var i =0;i<divs.length;i++)
+			{
+				//divs[i].className ="c1";
+				divs[i].setAttribute("class","c1");
+			}
+		}
+	</script>
+</html>

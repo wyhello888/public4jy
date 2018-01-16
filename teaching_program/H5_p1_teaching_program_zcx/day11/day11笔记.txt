@@ -1,0 +1,139 @@
+1、html概述：
+从2010年开始，HTML5和CSS3就一直是互联网技术中最受关注的两个话题。2010年，MIX10大会上微软的工程师在介绍ie9时，
+从前端技术的角度把互联网的发展分为三个阶段：
+第一阶段是以web 1.0为主的网络阶段，前端主流技术是HTML 和CSS。
+第二阶段是web 2.0 的ajax应用阶段，热门技术是javascript/DOM/异步数据请求。
+第三阶段是html5 + css3 阶段，这两者相辅相成，使互联网又进入一个崭新的时代。
+
+html5以html4 为基础，对html4进行了大量的修改 。
+
+html基本文档结构
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+</html>
+
+2、结构化标签5个：主要负责web上下文结构的定义，确保html文档的完整性。
+	(1)header	标记头部区域的内容(用于整个页面或页面中的一块区域)用法：<header></header>
+		
+	(2)footer	标记脚部区域的内容(用于整个页面或页面中的一块区域)，通常用于表示网站的一些相关信息，
+	例如，关于我们，法律申明，邮件信息和管理入口等。
+	(3)section	web页面中的一块区域，也可以用于区域的章节描述。
+	(4)article	独立的文章内容，用于表示一篇文章的主体内容，一般为文字集中显示的区域。
+	(5)nav		导航类辅助内容，用于菜单导航，链接导航等。
+	
+3、非结构化标签：主要完成web页面区域的划分，确保内容的有效分隔
+	(1)aside	相关内容或者引文,用以表达侧栏，摘要等作为补充主体的内容。从一个简单页面显示上看，就是侧边栏，可以在左边，也可以在右边。
+	(2)figure	用于表示一段独立的流内容，一般表示文档主体流内容中的一个独立单元。使用figcaption元素可为
+	figure元素组添加标题。
+		用法：
+		<figure>
+			<img src = ""/>
+			<figcaption>标题</figcaption>
+			
+		</figure>
+	(3)code		表示一段代码块
+	(4)dialog	用于表达人与人之间的对话。该元素还包括dt和dd这二个组合元素，它们常常同时使用。dt用于表示说话者，dd用于表示说话者的内容。
+4、行内语义性标签：主要完成web页面具体内容的引用和表述，是丰富内容展示的基础。
+	(1)meter	用于表示特定范围内的数值，可用于工资，数量，百分比等。
+	
+	(1)hgroup	用于对整个页面或页面中一个内容区块的标题进行组合。	
+		用法：<hgroup></hgroup>
+	(2)time		用于表示日期或时间
+	(3)progress	用于表示进度条，可通过对其max,min,step等属 性进行控制，完成对进度的表示和监控。
+	
+	(4)video	定义视频，比如电影片段或其他视频流。
+		用法：
+		<video src = "" controls = "controls" ></video>
+		属性	值	描述		
+		autoplay	autoplay	如果出现该属性，则视频在就绪后马上播放。
+		controls	controls	如果出现该属性，则向用户显示控件，比如播放按钮。
+		height	pixels	设置视频播放器的高度。
+		loop	loop	如果出现该属性，则当媒介文件完成播放后再次开始播放。
+		preload	preload	
+		如果出现该属性，则视频在页面加载时进行加载，并预备播放。
+		如果使用 "autoplay"，则忽略该属性。
+		src	url	要播放的视频的 URL。
+		width	pixels	设置视频播放器的宽度。
+		
+		当前，video 元素支持三种视频格式：
+		Ogg = 带有 Theora 视频编码和 Vorbis 音频编码的 Ogg 文件
+
+		MPEG4 = 带有 H.264 视频编码和 AAC 音频编码的 MPEG 4 文件
+		
+		WebM = 带有 VP8 视频编码和 Vorbis 音频编码的 WebM 文件
+		
+	(5)audio	定义音频，比如音乐或其他音频流
+		用法：
+		<audio src = ""></audio>
+		
+		属性	值	描述
+		autoplay	autoplay	如果出现该属性，则音频在就绪后马上播放。
+		controls	controls	如果出现该属性，则向用户显示控件，比如播放按钮。
+		loop	loop	如果出现该属性，则每当音频结束时重新开始播放。
+		preload	preload	
+		如果出现该属性，则音频在页面加载时进行加载，并预备播放。
+		如果使用 "autoplay"，则忽略该属性。
+		src	url	要播放的音频的 URL。
+		
+5、交互性标签：主要用于功能性的内容表达，会有一定的内容和数据的关联，是各种事件的基础。
+	(1)details:用于表示一段具体的内容，但是内容默认可能不显示，通过某种手段（如单击）与legend交互才会显示出来。
+	(2)datagrid:用于控制客户端数据与显示，可以由动态脚本及时更新。
+	(3)menu:	用于交互菜单
+	(4)command:	用来处理命令按钮。
+	
+6、新增的input输入类型：
+	(1)	email类型
+		<input type = "email"/>
+	(2)	url类型
+		<input type = "url"/>
+	(3)number类型
+		<input type = "number" min = "" max = "" step = "" />
+	(4)range类型
+		<input type = "range" min= "" max = ""/>
+	(5)date类型
+		<input type = "date"/>
+	(6)month类型
+		<input type = "month"/>
+	(7)week类型
+		<input type = "week"/>
+	(8)time类型
+		<input type = "time"/>
+	(9)datetime类型
+		<input type = "datetime"/>
+	(10)datetime-local
+		<input type = "datetime-local"/>
+	(11)search类型
+		<input type = "search"/>
+	(12)tel类型
+		<input type = "tel"/>
+	(13)color类型
+		<input type = "color"/>
+7、	新增的input属性
+	(1)autocomplete属性：
+	(2)autofocus属性：自动获取焦点
+	(3)pattern属性：正则的验证
+	(4)placeholder属性：
+	(5)required属性：必需添写
+
+	
+8、设计大纲：所谓大纲，简单来说就是文档中各内容区块的结构编排。内容区块可以使用标题元素(h1--h6，hgroup)来展示各级内容区块的标题。
+综合运用各级内容区块的标题创建好文档的目录后，该目录就是一个大纲了。
+	关于内容区块的编排，可以分为显示编排和隐式编排两种方式。
+	(1)显示编排：是指明确使用section等元素创建文档结构，在每个内容区块内使用标题(h1--h6，hgroup)等。
+	(2)隐式编排：不明确使用section等元素，而是根据页面中所书写的各级标题(h1--h6,hgroup)等把内容区块自动创建出来。因为html5
+	引擎只要看到了书写了某个级别的标题，就会判断存在相对应的内容区块。
+		--如果新出现的标题比上一个标题级别低，生成下级内容区块。
+		--如果新出现的标题比上一个标题级别高或级别相等，生成新的内容区块。
+	在编排页面时，尽量使用显示编排。
+9、设计样式：因为很多浏览器尚未对html5中新增的结构元素提供支持，因此我们无法知道客户端使用的浏览器是否支持这些元素，所以需要使用css
+追加如下声明，目的是通知浏览器页面中使用的html5中新增元素都是以块方式显示的。
+	header,footer,section,nav,hgroup,aside,article,figure,figcation{
+	display:block;
+	}

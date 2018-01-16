@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" />
+		<ul>
+			<li>hello</li>
+			<li>hello</li>
+			<li>hello</li>
+		</ul>
+	</body>
+	<script type="text/javascript" src ="js/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$("input[type=button]").click(function(){
+//			$("<li></li>").html("hello").appendTo("ul");
+//			$("<input type =button value =删除>").appendTo("ul li:last-child");
+//			$("[input type =button]").click(function(){
+//				$(this).parent().remove();
+//			})
+			var $li= $("<li></li>").html("helloLI").appendTo("ul");
+			var $button= $("<input type =button value =删除>").appendTo($li);
+			$button.click(function(){
+				$(this).parent().remove();
+			})
+			
+			
+		});
+	</script>
+		
+	
+</html>

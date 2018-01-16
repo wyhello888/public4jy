@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<div class="c1" id="div1">
+			helloWorld<!--这是一个注释-->
+			<div>helloDiv1</div>
+			<div>helloDiv2</div>
+			<div>helloDiv3</div>
+		</div>
+	</body>
+	<script>
+		//在 HTML DOM 中，所有事物都是节点
+		//节点的类型
+		/*
+		 * 
+		整个文档是一个文档节点
+		每个 HTML 元素是元素节点 
+		HTML 元素内的文本是文本节点 
+		每个 HTML 属性是属性节点 
+		注释是注释节点
+		
+		节点的三个属值， type ,name value,
+		 */
+		//获取一个元素节点，
+		var div1 = document.getElementById("div1");
+//		console.log(div1.nodeType);//1
+//		console.log(div1.nodeName);//DIV
+//		console.log(div1.nodeValue);//null
+		
+		//文本节点
+		var node1 = div1.firstChild;//获取div1的第一个子节点， 是一个文本节点
+//		console.log(node1.nodeType);//3
+//		console.log(node1.nodeName);//#text
+//		console.log(node1.nodeValue);//具体的文本值
+		
+		//属性节点
+		var node2 = div1.getAttributeNode("id");//获取div1的属性节点  id这个属性
+//		console.log(node2.nodeType);//2
+//		console.log(node2.nodeName);//属性
+//		console.log(node2.nodeValue);//属性的值
+		
+		//注释节点
+		var node3 = node1.nextSibling;//获取node1节点的下一个兄弟节点
+//		console.log(node3.nodeType);//8
+//		console.log(node3.nodeName);//#comment
+//		console.log(node3.nodeValue);//注释的具体的信息
+		
+		//文档节点
+		var node4 = div1.ownerDocument;//获取文档节点，一个HTML节构中只有一个文档节点
+		console.log(node4.nodeType);//9
+		console.log(node4.nodeName);//#document
+		console.log(node4.nodeValue);//null
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

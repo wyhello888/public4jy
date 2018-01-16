@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div1" class = "c1">
+			这是一个div<!--这是一个注释-->
+		</div>
+			
+		
+		<input type="button" value ="这是一个按钮" />
+		
+		
+		<div id="box">
+			<input type="text" />
+			<input type="text" />
+			<input type="text" />
+			<input type="text" />
+		</div>
+	</body>
+	<script type="text/javascript">
+	//nodeType
+	//nodeName
+	//nodeValue
+		var div1 = document.getElementById("div1");//元素节点
+		console.log(typeof div1);
+		console.log(div1.nodeType);//1
+		console.log(div1.nodeName);//标签名
+		console.log(div1.nodeValue);//null
+		
+		//获取一个属性节点
+		var node1 = div1.getAttributeNode("class");
+		console.log(node1.nodeType);//2
+		console.log(node1.nodeName);//属性名
+		console.log(node1.nodeValue);//属性值
+		
+		//文本节点
+		var node2 =div1.firstChild;//获取了div1第一个孩子
+		console.log(node2.nodeType);//3
+		console.log(node2.nodeName);//#text
+		console.log(node2.nodeValue);//具体的文本的内容
+		
+		//注释节点
+		var node3 =node2.nextSibling; //获取下一个兄弟节点
+		console.log(node3.nodeType);//8
+		console.log(node3.nodeName);//#comment
+		console.log(node3.nodeValue);//具体的注释的内容
+		
+		//文档节点
+		var node4 = div1.ownerDocument;//获取文档节点
+		console.log(node4.nodeType);//9
+		console.log(node4.nodeName);//#document
+		console.log(node4.nodeValue);//null
+		
+		
+		
+		
+	</script>
+</html>

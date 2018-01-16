@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		#div1 img{
+			width:300px;
+			
+		}
+			#div2{
+				width:300px;
+				height:50px;
+				background:cornflowerblue;
+				text-align: center;
+				line-height: 50px;
+			}
+		</style>
+	</head>
+	<body>
+	<div id="div1">
+	<img src="img/img3.gif" alt="" />
+	</div>
+	<div id="div2"></div>
+	</body>
+	<script>
+		var a=["李丁丁","王丁丁","孙丁丁","周丁丁"];
+		var div1 = document.getElementById("div1");
+		div1.onclick = function()
+		{
+			var index =parseInt(Math.random()*a.length) ;
+			var str = a[index];
+			div2.innerHTML= str;
+		}
+	</script>
+</html>

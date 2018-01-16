@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{
+			margin:0px;
+			padding:0px;
+			list-style: none;
+		}
+		ul{
+			position:relative;
+		}
+			ul>li{
+				width:150px;
+				height:40px;
+				background-color: blue;
+				float:left;
+				margin-left:5px;
+			}
+			ul>li:hover{
+				background-color: pink;
+			}
+			ol{
+				width:460px;
+				height:300px;
+				border:1px solid blue;
+				display:none;
+				position:absolute;
+				left:5px;
+				top:40px;
+				
+			}
+			div{
+				height:40px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>
+				<div>新闻</div>
+				<ol>
+					<li>新闻的内容</li>
+					<li>新闻的内容</li>
+					<li>新闻的内容</li>
+					<li>新闻的内容</li>
+					<li>新闻的内容</li>
+					<li>新闻的内容</li>
+				</ol>
+			</li>
+			<li>
+				<div>体育</div>
+				<ol style="display:block;" >
+					<li>体育的内容</li>
+					<li>体育的内容</li>
+					<li>体育的内容</li>
+					<li>体育的内容</li>
+					<li>体育的内容</li>
+					<li>体育的内容</li>
+				</ol>
+			</li>
+			<li>
+				<div>娱乐</div>
+				<ol >
+					<li>娱乐的内容</li>
+					<li>娱乐的内容</li>
+					<li>娱乐的内容</li>
+					<li>娱乐的内容</li>
+					<li>娱乐的内容</li>
+					<li>娱乐的内容</li>
+					<li>娱乐的内容</li>
+					<li>娱乐的内容</li>
+				</ol>
+			</li>
+		</ul>
+	</body>
+	<script type = "text/javascript">
+		var divs = document.getElementsByTagName("div");//获取所有的div
+		var ols = document.getElementsByTagName("ol");//获取所有的ol
+		console.log(divs.length);
+		console.log(ols.length);
+		
+		for(var i =0;i<divs.length;i++)
+		{
+			divs[i].id = i;
+			divs[i].onmouseover =function()
+			{
+				//所有的都隐藏
+				for(var j=0;j<ols.length;j++)
+				{
+					ols[j].style.display="none";
+				}
+				var index = this.id;
+				console.log(index);
+				ols[index].style.display="block";
+			}
+		}
+		
+	
+	</script>
+</html>

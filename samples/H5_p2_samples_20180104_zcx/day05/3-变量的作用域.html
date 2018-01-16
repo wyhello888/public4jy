@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+	//变量：函数优先使用局部变量，如果没用局部变量，则使用全局变量，如果没用这个局部变量，也没有全局变量，程序会报错，变量没有定义
+		var x = 200;//定义一个变量。全局变量
+		
+	
+		function fun2()
+		{
+			console.log("fun2--" +x);
+		}
+		function fun()
+		{
+			var x = 100;//定义一个变量x,变量的值为100;  变量x称为局部变量
+			console.log("fun---" + x);
+		}
+		function fun3()
+		{
+			x = 300;//没有加var , 是使用全局变量，修改了全局变量x的值
+			console.log("fun3---" + x);
+		}
+		fun();// 100
+		fun2();//200
+		fun3();//300
+		
+		fun2();//
+	</script>
+</html>

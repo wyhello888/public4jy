@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//数组去重问题：删除数组中重复的数据
+		//删除数组中某一个位置的数据元素的值 splice()    pop() shift()
+		var arr =[10,20,30,10,10,10,50,30,50,60];
+/*		document.write("原始数据：" + arr+"<br/>");
+		arr.splice(2,1);
+		document.write("删除后的数据"+arr+"<br/>");
+		
+		arr.splice(3,2);
+		document.write("删除后的数据"+arr+"<br/>");		
+		
+		arr.splice(0,1,110,120,130);	
+		document.write("删除后的数据"+arr+"<br/>");		
+*/
+		//去掉数组中重复的数据
+		document.write("原始数组:" +arr+"<br/>");
+		for(var i =0;i<arr.length;i++)
+		{
+			for(var j = i+1;j<arr.length;j++)
+			{
+				if(arr[i] == arr[j])//如果相等
+				{
+					arr.splice(j,1);
+					//删除1个数据,
+					j--;
+				}
+			}
+		}
+		document.write("去重后数组:" +arr+"<br/>");
+			
+ 	</script>
+</html>

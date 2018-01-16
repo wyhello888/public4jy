@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			ul li{
+				color:blue ;
+			}
+			
+			/*后代选择器*/
+			.c1 span{
+				display: inline-block;
+				width:200px;
+				height:80px;
+				border:1px solid red;
+			}
+			/*子选择器*/
+			.c1>span{
+				background-color: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>被总书记邀请前排合影的村支书黄大发</li>
+			<li>被总书记邀请前排合影的村支书黄大发
+				<ol>
+					<li>习近平总书记会见全国道德模范代表引发强烈反响</li>
+					<li>习近平总书记会见全国道德模范代表引发强烈反响</li>
+				</ol>
+			</li>
+			<li>被总书记邀请前排合影的村支书黄大发</li>
+		</ul>
+		
+		<div class="c1">
+			<div><span>span1</span></div>
+		</div>
+		<div class="c1">
+			<span>span2</span>
+		</div>
+	</body>
+</html>

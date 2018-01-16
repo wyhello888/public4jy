@@ -1,0 +1,30 @@
+document.querySelector( )(新)
+document.querySelectorAll( )（新）
+
+//克隆节点
+var node1 = div.cloneNode();
+document.body.appendChild(node1);
+
+//替节点
+oParent.replaceChild(newNode,oldNode) 
+
+
+getAttribute(name)：获取节点上name属性的值
+setAttribute(name,value)：设置节点上name属性的值为value
+removeAttribute(name)：删除节点上的name属性
+
+//获取非行间样式
+	//非ie
+	var style = getComputedStyle(div,null);
+	var color = style.backgroundColor;
+	//ie
+	var color = div.currentStyle.backgroundColor;
+
+//兼容性写法	
+function getStyle(obj, name) { 
+     if(obj.currentStyle) { 
+          return obj.currentStyle[name]; 
+     } else { 
+         return  getComputedStyle(obj, false)[name]; 
+     } 
+}

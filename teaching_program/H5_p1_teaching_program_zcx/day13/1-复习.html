@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width:300px;
+				height:200px;
+				border:1px solid blue;
+			}
+			span{
+				float:left;
+				width:100px;
+				height:100px;
+				border:1px solid blue;
+				margin-left:20px;
+			}
+			span:only-child{
+				background:blue;
+			}
+			div:empty{
+				background:yellow;
+			}
+			input:disabled{
+				background:red;
+			}
+			input:enabled{
+				background:yellow;
+			}
+			input:checked{
+				width:30px;
+				height:30px;
+			}
+			input[type="checkbox"]
+			{
+				width:40px;
+				height:40px;
+			}
+			/*p,div,h1,input{
+				color:pink;
+			}*/
+			:not(input)
+			{
+				color:blue;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+一、选择器
+	1、结构伪类选择器
+		li:first-child 
+		li:first-of-type
+		li:last-child
+		li:last-of-type
+		li:nth-child()
+		li:nth-of-type()
+		li:only-child
+		:root
+		div:empty
+	2、UI伪类选择器
+		:disabled
+		:enabled
+		:checked
+	3、属性选择器
+		[属性]
+		[属性=属性值]
+	4、否定伪类选择器
+		:not(选持器)
+	5、伪元素选择器
+		::after-- content:""
+		::before  content:""
+		:first-line
+		:first-letter
+		::selection
+二、css变型动画
+	transform:
+		-->
+		<!--<div>
+			<span></span>
+		</div>
+		<div>
+			<span></span>
+			<span></span>
+		</div>
+		<div>
+		</div>-->
+		<input type="button" value ="按钮" disabled="disabled"/>
+		<input type="button" value ="按钮" disabled="disabled"/>
+		<input type="button" value ="按钮" disabled="disabled"/>
+		<input type="button" value ="按钮" />
+		<input type="button" value ="按钮" />
+		<input type="button" value ="按钮" />
+		<br />
+		<input type="checkbox" />
+		<input type="checkbox" />
+		<input type="checkbox" />
+		<input type="checkbox" />
+		<input type="checkbox" checked />
+		<input type="checkbox" checked />
+		<input type="checkbox" checked />
+		<p>这是一个段落</p>
+		<p>这是一个段落</p>
+		<div>这是一个div</div>
+		<div>这是一个div</div>
+		<h1>这是一个标题</h1>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" id="btn1" value ="添加一个li" />
+		<input type="text" id="text1" />
+		<ul>
+			<li>helloLi1</li>
+			<li>helloLi1</li>
+			<li>helloLi1</li>
+			<li>helloLi1</li>
+			<li>helloLi1</li>
+		</ul>
+	</body>
+	<script type="text/javascript" src ="js/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+	$("#btn1").click(function(){
+		var str = $("#text1").val();//获取文本框里的文本值
+		//var $li = $("<li></li>").html("helloLI22222").appendTo("ul");
+		var $li = $("<li></li>").html(str).appendTo("ul");//创建一个Li,并追加到ul中
+		var $button = $("<input type =button value = 删除>").appendTo($li);
+		//按钮的事件
+		$button.click(function(){
+			$(this).parent().remove();//删除按钮的父元素
+		});
+	});
+	</script>
+		
+	
+</html>

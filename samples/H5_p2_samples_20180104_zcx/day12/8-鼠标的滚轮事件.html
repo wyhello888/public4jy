@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				height:3000px;
+			}
+		</style>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//mousewheel事件
+/*		document.onmousewheel = function(event)
+		{
+			var event = event || window.event;
+			console.log(event);
+			if(event.wheelDelta >0)
+			{
+				console.log("向上滚动");
+			}
+			else
+			{
+				console.log("向下滚动");
+			}
+		}
+		
+		//DomMouseScroll
+		document.addEventListener("DOMMouseScroll",function(event){
+			//console.log(event);
+			if(event.detail <0)
+			{
+				console.log("向上滚动");
+			}
+			else
+			{
+				console.log("向下滚动");
+			}
+		});
+		
+		* */
+		//如何判断浏览器
+			var str = navigator.userAgent;		
+			console.log(str);
+		//是FF
+			if(str.indexOf("Firefox") != -1)
+			{
+				document.addEventListener("DOMMouseScroll",function(event){
+					//console.log(event);
+					if(event.detail <0)
+					{
+						console.log("向上滚动");
+					}
+					else
+					{
+						console.log("向下滚动");
+					}
+				});				
+			}
+			else//非FF
+			{
+//				document.addEventListener("mousewheel",function(event){
+//					var event = event || window.event;
+//					if(event.wheelDelta >0)
+//					{
+//						console.log("向上滚动");
+//					}
+//					else
+//					{
+//						console.log("向下滚动");
+//					}
+//				});
+					document.onmousewheel = function(event)
+				{
+					var event = event || window.event;
+					console.log(event);
+					if(event.wheelDelta >0)
+					{
+						console.log("向上滚动");
+					}
+					else
+					{
+						console.log("向下滚动");
+					}
+				}
+			}
+		
+		
+	</script>
+</html>

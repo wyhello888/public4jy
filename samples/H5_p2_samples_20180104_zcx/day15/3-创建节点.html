@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id = "ul1">
+			<li title="title0">0AAAAAAAAAAAAAAAA</li>
+			<li title="title1">1AAAAAAAAAAAAAAAA</li>
+			<li title="title2">2AAAAAAAAAAAAAAAA</li>
+			<li title="title3">3AAAAAAAAAAAAAAAA</li>
+			<li title="title4">4AAAAAAAAAAAAAAAA</li>
+			<li title="title5">5AAAAAAAAAAAAAAAA</li>
+		</ul>
+	</body>
+	<script type = "text/javascript" src = "js/jquery-3.1.1.js"></script>
+	<script type = "text/javascript">
+		//创建节点
+
+		var $li =$("<li title='title6'></li>");//创建一个li节点
+		$li.html("bbbbbbbbbbbbb");//$li.text();
+		
+		//ul1追加一个节点li
+		$("#ul1").append($li);
+		
+	</script>
+</html>

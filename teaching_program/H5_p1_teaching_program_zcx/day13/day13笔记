@@ -1,0 +1,140 @@
+复习CSS选择器：
+1、结构伪类选择器：
+2、UI伪类选择器：
+3、属性选择器：
+4、否定伪类选择器：
+5、伪元素选择器：
+
+复习动画知识点：
+css变型：transform:none |变型函数
+	变型函数常用的以下几个：
+	translate(x,y)
+	translateX()
+	translateY()
+	translateZ()
+	
+	scale()
+	scaleX()
+	scaleY()
+	
+	rotate()
+	rotateX()
+	rotateY()
+	
+	skew()
+	skewX()
+	skewY()
+
+	transform-origin:left  top 自定义变型，改变对象的默认中心点。
+
+css平滑过渡动画transition:
+	transition是一个复合属性，常用属性有以下几个：
+	transition-property:属性列表
+	transition-duration:动画的过渡时间	
+	transition-delay：动画延迟的时间
+	transition-timing-function:定义过渡效果
+		ease:缓解效果
+		ease-in:渐显效果
+		ease-out:渐隐效果
+		linear:线性效果
+		ease-in-out：渐显渐隐效果
+		ease-bezier:特殊的立方贝塞尔曲线效果
+
+
+	例如：
+			div{
+				background:red;
+				width:400px;
+				height:200px;
+			}
+			div:hover{
+				background:blue;
+				transition-property: background;
+				transition-duration: 5s;
+				transition-timing-function: ease-out;
+			}
+2、3D动画:CSS3 提供了类似 Flash 关键帧控制的动画效果，通过 animation 属性实现。
+CSS3 提供的 animation 是一个复合属性，它包含了很多以下子属性。
+	
+	(1)animation-name:用来指定一个关键帧动画的名称，这个动画必须对应一个@keyframes规则。
+	css加载时会应用animation-name指定的动画，从而执行动画。
+	(2)animation-duration:用来设置动画的播放时间	
+	(3)animation-timing-function:定义动画的播放方式
+		其值可以为:ease	|ease-in	|ease-out	|ease-in-out	等。
+	(4)animation-delay:用来指定动画延迟播放的时间
+	(5)animation-iteration-count:infinite	| <number>	用来定义动画的播放次数
+		infinite	:表示无限次
+	(6)animation-direction:normal 	| alternate	用来定义动画的播放方向
+		normal：默认值，动画的每次循环都是向前播放
+		alternate:表示偶数次向前播放，奇数次反方向播放
+	(7)animation-play-state:用来控制动画的播放状态
+	(8)animation-fill-mode:用来设置动画的时间外属性
+	(9)animation以上的简写形式。
+	
+	除了以上9个属性之外，动画效果还有一个重要的属性，就是关键帧属性：@keyframes。
+	它的作用是声明一个动画，然后在 animation 调用关键帧声明的动画。
+	//基本格式，“name”可自定义 
+	@keyframes name { 
+	/*...*/ 
+	}
+	如：
+			div{
+				width:100px;
+				height:100px;
+				background:red;
+				border:1px solid green;
+				border-radius: 50%;				
+				animation-name:myani;				
+				animation-duration:5s;
+				animation-iteration-count:infinite;
+				animation-direction:alternate;				
+			}
+			@keyframes myani{
+				from{
+					background:red;
+					transform: translate(0,0);					
+				}
+				to{
+					background:blue;
+					transform: translate(500px,0);
+				}
+			}	
+
+(3)animate.css是一个有趣的，跨浏览器的css3动画库。很值得我们在项目中引用。
+	1、首先引入animate css文件
+	<link rel="stylesheet" href="animate.min.css">
+	2、给指定的元素加上指定的动画样式名
+	如：<div class="animated bounceOutLeft"></div>
+	这里包括两个class名，第一个是基本的，必须添加的样式名，任何想实现的元素都得添加这个。第二个是指定的动画样式名。
+	
+	
+	
+(4)3d盒子
+perspective 属性定义 3D 元素距视图的距离，以像素计。该属性允许您改变 3D 元素查看 3D 元素的视图。
+当为元素定义 perspective 属性时，其子元素会获得透视效果，而不是元素本身。
+注释：perspective 属性只影响 3D 转换元素。	
+语 法：perspective:500px;
+
+(4) 关于长度单位：
+PX
+px像素（Pixel）。相对长度单位。像素px是相对于显示器屏幕分辨率而言的。
+PX特点
+1. IE无法调整那些使用px作为单位的字体大小；
+2. 国外的大部分网站能够调整的原因在于其使用了em或rem作为字体单位；
+
+
+em是相对长度单位。相对于当前对象内文本的字体尺寸。如当前对行内文本的字体尺寸未被人为设置，则相对于浏览器的默认字体尺寸。
+EM特点
+1. em的值并不是固定的；
+2. em会继承父级元素的字体大小。
+
+CSS3 引入了一些新的尺寸单位，这里重点推荐一个：rem 。根据根元素的文本大小来计算的。
+html { font-size: 62.5%; } 
+h1 { font-size: 3rem; } 
+p { font-size: 1.4rem; }
+
+	
+	
+	
+	
+	

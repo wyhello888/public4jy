@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width:400px;
+				height:200px;
+				border:1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<input type="button" id ="btn1" value = "改变颜色" />
+	</body>
+	<script type="text/javascript">
+		var box = document.getElementById("box");
+		var btn1 = document.getElementById("btn1");
+		
+		btn1.onclick = function()
+		{
+//			var r =parseInt( Math.random()*256);
+//			var g =parseInt( Math.random()*256); 
+//			var b =parseInt( Math.random()*256); 
+//			
+//			//box.style.background="rgb(255,0,255)";
+//			box.style.background = "rgb(" +r+ ","+g+ ","+b+")";
+			box.style.background= randomColor();
+		}
+		
+		//封装一个方法，随机生成一个颜色
+		function randomColor()
+		{
+			var r =parseInt( Math.random()*256);
+			var g =parseInt( Math.random()*256); 
+			var b =parseInt( Math.random()*256); 
+			var color = "rgb(" +r+ ","+g+ ","+b+")";
+			return color;
+		}
+	</script>
+</html>

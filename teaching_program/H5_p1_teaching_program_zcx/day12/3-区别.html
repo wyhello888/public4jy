@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width:300px;
+				height:300px;
+				border:1px solid blue;
+				float: left;
+				margin-left:20px;
+			}
+			span{
+				display: block;
+				width:100px;
+				height:50px;
+				border:1px solid blue;
+				margin-top:10px;
+			}
+			/*span:nth-child(1)
+			{
+				background:blue;
+			}*/
+			/*span:nth-of-type(1)
+			{
+				background:yellow;
+			}*/
+			span:nth-child(1)
+			{
+				background:green;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			E:nth-child()
+			E:nth-of-type()
+			
+		-->
+		<div>
+			<p>这是个段落</p>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</body>
+</html>

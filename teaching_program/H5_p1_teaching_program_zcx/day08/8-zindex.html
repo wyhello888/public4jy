@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width:600px;
+				height:300px;
+				border:1px solid blue;
+				margin:0 auto;
+				position: relative;
+				background:yellow;
+			}
+			#div1{
+				width:100px;
+				height:100px;
+				background:red;
+				position: absolute;
+				left:100px;
+				top:100px;
+				/*margin-left:50px;*/
+				z-index: 11;
+				
+			}
+			#div2{
+				width:600px;
+				height:600px;
+				background:blue;
+				position: absolute;
+				left:150px;
+				top:150px;
+				z-index: -10;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="div1">1</div>
+			<div id="div2">2</div>
+		</div>
+	</body>
+</html>

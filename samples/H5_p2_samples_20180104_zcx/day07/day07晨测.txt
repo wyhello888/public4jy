@@ -1,0 +1,12 @@
+1、字符串长度的属性 length
+2、字符串截取的三个方法。 substr(index,n) substring(index1,index2) slice()
+3、数组添加数据元素的二个方法。push() unshift()
+4、数组删除数据元素的三个方法。pop()  shift() splice()
+5、如何定义一个日期对象？var d = new Date();
+6、分别写出获取年，月，日，小时，分钟，秒的方法。
+getFullYear()
+getMonth()
+getDate(),
+getHours()
+getMinutes()
+getSecond()

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<h1>hello</h1>
+		<h1>hello</h1>
+		<h1>hello</h1>
+	</body>
+	<script type="text/javascript" src ="js/jquery-3.2.1.js"></script>
+		
+	
+	<script type="text/javascript">
+//	3-基本过滤选择器：11个
+//	:first 选取第一个元素
+//	:last   选取最后一个元素
+//	:even  选取索引为偶数的所有元素
+//	:odd  选取索引为奇数的所有元素
+//	:not(selector)  去除与所有与选择器匹配的元素  
+//	:eq(index)  选取等于索引的元素 
+//	:gt(index)  选取大于索引的元素 
+//	:lt(index)  选取小于索引的元素 
+//	:header  选取所有的标题元素 
+//	:animated 选取正在执行动画的所有元素
+//	:focus 选取当前获取焦点的元素
+		$("div").css({width:"100px",height:"100px",border:"1px solid red"});
+		$("div:first").animate({width:"1000px"},1000);
+//		$("div:animated").css("background","blue");
+		$("div:animated").css({background:"yellow"});
+		$(":header").css({color:"red"});
+		$("div:not(:animated)").css({border:"10px solid red"});
+	</script>
+</html>

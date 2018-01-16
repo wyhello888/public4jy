@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width:200px;
+				height:50px;
+				margin-top:10px;
+				border:1px solid red;
+			}
+			span{
+				display: inline-block;
+				width:200px;
+				height:50px;
+				border:1px solid blue;
+			}
+			#div1+div
+			{
+				background-color:orange;
+			}
+			#div1+span{
+				background-color:orange;
+			}
+			
+			#div1~span{
+				background-color:green;
+			}
+			
+			#div1~div{
+				background-color:yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">这是一个div</div>
+		<span>这是一个span</span>
+		<div>这是一个div</div>
+		<div>这是一个div</div>
+		<div>这是一个div</div>
+		<span>这是一个span</span>
+		<span>这是一个span</span>
+		<span>这是一个span</span>
+		<span>这是一个span</span>
+		
+	</body>
+</html>

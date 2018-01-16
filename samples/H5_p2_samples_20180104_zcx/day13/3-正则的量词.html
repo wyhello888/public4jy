@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	/*
+	n+ 匹配任何包含至少一个 n 的字符串。 
+	n* 匹配任何包含0个或多个 n 的字符串。 
+	n? 匹配任何包含零个或一个 n 的字符串。 
+	n{X} 匹配包含 X 个 n 的序列的字符串。 
+	n{X,Y} 匹配包含 X 或 Y 个 n 的序列的字符串。 
+	n{X,} 匹配包含至少 X 个 n 的序列的字符串。 
+	n$ 匹配任何结尾为 n 的字符串。 
+	^n 匹配任何开头为 n 的字符串。 
+	?=n 匹配任何其后紧接指定字符串 n 的字符串。 
+	?!n 匹配任何其后没有紧接指定字符串 n 的字符串。 
+	
+	
+	var str = "hello@163.com";
+	var patt1 = /@+/;  
+	//要求匹配的字符串至少有一个@符号
+	var flag = patt1.test(str);
+	console.log(flag);
+*/		
+//	var str = "hellboy, gril";
+//	var patt1 = /hello*/;
+//	var flag = patt1.test(str);
+//	console.log(flag);
+	
+
+//	var str = "hellboy, gril, helloooo";
+//	var patt1 = /hello?/g;
+//	var flag = patt1.test(str);
+//	console.log(flag);
+//	str = str.replace(patt1,"*");
+//	console.log(str);
+	
+//	var str = "hello1234, hello12, hello123,hello1, hello123456789";
+//	var patt = /\d{2,4}/g;
+//	str = str.replace(patt,"*");
+//	console.log(str);
+
+	var str = "12345aa";
+	var patt = /(\d|X)$/;
+	var flag = patt.test(str);
+	console.log(flag);
+	</script>
+</html>

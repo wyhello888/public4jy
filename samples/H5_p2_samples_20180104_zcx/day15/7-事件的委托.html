@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			ul li{
+				width:500px;
+				height:30px;
+				background:blue;
+				margin-top:5px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>hello1</li>
+			<li>hello2</li>
+			<li>hello3</li>
+			<li>hello4</li>
+			<li>hello5</li>
+			<li>hello6</li>
+			<li>hello7</li>
+			<li>hello8</li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		//事件的委托，利用事件冒泡的原理，将事件委托给其父元素
+/*		var lis = document.getElementsByTagName("li");
+		for(var i =0;i<lis.length;i++)
+		{
+			lis[i].onclick = function()
+			{
+				alert(this.innerHTML);
+			}
+		}
+*/
+		var ul = document.getElementsByTagName("ul")[0];
+		ul.onclick = function(event)
+		{
+			var event = event || window.event;
+			var target=event.target;
+			//console.log(event.target);
+			alert(target.innerHTML);
+			
+		}
+	</script>
+</html>

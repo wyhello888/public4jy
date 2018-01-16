@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			.box{
+				width:200px;
+				height:300px;
+				border:1px solid red;
+			}
+			.title{
+				width:100%;
+				height:50px;
+				background:blue;
+			}
+			.menu{
+				width:100%;
+				height:200px;
+				background:lightblue;
+				display:none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class ="title"></div>
+			<div class ="menu"></div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var title = document.getElementsByClassName("title")[0];
+		var menu = document.getElementsByClassName("menu")[0];
+		title.onmouseover = function()
+		{
+			menu.style.display = "block";
+		}
+		title.onmouseout = function()
+		{
+			menu.style.display = "none";
+		}
+	</script>
+</html>

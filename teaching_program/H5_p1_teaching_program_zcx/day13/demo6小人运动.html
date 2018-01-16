@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		#box{
+			width:250px;
+			height:250px;
+			border:1px solid blue;
+			margin-top:200px;
+			margin-left:200px;
+		}
+		#box div{
+				/*transform: translateX(500px);*/
+				width:50px;
+				height:50px;
+				background:blue;
+				border-radius: 50%;
+				animation-name: myani;
+				animation-duration: 5s;
+				animation-iteration-count: infinite;
+				/*animation-direction: alternate;*/
+			}
+			@keyframes myani{
+				from{
+					transform: translate(0px) ;
+				}
+				25%{
+					transform: translate(200px,0) ;
+					
+				}
+				50%{
+					transform: translate(200px,200px) ;
+					
+				}
+				75%{
+					transform: translate(0,200px) ;
+					
+				}
+				to{
+					transform: translate(0px);
+				}
+			}
+		</style>
+	</head>
+	<body>
+	<div id="box">
+		<div>
+			
+		</div> 
+	</div>
+	</body>
+</html>

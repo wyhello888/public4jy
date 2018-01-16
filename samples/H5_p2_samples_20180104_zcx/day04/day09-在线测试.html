@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#start{
+				width:300px;
+				height:40px;
+				border-radius: 5px;
+				border:none;
+				background:red;
+			}
+			#box{
+				width:300px;
+				height:200px;
+				border:1px solid gray;
+				margin-top:10px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" id ="start" value = "今日运程测试" />
+		<div id ="box">
+			
+		</div>
+	</body>
+	<script>
+		var start = document.getElementById("start");//获取按钮
+		var box = document.getElementById("box");//获取div
+		//给按钮添加点击事件
+		start.onclick = function()
+		{
+			var num =parseInt( Math.random()*10);//随机生成一个0-10之间的随机整数
+			console.log(num);
+			var str = "";//定义一个空的字符串
+			switch(num)
+			{
+				case 0:
+				str = "财源滚滚！";break;
+				case 1:
+				str = "大吉大利，今晚吃鸡！";break;
+				case 2:
+				str = "吉星高照！";break;
+				case 3:
+				str = "333吉星高照！";break;
+				case 4:
+				str = "444333吉星高照！";break;
+				case 5:
+				str = "5555333吉星高照！";break;
+				case 6:
+				str = "66666333吉星高照！";break;
+				case 7:
+				str = "7777333吉星高照！";break;
+				case 8:
+				str = "8888333吉星高照！";break;
+				case 9:
+				str = "9999333吉星高照！";break;
+				
+			}
+			box.innerHTML = str;//innerHTML是设置div 的html内容
+		}
+	</script>
+</html>

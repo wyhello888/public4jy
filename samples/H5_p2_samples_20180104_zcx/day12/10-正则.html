@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//正则表达式
+	/*	//test() 方法用于检测一个字符串是否匹配某个模式.
+		
+		var reg= /hello/i;
+		
+		var reg2 = new RegExp("hello","i");
+		var str = "HelloEveryone!";
+		var flag = reg2.test(str);
+		console.log(flag);
+		
+//	match() 找到一个或多个正则表达式的匹配。 
+//	replace() 替换与正则表达式匹配的子串。 
+//	search() 检索与正则表达式相匹配的值。
+	var str = "hellobody,hellogril,hellonnd,";
+	var reg = /hello/ig;
+	var arr= str.match(reg);
+	console.log(arr);
+		
+
+	var str = "hellobody,hellogril,hellonnd,";	
+	var reg = /nnd/ig;
+	var str = str.replace(reg,"*");
+	console.log(str);
+	
+	var str = 'helloboby, Hellogril!';
+	var reg = /Hello/ig;
+	var index = str.search(reg);
+	console.log(index);
+*/	
+	var reg = /^1(3|4|5|7|8)\d{9}$/;
+	var str = "13338085020";
+	var flag = reg.test(str);
+	if(flag)
+	{
+		console.log("手机号码正确！");
+	}
+	else
+	{
+		console.log("手机号码不正确！");
+	}
+	</script>
+</html>

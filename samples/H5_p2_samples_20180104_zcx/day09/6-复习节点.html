@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body><input type="button" id="btn1" value ="添加一个div" /></body>
+		
+	
+	<script type="text/javascript">
+		var btn1 = document.getElementById("btn1");
+		btn1.onclick = function()
+		{
+			//创建一个div
+			var div = document.createElement("div");
+			div.style.width = parseInt(Math.random()*100+20)+"px";
+			div.style.height =parseInt(Math.random()*100+20)+"px";
+			div.style.background=randomColor();
+//			div.style.position= "absolute";
+//			div.style.left = parseInt(Math.random()*1000)+"px";
+//			div.style.top = parseInt(Math.random()*600)+"px";
+			//div.style.marginTop="10px";
+			
+			//添加一个事件
+			div.onclick = function()
+			{
+				div.remove();
+			}
+			//document.body.appendChild(div);
+			var node = document.body.firstChild;
+			document.body.insertBefore(div,node);
+		}
+		function randomColor()
+		{
+			var r = parseInt(Math.random()*256);
+			var g = parseInt(Math.random()*256);
+			var b = parseInt(Math.random()*256);
+			var color = "rgb("+ r + "," + g + "," + b+")";
+			return color;
+		}
+	</script>
+</html>
