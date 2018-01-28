@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type = "text/javascript">
+	//构造函数创建对象
+	
+	function Person(name,age)
+	{	//this表示当前的一个对象
+		debugger;
+		this.name = name;// 给当前对象添加一个name，值为形式参数name
+		this.age = age;
+		
+		//添加方法
+		this.sayName= function()
+		{
+			alert("我的名字是" + this.name);
+		}
+	}
+	
+	var person1 = new Person("赵成学",18);//实例化一个对象，对象名字是person1
+	//person1.sayName();
+	
+	var person2 = new Person("赵小学",20);//实例化一个对象，对象名字是person2
+	//person2.sayName();
+	
+	//console.log(typeof person1); //object
+	//利用构造函数创建的对象存在一个默认的属性constructor(构造函数)
+	console.log(person1.constructor == Person);//利用constructor标识对象类型
+	
+	//检测对象类型：instanceof 
+	console.log(person1 instanceof Person);//true
+	console.log(person1 instanceof Object);//true
+	
+/*
+ * 1-构造函数与工厂模式的区别？
+ * （1）构造函数的名应该以一个大写字母开头；
+ * （2）构造函数不需要显示的创建对象；
+ * （3）构造函数没有return语句；
+ * （4）构造函数使用new操作符创建一个实例 
+ * 
+ * 2-构造函数与普通函数的区别？
+ * 	构造函数与普通函数唯一的区别是调用它们的方式不同，构造函数也是函数，不存在定义构造函数的特殊语法，
+ * 任何函数只要通过new操作符来调用，那么它就可以作为构造函数，而任何函数，如果不通过new操作符调用，
+ * 那么它就是普通函数。一般情况下，构造函数名首字符大写。
+ * 
+ * 总结：
+ * 1-创建对象的方式：
+ * （1）利用new Object()创建一个对象
+ * （2）字面量的形式创建一个对象
+ * （3）利用工厂模式创建对象
+ * （4）利用构造函数创建对象
+ * 2-如果访问对象属性？
+ * 3-删除对象的属性？
+ * 4-遍历对象的属性？for(var key in 对象名)
+ * 5-构造函数与工厂模式的区别？
+ * 6-构造函数与普通函数的区别？
+ * 7-利用构造函数创建的对象有一个默认的属性：constructor
+ * 8-如何检测对象类型？instanceof 
+ * 
+ */
+	</script>
+</html>

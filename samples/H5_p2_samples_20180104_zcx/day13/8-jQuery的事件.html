@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" id="btn1" value ="开始动画" />
+		<input type="button" id ="btn2" value ="全选" />
+		<input type="button" id ="btn3" value ="取消全选" />
+		<div></div>
+		<input type="checkbox" />
+		<input type="checkbox" />
+		<input type="checkbox" />
+		<input type="checkbox" />
+		<input type="checkbox" />
+		<input type="checkbox" />
+	</body>
+	<script type="text/javascript" src ="js/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$("div").css({width:"200px",height:"100px",border:"1px solid red"});
+		
+		
+		//$("#btn1").click(function(){});
+		$("#btn1").click(function(){
+			$("div").animate({width:"1000px"},1000);
+		});
+		
+		//全选
+		$("#btn2").click(function(){
+			$(":checkbox").prop("checked",true);
+		});
+		
+		//取消全选
+		$("#btn3").click(function(){
+			$(":checkbox").prop("checked",false);
+		});
+	</script>
+	
+		
+	
+</html>

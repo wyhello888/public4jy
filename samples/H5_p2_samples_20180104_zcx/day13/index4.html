@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>hello1</li>
+			<li>hello1</li>
+			<li>hello1</li>
+			<li>hello1</li>
+			<li>hello1</li>
+		</ul>
+		<ul>
+			<li>hello2</li>
+			<li>hello2</li>
+			<li>hello2</li>
+		</ul>
+		<input type="checkbox" />
+		<input type="checkbox" />
+		<input type="checkbox" />
+		<input type="checkbox" />
+		<input type="button" id="btn1" value ="全选" />
+		<input type="button" id="btn2" value ="取消全选" />
+	</body>
+	<script type="text/javascript" src ="js/jquery-3.2.1.js"></script>
+		
+	
+	<script type="text/javascript">
+//		7-子元素过滤选择器 4个
+//	:first-child   选取某一个父元素的第一个子元素 
+//	:last-child  选取某一个父元素的最后一个子元素 
+//	:only-child  如果某个元素是它父元素的唯一的一个子元素，那么它将会被匹配 
+//	:nth-child()  选取每个父元素下，第index个元素或者是奇数，偶数元素 
+	$("li:first-child").css({background:"blue"});
+	$("li:nth-child(even)").css({background:"yellow"});
+	$("#btn1").click(function(){
+		
+	$("input:checkbox").prop("checked",true);
+	});
+	$("#btn2").click(function(){
+		$(":checkbox").prop("checked",false);
+	})
+	</script>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#content{
+				width:340px;
+				height:150px;
+				/*border:1px solid gray;*/
+			}
+			#content .left{
+				width:220px;
+				height:100%;
+				/*background:gray;*/
+				float:left;
+			}
+			#content .right{
+				width:110px;
+				height:100%;
+				background-color: #99FF00;
+				float:left;
+				margin-left:10px;
+			}
+			.clearfix:after{
+				content:"";
+				height:0px;
+				visibility: hidden;
+				display: block;
+				clear:both;
+			}
+			.clear{
+				zoom:1;
+			}
+			#content .left .top{
+				width:100%;
+				height:40px;
+				background:deepskyblue;
+			}
+			#content .left .middle{
+				width:100%;
+				height:45px;
+				/*background:deepskyblue;*/
+				margin-top:10px;
+			}
+			#content .left .bottom{
+				width:100%;
+				height:45px;
+				/*background:deepskyblue;*/
+				margin-top:10px;
+			}
+			#content .left .m1{
+				width:105px;
+				height:100%;
+				background:gray;
+				float:left;
+			}
+			#content .left .m2{
+				width:105px;
+				height:100%;
+				background:blue;
+				float:left;
+			}
+			.margin10{
+				margin-left:10px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="content" class="clearfix">
+			<div class="left">
+				<div class="top"></div>
+				<div class="middle clearfix">
+					<div class="m1"></div>
+					<div class="m2 margin10"></div>
+				</div>
+				<div class="bottom clearfix">
+					<div class="m2"></div>
+					<div class="m1 margin10"></div>					
+				</div>
+			</div>
+			<div class="right"></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width:300px;
+				height:200px;
+				border:1px solid red;
+				position: absolute;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<ul>
+				<li>hello</li>
+				<li>hello</li>
+				<li>hello</li>
+				<li>hello</li>
+				<li>hello</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			document.oncontextmenu= function(e)
+			{
+				var div = document.getElementById("div1");
+				div.style.display = "block";
+				div.style.left = e.clientX+"px";
+				div.style.top = e.clientY+"px";
+				//e.preventDefault();
+				//return false;
+			}
+			document.onclick = function()
+			{
+				var div = document.getElementById("div1");
+				div.style.display = "none";
+			}
+		</script>
+	</body>
+</html>

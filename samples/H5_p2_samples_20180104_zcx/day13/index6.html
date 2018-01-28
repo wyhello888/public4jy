@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" id ="btn1" value = "显示隐藏" />
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div style="display:none">6</div>
+	</body>
+	<script src ='js/jquery-3.2.1.js'></script>
+	<script type="text/javascript">
+	/*
+		5-可见性过滤选择器2个
+	:visible  选取所有可见的元素
+	:hidden 选取所有不可见的元素
+	*/
+	$("div").css({width:"400px",height:"80px",border:"1px solid red"});
+	$("div:visible").css({background:"yellow"});
+	
+	$("#btn1").click(function(){
+		$("div:hidden").css({display:"block"});
+	});
+	</script>
+</html>

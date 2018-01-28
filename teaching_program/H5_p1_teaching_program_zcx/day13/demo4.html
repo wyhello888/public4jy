@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin:0px;
+				padding:0px;
+				list-style: none;
+			}
+			#box{
+				width:1000px;
+				height:200px;
+				border:1px solid red;
+				perspective: 100px;
+			}
+			#box li{
+				width:150px;
+				height:150px;
+				background:blue;
+				margin-left:30px;
+				margin-top:30px;
+				float:left;
+			}
+			li:first-child:hover{
+				/*transform: translateX(20px);*/
+				/*transform:translateY(20px);*/
+				/*transform:translate(10px,10px);*/
+				transform: translateZ(-10px);
+			}
+			li:nth-child(2):hover{
+				/*transform:scale(2);*/
+				transform:scaleY(2);
+			}
+			li:nth-child(3){
+				/*transform:rotate(45deg);*/
+				
+				transform:skew(30deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		
+	</body>
+</html>

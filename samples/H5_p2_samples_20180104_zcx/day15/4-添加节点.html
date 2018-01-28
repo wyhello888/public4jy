@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id = "ul1">
+			<li title="title0">0AAAAAAAAAAAAAAAA</li>
+			<li title="title1">1AAAAAAAAAAAAAAAA</li>
+			<li title="title2">2AAAAAAAAAAAAAAAA</li>
+			<li title="title3">3AAAAAAAAAAAAAAAA</li>
+			<li title="title4">4AAAAAAAAAAAAAAAA</li>
+			<li title="title5">5AAAAAAAAAAAAAAAA</li>
+		</ul>
+	</body>
+	<script type = "text/javascript" src = "js/jquery-3.1.1.js"></script>
+	<script type = "text/javascript">
+		//创建节点
+
+		var $li =$("<li title='title6'></li>");//创建一个li节点
+		$li.html("****AAAAAAbbbbbb");//$li.text();
+		
+		//添加节点的方法
+		//ul1追加一个节点li
+		//$("#ul1").append($li);//父元素追加子元素
+		//$li.appendTo("#ul1")//子元素追加到父元素中
+		
+		//prepend()   prependTo()
+		//$("#ul1").prepend($li);//向父元素添加第一个子元素
+		
+		//$li.prependTo("#ul1");//子元素添加到父元素第一个子节点的位置
+		
+		//after()  insertAfter()   
+		
+		//$("#ul1>li:eq(2)").after($li);// A后面添加一个兄弟元素B   A.after(B)
+		//$li.insertAfter("#ul1>li:eq(2)");  //元素B添加到元素A的后面，作为元素A的兄第     B.insertAfter(A)
+		
+		//这二个方法都可以完成元素B插入到元素A的前面，做为A的一个兄弟节点
+		//before()         A.before(B)
+		//insertBefore()   B.insertBefor(A)
+		//$("#ul1>li:eq(5)").before($li);
+		$li.insertBefore("#ul1>li:eq(5)");
+
+		
+	/*
+	 * 节点的插入4对 8个方法
+	 * 父元素A在后面添加一个子元素B    A.append(B)      B.appendTo(A)
+	 * 父元素A的第一个子元素前面添加一个子元素B   A.prepend(B)    B.prependTo(A)
+	 * 
+	 * 元素A的后面添加一个兄弟元素B   A.after(B)   B.insertAfter(A)
+	 * 元素A的前面添加一个兄弟元素B   A.before(B)  B.insertBefore(A)
+	 * 
+	 */
+	
+	
+		
+	
+		
+		
+		
+		
+		
+	</script>
+</html>

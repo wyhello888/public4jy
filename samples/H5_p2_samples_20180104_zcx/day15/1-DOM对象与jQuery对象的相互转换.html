@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		#div1{
+			width:100px;
+			height:100px;
+			border:1px solid blue;
+		}
+		</style>
+	</head>
+	<body>
+		<div id = "div1"></div>
+		<input type = "button" value = "DOM操作" id ="btn1"/>
+		<input type = "button" value = "jQuery操作" id ="btn2"/>
+	</body>
+	<script type = "text/javascript" src = "js/jquery-3.1.1.js"></script>
+	<script type = "text/javascript" >
+		var div1 = document.getElementById("div1");
+		var btn1 = document.getElementById("btn1");
+		btn1.onclick =function()
+		{
+			div1.style.backgroundColor="yellow";
+			div1.innerHTML = "js dom操作"
+		}
+		
+		$("#btn2").click(function(){
+			$("#div1").css("background-color","blue");
+			$("#div1").html("jquery操作");
+			
+			
+		});
+		//JS对象与jQuery对象之间相互转换
+		//1-JS对象转换为jQuery对象的方法 
+		var $div1 = $(div1);
+		var $btn1 = $(btn1);
+		
+		//2-jQuery 对象转换为JS对象
+		var div1 = $("#div1")[0];//方法1
+		var div1 = $("#div1").get(0);//方法2
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

@@ -1,0 +1,36 @@
+1、
+var timer = window.setInterval(function(){},1000);间歇性定时器
+window.clearInterval(timer);//清除定时器
+
+2、一次性定时
+var timer = window.setTimeout()
+clearTimeout(timer);
+
+3、格式化日期格式
+		function format(str)
+		{
+			if(str <10)
+			{
+				return "0"+str;
+			}
+			else{
+				return str;
+			}
+		}
+
+
+4、获取页面元素的四种方法
+	document.getElementById() id获取
+	document.getElementsByClassName()  类名获取，。
+	document.getElementsByTagName()  标签名称获取
+	document.getElementsByName() 通过名称获取
+
+5、
+box.clientWidth ;//可视宽度
+box.clientHeight;
+
+ball.offsetWidth;//占位宽度
+ball.offsetHeight
+
+ball.offsetLeft ;//获取ball相对于父元素的偏移量
+ball.offsetTop

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width:30px;
+				height:30px;
+				background:blue;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+	<script type="text/javascript">
+	var div = document.getElementsByTagName("div")[0];
+		document.onkeydown= function(event)
+		{
+			var event = event || window.event;
+			console.log(event);
+			var code = event.keyCode;
+			var x = div.offsetLeft;
+			var y = div.offsetTop;
+			//<-
+			if(code == 37)
+			{
+				x -=10;
+			}
+			//向上健按下
+			else if(code == 38)
+			{
+				y -=10;
+			}
+			//向右健按下
+			else if(code == 39)
+			{
+				x += 10;
+			}
+			//向下健按下
+			else if(code == 40)
+			{
+				y +=10; 
+			}
+			
+			if(event.ctrlKey && code == 38)
+			{
+				y -= 100;
+			}
+			div.style.left =x+"px";
+			div.style.top = y +"px";
+		}
+	</script>
+</html>

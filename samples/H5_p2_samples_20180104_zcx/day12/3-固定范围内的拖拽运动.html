@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width:400px;
+				height:300px;
+				background:pink;
+				position: absolute;
+				cursor:move;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+	<script type="text/javascript">
+		var box = document.getElementById("box");
+		//1-鼠标按下
+		box.onmousedown = function(event)
+			
+		{
+			var event = event || window.event;
+			//鼠标相对于box的偏移量
+			var x1 = event.clientX- box.offsetLeft;
+			var y1 = event.clientY - box.offsetTop;
+			
+			//2-鼠标移动
+			document.onmousemove = function(event)
+			{
+				var event = event || window.event;
+				var x = event.clientX - x1;
+				var y = event.clientY-y1;
+				//左右边 界的判断
+				if(x >= document.documentElement.clientWidth- box.offsetWidth)
+				{
+					x = document.documentElement.clientWidth- box.offsetWidth;
+				}
+				else if(x <=0)
+				{
+					x =0;
+				}
+				//上下边界的判断
+				if(y >= document.documentElement.clientHeight - box.offsetHeight)
+				{
+					y = document.documentElement.clientHeight - box.offsetHeight
+				}
+				else if(y <=0)
+				{
+					y =0;
+				}
+				//设置box的left, top值
+				box.style.left = x +"px";
+				box.style.top = y+"px";
+			}
+		}
+		document.onmouseup = function()
+		{
+			document.onmousemove= null;//取消鼠标移动的事件
+		}
+		
+		//思考：不允许拖到屏幕的外边
+		
+	</script>
+</html>

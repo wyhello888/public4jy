@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			#mask{
+				width:100%;
+				height:100%;
+				background:rgba(0,0,0,0.5);
+				position: absolute;
+				left:0px;
+				display: none;
+				top:0px;
+			}
+			#login{
+				width:500px;
+				height:300px;
+				background:white;
+				
+				position: absolute;
+				z-index: 2;
+				text-align: right;
+				left:200px;
+				display:none;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" id ="btn" value ="登录" />
+		<div id="mask"></div>
+		<div id="login">
+			<input type="button" id="close" value ="X" />
+			<h1>登录窗口</h1>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var btn = document.getElementById("btn");
+		var close = document.getElementById("close");
+		btn.onclick = function()
+		{
+//			mask.style.display = "block";
+//			login.style.display = "block";
+			window.showModalDialog();
+		}
+		close.onclick = function()
+		{
+			mask.style.display = "none";
+			login.style.display = "none";
+		}
+		
+	</script>
+</html>

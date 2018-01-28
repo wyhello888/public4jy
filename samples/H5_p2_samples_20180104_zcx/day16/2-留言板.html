@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		#div1{
+			width:500px;
+			border:1px solid blue;
+		}
+		#text1{
+			width:400px;
+			height:40px;
+			
+		}
+		#text2{
+			width:400px;
+			height:80px;
+			vertical-align: top;
+			margin-top:10px;
+		}
+		/*#btn1{
+			width:80px;
+			height:40px;
+			background-color:blue;
+			border:none;
+		}*/
+		#btn1{
+			width:80px;
+			height:35px;
+			border:none;
+			background-color: blue;
+			margin-left:200px;
+			margin-top:10px;
+		}
+		.c0{
+			height:40px;
+		}
+		.c1{
+			float:left;
+			color:cornflowerblue;
+			width:10%;
+			
+			
+		}
+		.c2{
+			float:left;
+			margin-left:10px;
+			width:70%;
+			text-align: left;
+			
+		}
+		.c3{
+			float:left;
+			/*color:cornflowerblue;*/
+			background-color: transparent;
+			border:none;
+			
+		}
+		.c4{
+			color:dodgerblue;
+		}
+		
+		</style>
+	</head>
+	<body>
+		<div id = "div1">
+		昵称：<input type = "text" id = "text1"><br/>
+		内容：<textarea id = "text2"></textarea><br/>
+		<!--<input type= "button" value="发布"　id ="btn1"/>-->
+		<input type="button" value = "发布" id = "btn1"/>
+		
+		<!--留言部分-->
+		<div id = "div2">
+			<!--一个留言开始-->
+			<div>
+				<div class="c0">
+					<div class='c1'>昵称</div>
+					<div class="c2">内容----------</div>
+					<input type = "button" value = "删除" class="c3"/>
+				</div>
+				
+				<div class="c4">2017-3-22</div>
+			</div>
+			<!--一个留言结束-->
+
+		</div>	
+		</div>
+	</body>
+	<script type="text/javascript" src = "js/jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		$("#btn1").click(function(){
+			//创建一个大的div
+			var $div0 = $("<div></div>");
+			//创建二个子div
+			var $div01 = $("<div class='c0'></div>");
+			var $div02 = $("<div class='c4'></div>");
+			$div02.html(new Date().toLocaleString());//日期
+			
+			//昵称
+			var $div011= $("<div class='c1'></div>");
+			 $div011.html($("#text1").val());
+			 
+			 //内容
+			var $div012= $("<div class='c2'></div>")
+			$div012.html($("#text2").val());
+			
+			//按钮
+			var $btn = $("<input type = 'button' value = '删除' class='c3'>");
+			$btn.click(function(){
+				$(this).parent().parent().remove();
+			})
+			//追加
+			$div01.append($div011,$div012,$btn).appendTo($div0);
+			$div02.appendTo($div0);
+			
+			$div0.appendTo("#div2");
+
+		})
+	</script>
+</html>

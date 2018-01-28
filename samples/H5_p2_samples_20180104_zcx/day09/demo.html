@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div1" class = "c1">
+			这是父div
+			<div>这是子div</div> <!--这是一个子div-->
+			<div></div>
+			<div></div>
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		var div1 = document.getElementById("div1");
+		console.log(div1.nodeName);
+		console.log(div1.nodeType)
+		console.log(div1.nodeValue)
+		var attributeNode = div1.getAttributeNode("class");
+		console.log(attributeNode.nodeName);
+		console.log(attributeNode.nodeValue);
+		console.log(attributeNode.nodeType);
+		var node2 = div1.firstChild;
+		console.log(node2.nodeName);
+		console.log(node2.nodeType);
+		
+		var node3 = node2.next;
+		console.log(node3.nodeName);
+		console.log(node3.nodeType);
+	</script>
+</html>

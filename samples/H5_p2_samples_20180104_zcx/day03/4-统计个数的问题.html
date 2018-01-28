@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//统计1--100能被能3整除的数据的个数
+		var n =0;//定义一个变量，表示有几个能3整除的数据
+		for(var i = 1;i<=100;i++)
+		{
+			if(i % 3 ==0)
+			{
+				//document.write(i +" ");
+				n ++;// n =n +1   n +=1;
+			}
+		}
+		document.write("1--100能被能3整除的数据有" + n +"个！<br/>");
+		
+		var n1 =0;
+		for(var i = 1;i<=100;i++)
+		{
+			if(i% 3 ==0 && i%7 !=0)
+			{
+				n1++;
+			}
+		}
+		document.write("1--100能被3整除不能被7整除的数据有" + n1 + "个！<br/>");
+		
+		
+		//输出1--100能被3整除不能被7整除 ，要求5个一换行 
+		var n2 =0;//定义一个变量初始值为0,用来表示有几个满足要求的数据
+		for(var i = 1;i<=100;i++)
+		{
+			//判断数据是否满足要求
+			if(i %3 == 0 && i%7 !=0)
+			{
+				document.write(i + "\t");//如果满足要求，输出这个数据
+				n2 ++;//满足条件，计算器变量加1，
+				//对计数器变量进行判断，判断是否是5的倍数
+				if(n2 %5 ==0)
+				{
+					document.write("<br/>");
+				}
+				
+			}
+		}
+		document.write("<br/>");
+	</script>
+</html>

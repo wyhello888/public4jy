@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			ul li{
+				width:100px;
+				height:100px;
+				background:blue;
+				margin-left:10px;
+				float:left;
+				transform: rotate(45deg);
+			}
+			ul li:nth-child(1):hover
+			{
+				transform:translate(10,0);
+			}
+			div{
+				width:100px;
+				height:200px;
+				background:blue;
+				margin-top:110px;
+				margin-left:200px;
+				/*transform:skew(45deg,0) rotate(45deg);*/
+				transform-origin:top right;
+				transform:rotate(45deg);
+			}
+			/*div:hover{
+				transform:scale(0.5);
+			}
+			div:hover{
+				transform:rotate(45deg);
+			}*/
+			
+		</style>
+	</head>
+	<body>
+		
+		<div>
+		</div>
+	</body>
+</html>

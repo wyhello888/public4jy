@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		/*
+		 * 
+		 
+		//1算术运算符7个：+ - * / % ++ --
+		//2赋值运算符6个：=  += -= *= /= %= 
+		//3关系运算符7个：> >=  < <=  !=  	==  !==	===
+		//4逻辑运算符3个： &&（与运算符）    要求左右二个条件同时成立，其运算结果才为真，如果有一个为假，则运算结果为假。
+		//			 ||(或运算符)  左右二个条件只要有一个成立，其运算结果为真，如果二个都为假，运算结果为假。
+		//				！(非运算符)   取当前运算结果的相反值，
+		
+		//优先级： ！ > && > ||
+		var x = 100;
+		var flag = ( x >0)&& (x<200);//true
+	
+		console.log(flag);
+		flag = (x>0) && (x %3 ==0);//false
+		console.log(flag);
+		
+		flag = (x<0) || (x %2==0);//true
+		console.log(flag);
+		
+		flag =  (x %2==0)|| (x<0);//true
+		console.log(flag);
+		
+		flag =  (x %2!=0)|| (x<0);//false
+		console.log(flag);
+		
+		flag = !(x>0);//false
+		console.log(flag);
+	*/	
+		//判断闰年
+		//闰年条件:能被4整除,但不能被100整除, 或者直接能被400整除,
+		var year = 1000;
+		var flag1 = (year%4 ==0 && year%100 !=0)  || year %400 ==0;
+		console.log(flag1);
+	</script>
+</html>

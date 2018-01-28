@@ -1,0 +1,15 @@
+1、标准盒模型包括哪几部分？标准盒模型的实际宽度如何计算？实际高度如何计算。
+
+2、列出border-style的几个常用属性值
+solid dashed dotted double 。
+
+3、设置一个宽度为100px,高度为100px，边框为1px   实线，红色的圆。在页面中居中对齐，内部文字水平居中。写出核心的css代码。
+div{
+	width:100px;
+	height:100px;
+	border:1px solid red;
+	margin:0 auto;
+	text-align:center;
+	border-radius:50%;
+}
+

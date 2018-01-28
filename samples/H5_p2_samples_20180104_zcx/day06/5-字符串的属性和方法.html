@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	/*
+	 * 
+	
+		属性:length 字符串的长度
+		12个方法：
+		*	substr() 从起始索引号提取字符串中指定数目的字符。 
+		*	substring() 提取字符串中两个指定的索引号之间的字符。 
+		
+		*	charAt() 返回在指定位置的字符。 
+		*	charCodeAt() 返回在指定的位置的字符的 Unicode 编码。 
+		*	fromCharCode() 从字符编码创建一个字符串。 
+		
+		*	indexOf() 检索字符串。 
+		lastIndexOf() 从后向前搜索字符串。 
+		
+		concat() 连接字符串。 
+		slice() 提取字符串的片断，并在新的字符串中返回被提取的部分 
+		
+		split() 把字符串分割为字符串数组。 
+		
+		toLowerCase() 把字符串转换为小写。 
+		toUpperCase() 把字符串转换为大写。 
+
+
+	
+	//charCodeAt() 返回在指定的位置的字符的 Unicode 编码。 
+	//var str = String.fromCharCode(65,66,67,90,91);//A-Z  65-90
+	var str = String.fromCharCode(97,98,122);  //a-z  97   122
+	console.log(str);
+	str = "ahello";
+	var code = str.charCodeAt(0);
+	console.log(code);
+	
+	str ="helloboy,hellogirl,helloeveryone!";
+//	var index = str.indexOf("aaahello");
+	var index = str.lastIndexOf("hello");
+	console.log(index);
+	
+*/	
+	var str = '0123456789';
+	var str2 = str.slice(3);//从下标是3的开始截取，截取到字符串的最后
+	console.log(str2);
+	str2 = str.slice(2,6);//从下标为2的开始截取，截取到下标到5的中间字符，包含下标是2，不包含下标6  
+	console.log(str2);
+	
+	str2 = str.slice(-2);//从倒数第二个字符截取到最后
+	console.log(str2);
+	
+	str2 = str.slice(-5,-2);//从倒数第5个截取到倒数第2个，不包含倒数第2个
+	console.log(str2);
+	
+	str2= str.slice(1,-1);
+	console.log(str2);
+	
+	</script>
+</html>

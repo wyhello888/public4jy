@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width:200px;
+				height:500px;
+				border:1px solid red;
+				position: relative;
+			}
+			#ball{
+				width:100px;
+				height:100px;
+				background:blue;
+				position: absolute;
+				left:0px;
+				top:0px;
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="ball"></div>
+		</div>
+		<input type="button" name="start" id="start" value="开始运动" />
+	</body>
+	<script type="text/javascript">
+		var box = document.getElementById("box");
+		var ball = document.getElementById("ball");
+		var start = document.getElementById("start");
+		var timer = 0;
+		var y = ball.offsetTop;
+		
+		//给按钮添加点击事件
+		start.onclick = function()
+		{
+			start.disabled= true;//设置按钮不可用
+			var v = 20;
+			var y1 = box.clientHeight - ball.offsetHeight;//计算出临界点
+			
+			timer = setInterval(function(){
+				y += v;
+				if(y >= y1)
+				{
+					clearInterval(timer);
+					
+				}
+				ball.style.top = y +"px";
+			},50);
+		}
+		
+	</script>
+</html>

@@ -1,0 +1,116 @@
+1、HTML5 概述
+HTML5 并不仅仅是 HTML 规范的最新版本，而是一系列用来制作现代富 Web 内容的 相关技术的总称，其中最重要的三项技术分别为：HTML5 核心规范（标签元素）、CSS（层 叠样式表第三代）、和 JavaScript。
+
+2、HTML5 的核心
+涉及新的语义元素、新的增强的 Web 表单、音频和视频、以及通过 JavaScript 绘图的 Canvas。这部分大多数主流浏览器均得到很好的支持； 
+3、html文档结构
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+</html>
+
+4、文档结构解析 -Doctype
+	文档类型声明（Document Type Declaration，也称 Doctype）。它主要告诉浏览器 所查看的文件类型。在以往的 HTML4.01 和 XHTML1.0 中，它表示具体的 HTML 版本和风格。 而如今 HTML5 不需要表示版本和风格了。 
+	<!DOCTYPE html> //不分区大小写
+
+5、文档结构解析 -html 元素
+首先，元素就是标签的意思，html 元素即 html 标签。html 元素是文档开始和结尾的 元素。它是一个双标签，头尾呼应，包含内容。这个元素有一个属性和值：lang="zh-cn"， 表示文档采用语言为：简体中文。 
+
+6、文档结构解析 -head 元素
+用来包含元数据内容，元数据包括：<link>、<meta>、<noscript>、<script>、 <style>、<title>。这些内容用来浏览器提供信息，比如 link 提供 CSS 信息，script 提供 JavaScript 信息，title 提供页面标题等。 
+	<head>...</head> //这些信息在页面不可见
+7、文档结构解析 -meta 元素 
+这个元素用来提供关于文档的信息，起始结构有一个属性为：charset="utf8"。表示 告诉浏览器页面采用的什么编码，一般来说我们就用 utf8。当然，文件保存的时候也是 utf8，而浏览器也设置 utf8 即可正确显示中文。 
+	<meta charset="utf-8"> 
+    <meta name="keywords" content="关键字"/>
+    <meta name="description" content="描述" />
+8、文档结构解析 -title 元素
+这个元素很简单，顾名思义：设置浏览器左上角的标题。 
+	<title>基本结构</title>
+9、文档结构解析 -body 元素
+用来包含文档内容的元素，也就是浏览器可见区域部分。所有的可见内容，都应该在这 个元素内部进行添加。 
+<body>...</body>
+10、电子邮箱类型
+功能描述：是一种专门用于输入E-mail地址的文本输入框，在提交表单的时候，会自动验证email输入框的值。
+语法： <input type="email" />
+11、新表单属性：数字类型
+功能描述：只能接收数字值
+语法： <input type=“number" />
+属性：
+min:当前域能接受的最小值
+max:当前域能接受的最大值
+step:决定了域所接受值递增或递减的步长，默认为1
+12、新表单属性：电话类型
+功能描述：用于输入电话号码的文本框。它并不限定只输入数字，因为很多电话号码还包括其它字符如86-010-88888888.区别：IPHONE或IPAD中的Safari浏览器遇到TEL类型的input元素时，会自动变换触摸屏幕键盘以方便用户输入。
+13、新表单属性：范围类型
+功能描述：允许用户选择一个范围的数值
+语法： <input type=“range”min=“10” max=“1000” value=“50” />
+属性：
+min:范围的下限值
+max:范围的上限值
+step:声明该值递增或递减的步长
+value：设定初始值
+14、新表单属性：颜色类型
+功能描述：预定义的颜色拾取控件
+语法： <input type="color" />
+
+15、新表单属性：日期类型
+功能描述：创建一个日期输入域
+语法： <input type="date" />
+
+16、新表单属性：url类型
+功能描述：提供用于输入url地址这类特殊文本的文本框。当提交表单时，如果所输入的内容是url地址格式的文本，则会提交数据到服务器，如果不是url地址格式的文本，则不允许提交。
+语法：<input  type="url"/>
+17、新表单属性：search类型
+功能描述：提供于专门用于输入搜索关键词的文本框。
+语法：<input type="search"/>
+
+18、新增的input属性：
+	autocomplete：autocomplete 属性规定 form 或 input 域应该拥有自动完成功能。
+	autofocus:autofocus 属性规定在页面加载时，域自动地获得焦点。
+	Placeholder:提供一种提示，描述输入域所期待的值。
+	Required:required 属性规定必须在提交之前填写输入域（不能为空）。
+19、视频处理：
+	video元素可以实现在HTML页面中嵌入视频内容，该元素的属性可以设置是否自动播放、预加载及视频高和宽等
+	<video width="360" height="240" 			src="source/video.mp4">
+		视频不能播放
+	</video>
+	src属性：用于读取媒体文件
+	autoplay属性：设置该视频是否自动播放
+	width和height属性：设置该视频的宽度和高度
+	video元素除了controls属性外还具备以下几个属性：
+	poster：该属性指定一个URL，在视频等待播放时显示一幅图像
+	loop：设置这个属性时，浏览器会反复播放该视频
+	muted:规定视频的音频输出应该被静音
+	preload 如果出现该属性，则视频在页面加载时进行加载，并预备播放。如果使用 "autoplay"，则忽略该属性。
+	html5新增的针对视频元素处理属性如下：
+	paused：媒体处于暂停或未播放状态，这个值为true
+	ended：如果媒体已经结束播放，这个值为true
+	duration：返回媒体时长，以秒为单位
+	currentTime：获取或设置媒体播放位置
+	volume:属性设置或返回视频的当前音量，从0.0（静音）到1.0（最大声）	
+	
+20、音频处理：
+	audio元素可以实现在HTML页面中嵌入音频内容，该元素的属性可以设置是否自动播放、预加载及循环播放等
+	audio元素提供了播放、暂停和音量控件来控制音频
+	使用audio元素提供三种音频格式的文件：MP3、Ogg和Wav
+	MP3 ：采用 mpeg 音频解码器
+	Ogg ：采用 ogg 音频解码器
+	Wav ：采用 wav 音频解码器
+	语法结构：
+   <audio src="mp3/Yellow.mp3" controls >
+   </audio>
+   或
+   <audio controls>
+	   <source src="mp3/Yellow.mp3" />
+   </audio>
+
+
+
+

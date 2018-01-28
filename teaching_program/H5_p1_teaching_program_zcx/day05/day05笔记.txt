@@ -1,0 +1,218 @@
+一、文字样式
+*1、字体颜色color：
+	color:#FF0000;
+	color:rgb(255,0,0);
+	color:red;
+*2、文字大小font-size:
+	(1)font-size:16px;
+	(2)font-size:xx-small	|x-small	|medium		|large	|x-large	|xx-large
+		xx-small     9px
+      	x-small		11px
+		small       13px
+   		medium		16px
+		large         19px
+		x-large      23px
+		xx-large     27px
+	
+	(3)font-size:	smaller	|larger	
+		smaller	把 font-size 设置为比父元素更小的尺寸。
+		larger	把 font-size 设置为比父元素更大的尺寸。
+	(4)font-size:150%;
+	%	把 font-size 设置为基于父元素的一个百分比值。
+	(5)font-size:inherit
+	inherit	规定应该从父元素继承字体尺寸。
+	(6) font-size:0.75em;
+	1em 等于当前的字体尺寸。
+*3、文字字体font-family:
+	font-family：Arial，"Times New Roman"，"宋体","黑体","微软雅黑"；当字体是中文字体时需要加双引号，
+	当英文字体中有空格时需要加双引号。
+	【备注：】一般设三个值，一个一个匹配，电脑中没有，用默认
+*4、 字体风格font-style:
+	font-style:normal	|italic		|oblique	|inherit
+		normal	默认值。浏览器显示一个标准的字体样式。
+		italic	浏览器会显示一个斜体的字体样式。
+		oblique	浏览器会显示一个倾斜的字体样式。
+		inherit	规定应该从父元素继承字体样式。	
+*5、字体加粗font-weight:
+	font-weight:nommal	|bold	|bolder	|lighter	|
+		normal	默认值。定义标准的字符。
+		bold	定义粗体字符。
+		bolder	定义更粗的字符。
+		lighter	定义更细的字符。
+		100	200	300	400	500	600	700	800	900定义由细到粗的字符。400 等同于 normal，而 700 等同于 bold。
+		inherit	规定应该从父元素继承字体的粗细。
+6、小型大写字母font-variant:
+	font-variant:normal |small-caps	|inherit
+	font-variant 属性设置小型大写字母的字体显示文本，这意味着所有的小写字母均会被转换为大写，
+	但是所有使用小型大写字体的字母与其余文本相比，其字体尺寸更小。
+	normal	默认值。浏览器会显示一个标准的字体。
+	small-caps	浏览器会显示小型大写字母的字体。
+	inherit	规定应该从父元素继承 font-variant 属性的值。
+	
+7、font字体简写或复合写法：    
+	font : font-size/font-height  font-family
+	font : style   weight   size/line-height    family
+    例如：
+    p {
+	  font ：italic  bold  12px/20px  arial,sans-serif;
+  	}
+直接描述字体的所有属性。
+二、段落样式
+*1、文字修饰text-decoration:
+	text-decoration:none	|*underline	|*overline	|*line-through	|blink	|inherit
+		none	默认。定义标准的文本。
+		underline	定义文本下的一条线。
+		overline	定义文本上的一条线。
+		line-through	定义穿过文本下的一条线。
+		blink	定义闪烁的文本。
+		inherit	规定应该从父元素继承 text-decoration 属性的值。
+	
+*2、水平对齐方式text-align:
+	text-align:left	|right	|center	|justify	|inherit
+		left	把文本排列到左边。默认值：由浏览器决定。
+		right	把文本排列到右边。
+		center	把文本排列到中间。
+		justify	实现两端对齐文本效果。
+		inherit	规定应该从父元素继承 text-align 属性的值。
+
+*3、文本首行缩进text-indent:
+	text-indent:20px	| 5%	|inherit
+		length	定义固定的缩进。默认值：0。
+		%	定义基于父元素宽度的百分比的缩进。
+		inherit	规定应该从父元素继承 text-indent 属性的值。
+		注释：允许使用负值。如果使用负值，那么首行会被缩进到左边。
+
+*4、行高line-height:
+	line-height:normal	|number	|length	|%	|inherit
+		normal	默认。设置合理的行间距。
+		number	设置数字，此数字会与当前的字体尺寸相乘来设置行间距。
+		length	设置固定的行间距。
+		%	基于当前字体尺寸的百分比行间距。
+		inherit	规定应该从父元素继承 line-height 属性的值。
+		注释：不允许使用负值。
+		当单行文本的行高等于父容器高度时，可实现单行文本在容器中垂直方向居中对齐的效果。
+5、字符间距letter-spacing:
+	letter-spacing:normal	|length	|inherit
+		normal	默认。规定字符间没有额外的空间。
+		length	定义字符间的固定空间（允许使用负值）。
+		inherit	规定应该从父元素继承 letter-spacing 属性的值。
+6、字间距word-spacing:
+	word-spacing:normal	|length	|inherit
+		normal	默认。定义单词间的标准空间。
+		length	定义单词间的固定空间。
+		inherit	规定应该从父元素继承 word-spacing 属性的值。
+
+7、控制文本的大小写text-transform:
+	text-transform:none	|capitalize	|uppercase	|lowercase	|inherit
+		none	默认。定义带有小写字母和大写字母的标准的文本。
+		capitalize	文本中的每个单词以大写字母开头。
+		uppercase	定义仅有大写字母。
+		lowercase	定义无大写字母，仅有小写字母。
+		inherit	规定应该从父元素继承 text-transform 属性的值。
+8、设置文本方向direction:
+	direction:ltr	|rtl	|inherit
+		ltr	默认。文本方向从左到右。
+		rtl	文本方向从右到左。
+		inherit	规定应该从父元素继承 direction 属性的值。
+9、设置空白的处理方式white-space:
+	white-space:normal	|pre	|nowrap	|pre-wrap	|pre-line	|inherit
+		normal	默认。空白会被浏览器忽略。
+		pre	空白会被浏览器保留。其行为方式类似 HTML 中的 <pre> 标签。
+		nowrap	文本不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止。
+		pre-wrap	保留空白符序列，但是正常地进行换行。
+		pre-line	合并空白符序列，但是保留换行符。
+		inherit	规定应该从父元素继承 white-space 属性的值。
+		
+10、文字溢出text-overflow:
+	text-overflow:clip	|ellipsis	|string
+	clip	修剪文本。	
+	ellipsis	显示省略符号来代表被修剪的文本。	
+	string	使用给定的字符串来代表被修剪的文本。
+
+	【备注：】实现文字过长隐藏，用省略号代替效果需要同时设置以下：
+	white-space:nowrap   (强制文本不换行)
+	设置容器宽度width
+	设置溢出隐藏overflow:hidden
+	设置溢出显示方式为省略号显示方式
+三、背景样式
+1、背景颜色 ：background-color:颜色; 
+	设置背景色
+	颜色名字：例如red
+	颜色16进制数值：例如#FF0000；
+	rgb色值：rgb（255，0，0）
+	transparent：默认背景透明
+
+2、背景图像 ：background-image:url(图片地址); 
+	url（）：指向背景图片
+	none：无背景图像，默认
+
+3、背景图像的重复方式 ：background-repeat
+	repeat：默认，垂直水平重复
+	repeat-x：水平方向重复
+	repeat-y：垂直方向重复
+	no-repeat：不重复
+
+4、背景图像位置：background-position：水平  垂直；      
+	水平：left左、center中、right右 
+	垂直：top上、center中、bottom下 
+	当表示上下、左右都居中时可以写一个值center   
+			可以取的值为关键字，数值，百分比
+	top left，top center，top right，center left，center center
+	center right，bottom left，bottom center，bottom right，如果只规定第一个，第二个必然是center
+	百分比 x%，y% 如果只规定第一个，另一个必然是50%
+	xpose，ypose：x，y的值，如果只规定第一个，另一个必然是50%
+
+5、背景吸附性 ：background-attachment
+	设置背景图像是否固定或者随着页面的其余部分滚动
+	scroll：默认值，背景图像会随着页面其余部分滚动而滚动
+	fixed:背景固定，不随滚动条滚动
+
+6、background-size:背景尺寸
+	20px  20px
+	50%  50%
+	contain--使原始图像的宽度或高度完全等于元素的宽度或高度
+	cover--使原始图像在维持纵横比的前提下将背景图像自动缩放到填满元素内部
+
+7、一个元素中显示多个背景：
+	background-image:url(),url(),url();
+	background-repeat:no-repeat,repeat-x,repeat-y;
+	banckground-position:3% 98%,center,top;
+
+8、background简写属性
+	background-color
+	background-position
+	background-size 设置背景图片大小length，%，coverle（足够大，有些部分显示不到），contain（足够大，尺寸完全适应）
+	background-repeat
+	background-origin 背景图片定位区域，padding-box（相对内边框定位）border-box（相对边框定位）content-box（相对内容定位）	
+	background-clip背景图剪裁，border-box相对边框剪裁，padding-box相对内边框剪裁，content-box相对内容剪裁
+	background-attachment
+	background-image
+	例如：
+	background: #fff   url(图片地址)   no-repeat  left  center fixed;
+	属性值的顺序可调换
+
+	【备注：】
+	img插入图片属于网页的内容(结构)，而背景图属于网页的表现，是修饰网页目的的。背景图上可以显示文字、表格等内容。
+	背景图片的显示原则：
+	1、当容器尺寸大于图片尺寸，背景图片将默认平铺，直至铺满元素；
+	2、当容器尺寸小于图片尺寸，只显示元素范围以为的背景图区域。
+四、列表样式
+1、list-style-image
+	图像替代列表项
+	url（）列表图像地址
+	none，默认
+
+2、list-style-position
+	列表项目标记的位置
+	inside，列表项目标记放置在文本以内，且环绕文本根据标记对齐。
+	outside，默认值。保持标记位于文本的左侧。列表项目标记放置在文本以外，且环绕文本不根据标记对齐
+	
+3、list-style-type
+	列表样式：
+	none：无
+	disc实心圆，circle空心圆，square实心方块，decimal数字，decimal-leading-zero01开头数字，lower-roman小写罗马数字开头，upper-roman大写罗马数字开头，lower-alpha小写英文字母开头，upper-alpha大写英文字母开头
+	CSS的继承性和层叠性：
+
+【备注：】以上三个属性都会在不同浏览器下产生不完全一致的效果，因此都不常使用。
+注释：任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 "inherit"。
+

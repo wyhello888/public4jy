@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+		div{
+			width:100px;
+			height:100px;
+			border:1px solid blue;
+		}
+		</style>
+		
+	</head>
+	<body>
+		<div id = "div1"></div>
+		<input type = "button" value = "改变颜色1" id = "btn1"><br/>
+		<input type = "button" value = "改变颜色2" id = "btn2"><br/>
+	</body>
+	<script type = "text/javascript" src = "js/jquery-3.1.1.js"></script>
+	<script type = "text/javascript">
+//		var btn1 = document.getElementById("btn1");
+//		var div1 = document.getElementById("div1");
+		var btn1=$("#btn1")[0];
+		var div1=$("#div1").get(0);
+		btn1.onclick = function()
+		{
+			div1.style.backgroundColor="yellow";
+			div1.innerHTML= "js操作-------！ ";
+		}
+/*----------------------jquery代码*/		
+		$("#btn2").click(function(){
+			$("#div1").css("background-color","blue");
+			$("#div1").html("jquery操作");
+		})
+		
+		
+			//$("#div1").innerHTML="jquery";
+/*----------------------DOM对象转换为jquery对象*/
+//		var $btn1 = $(btn1);
+//		var $div= $(div1);
+//		$btn1.click(function(){
+//			$div.html("-----------");
+//			$div.css("background-color","yellowgreen");
+//		})
+		
+	</script>
+</html>

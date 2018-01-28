@@ -1,0 +1,62 @@
+一、条件语句：
+1、
+	if(条件)
+	{
+		语句1;
+	}
+	else
+	{
+		语句2;
+	}
+2、
+	if(条件)
+	{
+		语句;
+	}
+3、
+	if(条件1)
+	{
+		语句1;
+	}
+	else if(条件2)
+	{
+		语句2;
+	}
+	else if(条件3)
+	{
+		语句3;
+	}
+	...
+	else
+	{
+		语句n;
+	}
+4、
+switch(变量)
+{
+	case 值1：
+		语句1;break;
+	case 值2：
+		语句2;break;
+	...
+	default:
+		语句n;
+}
+二、循环语句：
+for()
+{
+}
+while()
+{
+}
+do
+{
+}while();
+
+三、跳转语句
+1、continue
+2、break;
+
+四、
+通过ID获取dom元素
+document.getElementById();

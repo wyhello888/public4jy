@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" />
+		<input type="text" />
+		<input type="text" />
+		<input type="text" autofocus/>
+		<div class="c1">div0</div>
+		<div class="c1">div1</div>
+		<div class="c1">div2</div>
+		<div>div3</div>
+		<div>div4</div>
+		<div>div5</div>
+		<div><h1>div6</h1></div>
+		<div><h2>div7</h2></div>
+	</body>
+	<script type="text/javascript" src ="js/jquery-3.2.1.js"></script>
+		
+	
+	<script type="text/javascript">
+	/*	3-基本过滤选择器：11个
+	:first 选取第一个元素
+	:last   选取最后一个元素
+	:even  选取索引为偶数的所有元素
+	:odd  选取索引为奇数的所有元素
+	:not(selector)  去除与所有与选择器匹配的元素  
+	:eq(index)  选取等于索引的元素 
+	:gt(index)  选取大于索引的元素 
+	:lt(index)  选取小于索引的元素 
+	:header  选取所有的标题元素 
+	:animated 选取正在执行动画的所有元素
+	:focus 选取当前获取焦点的元素		
+	*/
+	$("div:first").css({width:"400px",height:"80px",border:"1px solid red"});
+	$("div:last").css({width:"400px",height:"80px",border:"1px solid red"});
+	$("div:even").css({width:"500px",height:"80px",background:"yellow"});
+	
+	$("div:not(.c1)").css({width:"500px",height:"80px",background:"blue"});
+	
+	$("div:eq(5)").css({color:"red"});
+	$(":header").css({fontSize:"30px"});
+	//添加动画
+	$("div:lt(5)").animate({width:"1000px"},1000);
+	//获取所有正在执行动画的的元素
+	$("div:animated").css({color:"pink"});
+	
+	$("input:focus").css({width:"200px",height:"30px"});
+	</script>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				width:2000px;
+				height:1000px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" id ="open1"  value ="打开一个新窗口"/>
+	</body>
+	<script>
+	/*	var x = 100;
+		console.log(window.x);
+		
+		function outputMessage()
+		{
+			console.log("helloWorld!");
+		}
+		window.outputMessage();
+		
+//		Math.random();
+//		var str = new String("hello");
+//		str.substr()
+		*/
+		var innerH = window.innerHeight;
+		var innerW = window.innerWidth;
+		console.log(innerH + "--" + innerW);
+		
+		var outerH =　window.outerHeight;
+		var outerW = window.outerWidth;
+		console.log(outerH + "--" + outerW);
+		
+		var clientH= document.documentElement.clientHeight;
+		var clientW = document.documentElement.clientWidth;
+		
+		console.log(clientH +"--" + clientW);
+		
+		var bodyH = document.body.clientHeight;
+		var bodyW = document.body.clientWidth;
+		console.log(bodyH + "--" + bodyW);
+		
+		var open1 = document.getElementById("open1");
+		open1.onclick = function()
+		{
+			//window.open("http://www.baidu.com","baidu","height=400,width=400,top=10,left=10");
+			window.open("index.html");
+		}
+	</script>
+</html>

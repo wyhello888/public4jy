@@ -1,0 +1,55 @@
+一、window对象：Window 对象所有浏览器都支持 window 对象。它表示浏览器窗口。
+
+		   window.innerHeight - 浏览器窗口的内部高度 ， 包含滚动条 	IE9以下不兼容
+		   window.innerWidth - 浏览器窗口的内部宽度 ， 包含滚动条  	IE9以下不兼容
+		   
+		   window.outerHeight:浏览器窗口整个的高度		IE9以下不兼容
+		   window.outerWidth： 浏览器窗口整个的宽度		IE9以下不兼容
+		   
+		  * document.documentElement.clientHeight 浏览器窗口的内部高度 ,不包含滚动条 
+		  * document.documentElement.clientWidth  浏览器窗口的内部宽度，  不包含滚动条 
+		   
+		   document.body.clientHeight :body的高度
+		   document.body.clientWidth  :body的宽度
+		   
+二、window对象的方法
+		window.alert()弹出一个警告框
+		window.confrim()弹出一个确认框
+		window.prompt()弹出一个输入框
+		
+		var timer = setInterval(fun,1000)  间歇性定时器
+		clearInterval(timer)  清除定时器
+		
+		var timer = setTimeout(fun,1000)  一次性定时器
+		clearTimeout(timer) 清除定时器
+		
+		window.open()打开一个新窗口
+		window.close()关闭打开的新窗口
+三、location对象：window.location 对象用于获得当前页面的地址 (URL)，并把浏览器重定向到新的页面。
+		location.href:设置或获取url
+		location.reload() 重新加载页面
+四、window.history 对象包含浏览器的历史。
+		history.back() - 与在浏览器点击后退按钮相同 
+		
+五、window.screen 对象包含有关用户屏幕的信息。
+		screen.availWidth - 可用的屏幕宽度 ，不包含任务栏
+		screen.availHeight - 可用的屏幕高度 ，不包含任务栏
+		
+		screen.width -屏幕的宽度
+		screen.height-屏幕的高度
+六、window.navigator 对象包含有关访问者浏览器的信息。
+		navigator.userAgent
+		
+		//嗅探浏览器
+		if(navigator.userAgent.indexOf("Chrome") != -1)
+		{
+			console.log("谷歌浏览器");
+			//do something 
+		}
+		else
+		{
+			console.log("非谷歌浏览器");
+			//do something 
+		}
+
+

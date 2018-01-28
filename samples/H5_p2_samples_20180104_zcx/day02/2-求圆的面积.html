@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//已知圆的半径是6,求圆的面积
+		// s = 3.14 * r * r;
+		 
+		 //var r = 6;//定义一个变量r,r表示圆的半径
+		var r =Number(prompt("请输入一个圆的半径："));
+		var s = 3.14 * r * r;
+		//var s = Math.PI * Math.pow(r,2);
+		 s= s.toFixed(2);//将变量s四舍五入，保留2位小数，重新赋值给变量s
+		 document.write("圆的面积是：" +s);
+		 console.log(Math.PI);
+	</script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#loginDiv{
+				width:400px;
+				height:300px;
+				background:white;
+				margin:0 auto;
+				position: relative;
+				display: none;
+				z-index: 2;
+				
+			}
+			#close{
+				position: absolute;
+				right:10px;
+				top:10px;
+			}
+			#cover{
+				width:100%;
+				height:100%;
+				background:rgba(0,0,0,0.2);
+				
+				position: absolute;
+				left:0px;
+				top:0px;
+				display:none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id ="cover"></div>
+		<input type="button"  id="login" value ="登录" />
+		<div id = "loginDiv">
+			<input type="button" id ="close" value = "X" />
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		var login = document.getElementById("login");
+		var loginDiv = document.getElementById("loginDiv");
+		var close = document.getElementById("close");
+		var cover = document.getElementById("cover");
+		login.onclick = function()
+		{
+			loginDiv.style.display = "block";
+			cover.style.display = "block";
+		}
+		close.onclick = function()
+		{
+			loginDiv.style.display ="none";
+			cover.style.display = "none";
+		}
+	</script>
+</html>

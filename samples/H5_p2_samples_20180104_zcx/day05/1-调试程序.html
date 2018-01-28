@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width:200px;
+				height:50px;
+				background:blue;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" value ="抢红包 "  id="btn1"/>
+		<div id="box"></div>
+	</body>
+	<script>
+		var btn1 = document.getElementById("btn1");
+		var box = document.getElementById("box");
+		console.log(btn1);
+		btn1.onclick= function()
+		{
+			//console.log("-----");
+			var num =parseInt( Math.random()*10);
+			console.log(num);
+			box.innerHTML = num;
+			box.style.background="yellow";
+			console.log(box);
+		}
+	</script>
+</html>

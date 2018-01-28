@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id = "ul1">
+			<li>0111111111111111</li>
+			<li>1111111111111111</li>
+			<li>2111111111111111</li>
+			<li>3111111111111111</li>
+			<li>4111111111111111</li>
+			<li>5111111111111111</li>
+		</ul>
+		<input type = "button" id = "btn1" value = "删除">
+	</body>
+	<script type = "text/javascript" src = "js/jquery-3.1.1.js"></script>
+	<script type = "text/javascript">
+		var $li = $("<li title='aa'>11ggssdddsssssssssssssss</li>");
+		//$("ul").append($li);
+		//$li.appendTo("#ul1");
+		//$("ul").prepend($li);
+		//$li.prependTo("ul");
+		
+	//	$("ul>li:eq(1)").after($li);
+	//$li.insertAfter("ul>li:eq(0)");
+	//$("ul>li:eq(0)").before($li);
+	//$li.insertBefore("ul>li:eq(4)");
+	//$("ul>li").remove(":eq(1)");
+	$("ul>li").click(function(){
+		alert($(this).text());
+	})
+	
+	var $li = $("ul>li:eq(0)").detach();
+	$("ul").append($li);
+	
+	$("ul>li:gt(3)").empty();
+	</script>
+</html>

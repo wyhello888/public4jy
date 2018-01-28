@@ -1,0 +1,52 @@
+一、弹性盒子
+1、 display属性定义为弹性盒子容器。
+	语法:display：flex | inline-flex 
+2、flex-direction 属性指定了弹性子元素在父容器中的位置。
+	语法：
+	flex-direction: row | row-reverse | column | column-reverse
+	row：横向从左到右排列（左对齐），默认的排列方式。
+	row-reverse：反转横向排列（右对齐，从后往前排，最后一项排在最前面。
+	column：纵向排列。
+	column-reverse：反转纵向排列，从后往前排，最后一项排在最上面
+	
+3、justify-content 属性
+	内容对齐（justify-content）属性应用在弹性容器上，把弹性项沿着弹性容器的主轴线（main axis）对齐。
+	语法：
+	justify-content: flex-start | flex-end | center | space-between | space-around
+
+	flex-start：弹性项目向行头紧挨着填充。这个是默认值。	
+	flex-end：弹性项目向行尾紧挨着填充。
+	center：弹性项目居中紧挨着填充。
+	space-between：弹性项目平均分布在该行上。
+	space-around：弹性项目平均分布在该行上，两边留有一半的间隔空间。
+4、align-items 属性设置弹性盒子元素在侧轴（纵轴）方向上的对齐方式。	
+语法
+align-items: flex-start | flex-end | center | baseline | stretch
+各个值解析:
+flex-start：弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴起始边界。
+flex-end：弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴结束边界。
+center：弹性盒子元素在该行的侧轴（纵轴）上居中放置。（如果该行的尺寸小于弹性盒子元素的尺寸，则会向两个方向溢出相同的长度）。
+baseline：如弹性盒子元素的行内轴与侧轴为同一条，则该值与'flex-start'等效。其它情况下，该值将参与基线对齐。
+stretch：如果指定侧轴大小的属性值为'auto'，则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸，但同时会遵照'min/max-width/height'属性的限制。
+
+5、子元素的属性：
+	margin:auto;设置子元素在弹性盒子中自动主轴，侧轴居中对齐。
+6、子元素的属性：
+	flex:指定弹性子元素如何分配空间
+	
+二、分栏布局：CSS3 可以将文本内容设计成像报纸一样的多列布局
+	1、column-count 属性指定了需要分割的列数。
+	2、column-gap 属性指定了列与列间的间隙
+	3、column-rule-style 属性指定了列与列间的边框样式：
+	4、column-rule-width 属性指定了两列的边框厚度:
+	5、column-rule-color 属性指定了两列的边框颜色：
+	如：
+	div {
+   		 column-count: 3;
+   		 column-gap: 40px;
+   		 column-rule-style: solid;
+   		 column-rule-width: 1px;
+   		 column-rule-color: blue;
+	}
+	6、column-rule 属性是 column-rule-* 所有属性的简写
+	如： column-rule: 1px solid blue;

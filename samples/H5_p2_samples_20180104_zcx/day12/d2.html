@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div1{
+				width:300px;
+				height:300px;
+				background:blue;
+				position: absolute;
+				left:100px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1"></div>
+	</body>
+	<script type="text/javascript">
+		var div1  = document.getElementById("div1");
+		div1.onmousedown= function(e)
+		{
+			var x1 = e.clientX-div1.offsetLeft;
+			var y1 = e.clientY-div1.offsetTop;
+			document.onmousemove= function(e)
+			{
+				var x = e.clientX-x1;
+				var y = e.clientY-y1
+				
+				if(x >= document.documentElement.clientWidth-div1.offsetWidth)
+				{
+					x = document.documentElement.clientWidth-div1.offsetWidth;
+				}
+				else if(x <=0)
+				{
+					x =0;
+				}
+				div1.style.left = (x)+"px";
+				div1.style.top = (y)+"px";
+			}
+		}
+		document.onmouseup = function()
+		{
+			document.onmousemove = null;
+		}
+	</script>
+</html>

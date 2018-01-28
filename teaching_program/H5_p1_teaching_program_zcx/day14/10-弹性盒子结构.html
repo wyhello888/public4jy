@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style>
+			.flex-container{
+				width:50%;
+				height:200px;
+				background:burlywood;
+				margin:0 auto;
+				display: flex;
+				flex-direction: column;
+				
+			}
+			.containerT,.containerB{
+				width:100%;
+				height:50%;
+				
+				display: flex;
+				justify-content: space-around;
+				
+			}
+			.containerT{
+				background:yellow;
+			}
+			.containerB{
+				background:green;
+			}
+			.contain-item{
+				width:20%;
+				height:100%;
+				background:pink;
+			}
+			.containerB .contain-item{
+				background:indianred;
+			}
+			
+			@media only screen and (max-width: 800px) {
+				.flex-container{
+					height:600px;
+					width:25%;
+				}
+				.containerT,.containerB
+				{
+					flex-direction: column;
+				}
+				.contain-item{
+					margin-top:10px;
+					width:100%;
+				}
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="flex-container">
+			<div class = "containerT">
+				<div class="contain-item"></div>
+				<div class="contain-item"></div>
+				<div class="contain-item"></div>
+				<div class="contain-item"></div>
+			</div>
+			<div class = "containerB">
+				<div class="contain-item"></div>
+				<div class="contain-item"></div>
+				<div class="contain-item"></div>
+				<div class="contain-item"></div>
+			</div>
+		</div>
+	</body>
+</html>

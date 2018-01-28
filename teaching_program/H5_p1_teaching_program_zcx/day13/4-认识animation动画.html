@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width:100px;
+				height:100px;
+				background:blue;
+				transform:rotate(45deg);
+				/*margin-left:100px;*/
+				margin-top:100px;
+				
+				/*定义一个3D动画，动画名字是myani*/
+				animation-name:myani;
+				/*动画执行的时间是3秒钟*/
+				animation-duration: 3s;
+				/*动画执行的次数：反复执行*/
+				animation-iteration-count:infinite;
+				/*动画执行的动作方式:交替执行*/
+				animation-direction: alternate;
+			}
+			/*定义关键帧*/
+			@keyframes myani{
+				from{
+					background:blue;
+					/*transform: rotate(45deg);*/
+					transform: translateX(0);
+					
+				}
+				to{
+					background:deeppink;
+					/*transform:rotate(315deg);*/
+					transform: translateX(200px);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+</html>

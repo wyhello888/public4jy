@@ -1,0 +1,137 @@
+1、<form> 表单
+		<form action="" method="" name="form1" id="form1">
+		...
+		</form>
+	<form>标签创建供用户输入的表单。表单在网页中主要负责数据采集功能。
+	method属性：规定用于发送 form-data 的 HTTP 方法。实际上就是请求的方式。
+	
+	Form表单里POST请求与GET请求的区别
+	1.最显然的区别是GET是从服务器获取数据，服务器需要的数据会出现在url里；
+	2.POST是将数据传给服务器；
+
+	参数传递不同：
+	1.GET请求时,action的url的参数会丢掉，就像上面的url少了test=testval,它只会把form表单里的参数传在url里；
+	2.POST请求时，action的url的参数不会丢掉，同时也会把form表单里的参数传到服务器；
+
+	安全性：
+	1.GET请求时，表单里的数据都会显示在url里，相对POST请求不安全；
+	2.POST请求时，表单里的数据不会那样明显显示在客户端；
+
+	数据量：
+	GET请求传递数据量要小于POST请求很多。
+	name属性：表单的名称。 
+	action属性：请求路径的具体地址 
+	target属性：指定action的Url在哪里打开
+		_blank：指定action的Url在新开的浏览器窗口中
+		_parent：指定action的Url在父级浏览器窗口中
+		_self：指定action的Url在当前浏览器窗口中
+		_top：指定action的Url在顶级浏览器窗口中
+
+2、<input>标记及其属性
+	name：规定 input 元素的名称，用于对提交到服务器后的表单数据进行标识。（也就是通知服务器是哪个表单项传递来的数据）
+	要保证数据的准确性，必须定义一个独一无二的名称。
+	
+	value:对于不同的输入类型，value 属性的用法也不同。
+	type="button", "reset", "submit" - 定义按钮上的显示的文本
+	•type="text", "password"- 定义输入字段的初始值
+	•type="checkbox", "radio", "image" - 定义与输入相关联的值
+	
+	(1)文本框：主要用于输入单行文本内容
+	<input type="text" name="" id="" value=""  placeholder=""/>
+	placeholder 属性提供可描述输入字段预期值的提示信息。该提示会在输入字段为空时显示，并会在字段获得焦点时消失。
+	placeholder 属性适用于以下的 <input> 类型：text, url, tel, email 以及 password
+	id:可选属性，方便定义样式，后期js获取元素
+
+	(2)密码框：主要用于输入一些保密信息
+	<input  type="password/>
+	
+	(3)单选框:单选框主要是让网页浏览者在一组选项里选择一个。
+		Name属性定义单选框的名称，单选框都是以组为单位使用的，在同一组中的选项必须使用同一名称。
+
+	
+	(4)复选框:复选框主要是让网页浏览者在一组选项里同时选择多个选项。
+	<input  type="checkbox"  checked="checked"  /> 
+	
+	(5)文件域:文件域主要是让网页浏览者上传文件。
+	<input  type="file“/> 
+	(6)提交按钮:提交按钮用来将输入的信息提交到服务器。
+	<input  type="submit"  value="显示的值"/>Value属性定义按钮的显示文字。
+	(7)普通按钮
+	<input  type="button" value=” 显示的值”/> 
+
+	(8)重置按钮:重置按钮用来重置表单中输入的信息。
+	<input  type="reset"  value="显示的值"/> value属性定义按钮的显示文字。
+	(9)图像域:创建一个图像控件，该控件单击后将导致表单立即被提交
+	<input  type="image"  src="图像地址" />
+
+	(10)<label> 标签
+	<label> 标签为 input 元素定义标注（标记）。
+	label 元素不会向用户呈现任何特殊效果。当用户选择该标签时，浏览器就会自动将焦点转到和标签相关的表单控件上。
+	<label> 标签的 for 属性应当与相关元素的 id 属性相同。
+
+3、下拉列表:
+	<select  multiple="multiple">
+		<option  selected="selected">选项1</option>
+		<option>选项2</option>
+		...
+	</select>
+	
+	selected="selected":默认被选中	
+	实现多选 multiple="multiple"
+
+	
+4、文本域：
+		<textarea  rows="行数"  cols="列数"  name="" wrap="virtual">初始值（可有可无）</textarea>
+		cols（columns）属性：定义文本域的宽度
+		rows属性：定义文本域的高度
+
+
+
+5、h5新增类型
+	(1)Input 类型 - email:用于应该包含 e-mail 地址的输入域。
+	在提交表单时，会自动验证 email 域的值。
+	E-mail: <input type="email" name="user_email" />
+
+	(2)Input 类型 - url
+	url 类型用于应该包含 URL 地址的输入域。
+
+	在提交表单时，会自动验证 url 域的值。
+	Homepage: <input type="url" name="user_url" />
+	
+	Input 类型 - number
+	number 类型用于应该包含数值的输入域。
+	
+	您还能够设定对所接受的数字的限定：
+	<input type="number" name="points" min="1" max="10" />
+	
+	Input 类型 - range
+	range 类型用于应该包含一定范围内数字值的输入域。
+	
+	range 类型显示为滑动条。
+	
+	您还能够设定对所接受的数字的限定：
+	<input type="range" name="points" min="1" max="10" />
+	
+	
+	Input 类型 - Date Pickers（日期选择器）
+	HTML5 拥有多个可供选取日期和时间的新输入类型：
+	
+	date - 选取日、月、年 
+	month - 选取月、年 
+	week - 选取周和年 
+	time - 选取时间（小时和分钟） 
+	datetime - 选取时间、日、月、年（UTC 时间） 
+	datetime-local - 选取时间、日、月、年（本地时间） 
+
+
+
+
+
+
+
+	
+	
+	
+
+	
+

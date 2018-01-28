@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width:600px;
+				height:300px;
+				border:1px solid red;
+				position: relative;
+			}
+			#ball{
+				width:80px;
+				height:80px;
+				background:blue;
+				border-radius: 50%;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="ball"></div>
+		</div>
+		<input type="button" id="start" value ="开始运动" />
+	</body>
+	<script type="text/javascript">
+		var box = document.getElementById("box");
+		var ball = document.getElementById("ball");
+		var start = document.getElementById('start');
+		start.onclick = function()
+		{
+			var x = ball.offsetLeft;
+			var y = ball.offsetTop;
+			var v1 = 10;//定义一个水平方向的速 度
+			var v2 = 10;
+			
+			var x1 = box.clientWidth - ball.offsetWidth;//水平的右临界点
+			var y1 = box.clientHeight -ball.offsetHeight;//垂直方向的临界点 
+			
+			var timer = setInterval(function(){
+				x += v1;
+				y += v2;
+				if(x >= x1 || x<=0)
+				{
+					v1 = -v1;
+				}
+				if(y >= y1 || y <=0)
+				{
+					v2 = -v2;
+				}
+				ball.style.left = x + "px";
+				ball.style.top = y +"px";
+			},50);
+		}
+	</script>
+</html>

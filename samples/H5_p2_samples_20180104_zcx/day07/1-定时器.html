@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		//var timer =window.setInterval(); 间歇性定时器，间歇性的做某些事情，间隔一个时间片断去做某些事件
+		//window.clearInterval(timer);
+		//匿名回调函数：做为一个参数的函数
+	/*	var i = 1;//定义一个全局变量
+		var timer = window.setInterval(function(){
+			console.log(i +"helloEveryone!");
+			
+			//满足某种条件时，清除这个定时器
+			if(i == 10)
+			{
+				window.clearInterval(timer);
+			}
+			i++;
+		},2000);
+		
+	//console.log(timer);	
+	
+	//第2种写法：
+	var timer = setInterval(printMessage,2000);
+	
+	//定义一个函数，在控制台输出一条信息
+	var i =1;
+	function printMessage()
+	{
+		console.log(i+"helloWorld!");
+		if(i == 5)
+		{
+			clearInterval(timer);
+		}
+		i++;
+	}
+	//printMessage();
+	
+*/	
+	//一次性定时器：setTimeout()
+	//清除一次性定时器：clearTimeout()
+	var timer = window.setTimeout(function(){
+		console.log("helloWorld!");
+	},3000);
+		
+	</script>
+</html>

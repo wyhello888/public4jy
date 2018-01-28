@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			input:checked{
+				width:50px;
+				height:50px;
+			}
+			input:disabled{
+				background:yellow;
+			}
+			input:enabled{
+				background:blue;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="checkbox" checked="checked" />
+		<input type="checkbox" checked="checked" />
+		<input type="checkbox" checked="checked" />
+		<input type="checkbox" />
+		<input type="checkbox" />
+		<input type="checkbox" />
+		<input type="checkbox" />
+		<input type="checkbox" checked="checked" />
+		<input type="button" value ="普通按钮" />
+		<input type="button" value ="普通按钮" />
+		<input type="button" value ="普通按钮" />
+		<input type="button" value ="结算按钮"  id="btn1"/>
+		<input type="button" value ="普通按钮"  disabled="disabled"/>
+		<input type="button" value ="普通按钮"  disabled="disabled"/>
+		<input type="button" value ="普通按钮"  disabled="disabled"/>
+		<input type="button" value ="普通按钮"  disabled="disabled"/>
+	</body>
+	<script src ='js/jquery-3.1.1.js'></script>
+	<script>	
+		$("#btn1").click(function()
+		{
+			var checkboxs = $("input:checked");
+			alert(checkboxs.length);
+		})
+		
+	</script>
+</html>

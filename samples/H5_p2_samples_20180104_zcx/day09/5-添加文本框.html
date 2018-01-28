@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<input type="button" id ="btn1" value ="添加" />
+		<!--<input type="text" />-->
+	</body>
+	<script type="text/javascript">
+		var btn1 = document.getElementById("btn1");
+		btn1.onclick = function()
+		{
+			//创建 一个input节点
+			var input1 = document.createElement("input");
+			//设置属性
+			input1.type = 'text';
+			input1.style.display="block";
+			
+			//添加
+			document.body.appendChild(input1);
+			
+			
+			
+			
+			
+		}
+	</script>
+</html>

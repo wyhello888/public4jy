@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#menu{
+				width:300px;
+				height:400px;
+				background:darkgray;
+				display:none;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id ="menu">
+			<ul>
+				<li>子菜单1</li>
+				<li>子菜单1</li>
+				<li>子菜单1</li>
+				<li>子菜单1</li>
+				<li>子菜单1</li>
+				<li>子菜单1</li>
+			</ul>
+		</div>
+	</body>
+	<script>
+	//阻止默认事件
+		//click ,dblclick mouseover, mouseout, mousemove, contextmenu
+		//keydown, keyup ,keypress,
+		//focus, blur,change
+		var menu = document.getElementById("menu");
+		document.oncontextmenu = function(event)
+		{
+			var event = event || window.event;
+			var x = event.clientX;
+			var y = event.clientY;
+			console.log(x + "--" + y);
+			menu.style.left = x +"px";
+			menu.style.top = y +"px";
+			menu.style.display = "block";
+			
+			//阻止默认事件
+			return false;//方法1
+			//event.preventDefault();//方法 ie低版本不支持这个方法
+		}
+		//鼠标左健单击，隐藏菜单
+		document.onclick = function()
+		{
+			menu.style.display = "none";
+		}
+	</script>
+</html>

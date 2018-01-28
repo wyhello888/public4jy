@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				background:blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<input type="button" id ="btn1" value ="设置样式" />
+		<input type="button" id ="btn2" value ="获取样式" />
+	</body>
+	<script type="text/javascript">
+		var btn1 = document.getElementById("btn1");
+		var btn2 = document.getElementById("btn2");
+		var div = document.getElementsByTagName("div")[0];
+		btn1.onclick = function()
+		{
+			div.style.width = "100px";
+			div.style.height ="100px";
+//			div.style.backgroundColor="blue";
+		}
+		btn2.onclick = function()
+		{
+//			var w = div.style.width;//获取行间样式
+//			console.log(w);
+			
+			//非ie
+//			var style = getComputedStyle(div,null);
+//			var color = style.backgroundColor;
+
+			//ie
+			//var color = div.currentStyle.backgroundColor;
+			
+			//兼容性写法
+			var color = getStyle(div,"backgroundColor");
+			console.log(color);
+		}
+		
+		
+	//封装一个方法，获取非行间样式
+	function getStyle(obj, name) { 
+     if(obj.currentStyle) { 
+          return obj.currentStyle[name]; 
+     } else { 
+         return  getComputedStyle(obj, false)[name]; 
+     } 
+}
+	</script>
+</html>

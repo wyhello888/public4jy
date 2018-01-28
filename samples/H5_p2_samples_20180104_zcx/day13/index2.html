@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class ="box">
+			<div></div>
+			<div></div>
+			<div></div>
+			<span>
+				<div></div>
+			</span>
+		</div>
+		<div></div>
+		<div></div>
+	</body>
+	<script type="text/javascript" src ='js/jquery-3.2.1.js'></script>
+	<script type="text/javascript">
+		//2-层次选择器 4个：后代选择器，子选择器，相邻元素选择器+，兄弟选择器~
+		$(".box div").css({"width":"100px","height":"100px","border":"1px solid red"});
+		$(".box>div").css({"background":"blue"});
+		$(".box+div").css({"width":"100px","height":"100px","border":"1px solid red"});
+		$(".box~div").css({"width":"100px","height":"100px","border":"1px solid red","background":"yellow"});
+	</script>
+		
+	
+</html>
